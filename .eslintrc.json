@@ -1,4 +1,4 @@
 {
-  "extends": "next/core-web-vitals"
-  // eslint-disable-next-line @next/next/no-img-element
+  "extends": "next/core-web-vitals",
+  "rules": { "@next/next/no-img-element": "off" }
 }

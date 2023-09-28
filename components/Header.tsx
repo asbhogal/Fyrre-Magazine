@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header>
       <div>
-        <Link href="/">
+        <Link href="/" aria-label="Return to homepage">
           <img src="/logos/FyrreMagazineLogo-Black.svg" alt="logo" />
         </Link>
       </div>
