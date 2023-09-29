@@ -23,7 +23,7 @@ export default function Header() {
             alt="hamburger menu icon"
           />
         </SheetTrigger>
-        <SheetContent side="right" className="w-full pt-14">
+        <SheetContent side="right">
           <nav className="flex flex-col flex-1 justify-end gap-6">
             {menuLinks.map((menuItem, index) => (
               <Link key={index} href={menuItem.href}>
