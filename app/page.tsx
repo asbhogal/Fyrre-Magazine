@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 import NewsTicker from "@/components/NewsTicker";
 import PageTitle from "@/components/PageTitle";
 
@@ -9,6 +10,7 @@ export default function Home() {
         Art & Life
       </PageTitle>
       <NewsTicker />
+      <Hero />
     </main>
   );
 }

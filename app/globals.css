@@ -76,9 +76,9 @@
   body {
     @apply bg-background text-foreground;
   }
-  .text-title {
+  .text-subtitle {
     font-weight: 600;
-    font-size: clamp(3.25rem, -0.75rem + 20vw, 18.25rem);
+    font-size: 6.5rem;
     text-transform: uppercase;
     line-height: 1;
   }
