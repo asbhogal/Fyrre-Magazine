@@ -1,6 +1,7 @@
 import Container from "@/components/ui/container";
 import "./globals.css";
 import type { Metadata } from "next";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Fyrre Magazine",
@@ -22,7 +23,10 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <Container>{children}</Container>
+        <Container>
+          <Header />
+          {children}
+        </Container>
       </body>
     </html>
   );
