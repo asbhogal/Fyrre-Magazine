@@ -15,6 +15,15 @@ module.exports = {
         "2xl": "95rem",
       },
     },
+    screens: {
+      sm: "640px",
+
+      md: "920px",
+
+      lg: "1024px",
+
+      xl: "1280px",
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",

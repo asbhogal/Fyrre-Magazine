@@ -70,6 +70,9 @@
   * {
     @apply border-border;
   }
+  html {
+    font-family: General Sans, system-ui, sans-serif;
+  }
   body {
     @apply bg-background text-foreground;
   }
@@ -77,4 +80,28 @@
 
 * {
   outline: 1px solid red;
+}
+
+@font-face {
+  font-family: "General Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/fonts/general-sans/GeneralSans-Regular.woff2"), format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  font-weight: 500;
+  font-style: normal;
+  src: url("/fonts/general-sans/GeneralSans-Medium.woff2"), format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  font-weight: 600;
+  font-style: normal;
+  src: url("/fonts/general-sans/GeneralSans-Semibold.woff2"), format("woff2");
+  font-display: swap;
 }
