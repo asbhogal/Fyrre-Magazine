@@ -21,7 +21,7 @@ export default function Hero() {
       </div>
       <div>
         <img
-          className="object-cover"
+          className="w-full object-cover"
           src="/images/homepage/dimitar-belchev-fRBpWLAcWIY-unsplash 1.jpg"
           alt="An abstract painting of three faces"
         />

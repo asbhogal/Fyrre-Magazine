@@ -3,11 +3,7 @@ type ContainerProps = {
 };
 
 const Container: React.FC<ContainerProps> = ({ children }) => {
-  return (
-    <div className="container 3xl mx-auto w-full xs:px-4 sm:px-8 md:px-8 lg:px-8 xl:px-0">
-      {children}
-    </div>
-  );
+  return <div className="container 3xl mx-auto w-full ">{children}</div>;
 };
 
 export default Container;
