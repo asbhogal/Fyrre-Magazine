@@ -13,7 +13,11 @@ export default function PageTitle({
     <div>
       <h1 className={className}>{children}</h1>
       {imgSrc && (
-        <img src={imgSrc} alt="Art & Life in bold letter" className="py-12" />
+        <img
+          src={imgSrc}
+          alt="Art & Life in bold letter"
+          className="py-12 w-full"
+        />
       )}
     </div>
   );

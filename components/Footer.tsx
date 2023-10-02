@@ -1,13 +1,15 @@
 import NewsletterTicker from "./NewsletterTicker";
 import { Input } from "@/components/ui/input";
 import { Button } from "./ui/button";
+import Link from "next/link";
+import FooterSocialLinks from "./FooterSocialsLinks";
 
 export default function Footer() {
   return (
     <footer className="bg-black">
       <NewsletterTicker />
       <div className="max-w-[95rem] mx-auto">
-        <div className=" py-[128px]  grid grid-cols-1 2xl:grid-cols-2 gap-32 items-center">
+        <div className="py-8 xl:py-[128px] grid grid-cols-1 2xl:grid-cols-2 gap-2 xl:gap-32 items-center">
           <h2 className="uppercase text-footer-title">
             Design news to your inbox
           </h2>
@@ -51,6 +53,15 @@ export default function Footer() {
               </ul>
             </nav>
           </div>
+        </div>
+        <div className="flex flex-wrap flex-col md:flex-row justify-between py-3 lg:pt-[6rem] lg:pb-[4.0625rem] w-full">
+          <p className="font-regular text-white">
+            Designed by{" "}
+            <Link href="https://templates.gola.io/templates">Pawel Gola</Link>.
+            Developed by Aman Singh Bhogal. All content belongs to their
+            respective copyright holders.
+          </p>
+          <FooterSocialLinks />
         </div>
       </div>
     </footer>

@@ -11,16 +11,17 @@ module.exports = {
     container: {
       center: true,
       screens: {
-        "2xl": "160rem",
+        "3xl": "2560px",
       },
     },
     screens: {
-      xs: "20rem",
-      sm: "40rem",
-      md: "57.5rem",
-      lg: "64rem",
-      "2xl": "90rem",
-      "3xl": "105rem",
+      xs: "320px",
+      sm: "640px",
+      md: "920px",
+      lg: "1024px",
+      xl: "1440px",
+      "2xl": "1680px",
+      "3xl": "2560px",
     },
     extend: {
       colors: {
