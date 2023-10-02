@@ -31,8 +31,10 @@ const content = [
             God hatred aversion convictions war depths superiority inexpedient of sea. Superiority deceptions god horror virtues free horror suicide law marvelous fearful eternal-return superiority ultimate. Marvelous will pinnacle chaos hope prejudice noble fearful play depths god ideal law. Ocean virtues holiest justice gains burying salvation horror self strong joy burying. Merciful suicide good abstract selfish."`,
           },
           {
-            accent:
+            quote: [
               "Decrepit merciful faithful eternal-return philosophy burying virtues decieve insofar hope ocean oneself. Sexuality evil passion battle noble. Spirit will intentions dead justice decieve depths philosophy. Ubermensch derive truth truth overcome truth faith horror. God grandeur derive abstract superiority.",
+              "Friedrich Nietzsche",
+            ],
           },
           {
             summary2:
@@ -71,8 +73,10 @@ const content = [
             God hatred aversion convictions war depths superiority inexpedient of sea. Superiority deceptions god horror virtues free horror suicide law marvelous fearful eternal-return superiority ultimate. Marvelous will pinnacle chaos hope prejudice noble fearful play depths god ideal law. Ocean virtues holiest justice gains burying salvation horror self strong joy burying. Merciful suicide good abstract selfish."`,
           },
           {
-            accent:
+            quote: [
               "Decrepit merciful faithful eternal-return philosophy burying virtues decieve insofar hope ocean oneself. Sexuality evil passion battle noble. Spirit will intentions dead justice decieve depths philosophy. Ubermensch derive truth truth overcome truth faith horror. God grandeur derive abstract superiority.",
+              "Friedrich Nietzsche",
+            ],
           },
           {
             summary2:
@@ -111,8 +115,10 @@ const content = [
             God hatred aversion convictions war depths superiority inexpedient of sea. Superiority deceptions god horror virtues free horror suicide law marvelous fearful eternal-return superiority ultimate. Marvelous will pinnacle chaos hope prejudice noble fearful play depths god ideal law. Ocean virtues holiest justice gains burying salvation horror self strong joy burying. Merciful suicide good abstract selfish."`,
           },
           {
-            accent:
+            quote: [
               "Decrepit merciful faithful eternal-return philosophy burying virtues decieve insofar hope ocean oneself. Sexuality evil passion battle noble. Spirit will intentions dead justice decieve depths philosophy. Ubermensch derive truth truth overcome truth faith horror. God grandeur derive abstract superiority.",
+              "Friedrich Nietzsche",
+            ],
           },
           {
             summary2:
@@ -151,8 +157,10 @@ const content = [
             God hatred aversion convictions war depths superiority inexpedient of sea. Superiority deceptions god horror virtues free horror suicide law marvelous fearful eternal-return superiority ultimate. Marvelous will pinnacle chaos hope prejudice noble fearful play depths god ideal law. Ocean virtues holiest justice gains burying salvation horror self strong joy burying. Merciful suicide good abstract selfish."`,
           },
           {
-            accent:
+            quote: [
               "Decrepit merciful faithful eternal-return philosophy burying virtues decieve insofar hope ocean oneself. Sexuality evil passion battle noble. Spirit will intentions dead justice decieve depths philosophy. Ubermensch derive truth truth overcome truth faith horror. God grandeur derive abstract superiority.",
+              "Friedrich Nietzsche",
+            ],
           },
           {
             summary2:
@@ -191,8 +199,10 @@ const content = [
             God hatred aversion convictions war depths superiority inexpedient of sea. Superiority deceptions god horror virtues free horror suicide law marvelous fearful eternal-return superiority ultimate. Marvelous will pinnacle chaos hope prejudice noble fearful play depths god ideal law. Ocean virtues holiest justice gains burying salvation horror self strong joy burying. Merciful suicide good abstract selfish."`,
           },
           {
-            accent:
+            quote: [
               "Decrepit merciful faithful eternal-return philosophy burying virtues decieve insofar hope ocean oneself. Sexuality evil passion battle noble. Spirit will intentions dead justice decieve depths philosophy. Ubermensch derive truth truth overcome truth faith horror. God grandeur derive abstract superiority.",
+              "Friedrich Nietzsche",
+            ],
           },
           {
             summary2:
@@ -231,8 +241,10 @@ const content = [
             God hatred aversion convictions war depths superiority inexpedient of sea. Superiority deceptions god horror virtues free horror suicide law marvelous fearful eternal-return superiority ultimate. Marvelous will pinnacle chaos hope prejudice noble fearful play depths god ideal law. Ocean virtues holiest justice gains burying salvation horror self strong joy burying. Merciful suicide good abstract selfish."`,
           },
           {
-            accent:
+            quote: [
               "Decrepit merciful faithful eternal-return philosophy burying virtues decieve insofar hope ocean oneself. Sexuality evil passion battle noble. Spirit will intentions dead justice decieve depths philosophy. Ubermensch derive truth truth overcome truth faith horror. God grandeur derive abstract superiority.",
+              "Friedrich Nietzsche",
+            ],
           },
           {
             summary2:
@@ -271,8 +283,10 @@ const content = [
             God hatred aversion convictions war depths superiority inexpedient of sea. Superiority deceptions god horror virtues free horror suicide law marvelous fearful eternal-return superiority ultimate. Marvelous will pinnacle chaos hope prejudice noble fearful play depths god ideal law. Ocean virtues holiest justice gains burying salvation horror self strong joy burying. Merciful suicide good abstract selfish."`,
           },
           {
-            accent:
+            quote: [
               "Decrepit merciful faithful eternal-return philosophy burying virtues decieve insofar hope ocean oneself. Sexuality evil passion battle noble. Spirit will intentions dead justice decieve depths philosophy. Ubermensch derive truth truth overcome truth faith horror. God grandeur derive abstract superiority.",
+              "Friedrich Nietzsche",
+            ],
           },
           {
             summary2:
@@ -319,8 +333,10 @@ const content = [
             God hatred aversion convictions war depths superiority inexpedient of sea. Superiority deceptions god horror virtues free horror suicide law marvelous fearful eternal-return superiority ultimate. Marvelous will pinnacle chaos hope prejudice noble fearful play depths god ideal law. Ocean virtues holiest justice gains burying salvation horror self strong joy burying. Merciful suicide good abstract selfish."`,
           },
           {
-            accent:
+            quote: [
               "Decrepit merciful faithful eternal-return philosophy burying virtues decieve insofar hope ocean oneself. Sexuality evil passion battle noble. Spirit will intentions dead justice decieve depths philosophy. Ubermensch derive truth truth overcome truth faith horror. God grandeur derive abstract superiority.",
+              "Friedrich Nietzsche",
+            ],
           },
           {
             summary2:
@@ -359,8 +375,10 @@ const content = [
             God hatred aversion convictions war depths superiority inexpedient of sea. Superiority deceptions god horror virtues free horror suicide law marvelous fearful eternal-return superiority ultimate. Marvelous will pinnacle chaos hope prejudice noble fearful play depths god ideal law. Ocean virtues holiest justice gains burying salvation horror self strong joy burying. Merciful suicide good abstract selfish."`,
           },
           {
-            accent:
+            quote: [
               "Decrepit merciful faithful eternal-return philosophy burying virtues decieve insofar hope ocean oneself. Sexuality evil passion battle noble. Spirit will intentions dead justice decieve depths philosophy. Ubermensch derive truth truth overcome truth faith horror. God grandeur derive abstract superiority.",
+              "Friedrich Nietzsche",
+            ],
           },
           {
             summary2:
@@ -399,8 +417,10 @@ const content = [
             God hatred aversion convictions war depths superiority inexpedient of sea. Superiority deceptions god horror virtues free horror suicide law marvelous fearful eternal-return superiority ultimate. Marvelous will pinnacle chaos hope prejudice noble fearful play depths god ideal law. Ocean virtues holiest justice gains burying salvation horror self strong joy burying. Merciful suicide good abstract selfish."`,
           },
           {
-            accent:
+            quote: [
               "Decrepit merciful faithful eternal-return philosophy burying virtues decieve insofar hope ocean oneself. Sexuality evil passion battle noble. Spirit will intentions dead justice decieve depths philosophy. Ubermensch derive truth truth overcome truth faith horror. God grandeur derive abstract superiority.",
+              "Friedrich Nietzsche",
+            ],
           },
           {
             summary2:
@@ -447,8 +467,10 @@ const content = [
             God hatred aversion convictions war depths superiority inexpedient of sea. Superiority deceptions god horror virtues free horror suicide law marvelous fearful eternal-return superiority ultimate. Marvelous will pinnacle chaos hope prejudice noble fearful play depths god ideal law. Ocean virtues holiest justice gains burying salvation horror self strong joy burying. Merciful suicide good abstract selfish."`,
           },
           {
-            accent:
+            quote: [
               "Decrepit merciful faithful eternal-return philosophy burying virtues decieve insofar hope ocean oneself. Sexuality evil passion battle noble. Spirit will intentions dead justice decieve depths philosophy. Ubermensch derive truth truth overcome truth faith horror. God grandeur derive abstract superiority.",
+              "Friedrich Nietzsche",
+            ],
           },
           {
             summary2:
@@ -487,8 +509,10 @@ const content = [
             God hatred aversion convictions war depths superiority inexpedient of sea. Superiority deceptions god horror virtues free horror suicide law marvelous fearful eternal-return superiority ultimate. Marvelous will pinnacle chaos hope prejudice noble fearful play depths god ideal law. Ocean virtues holiest justice gains burying salvation horror self strong joy burying. Merciful suicide good abstract selfish."`,
           },
           {
-            accent:
+            quote: [
               "Decrepit merciful faithful eternal-return philosophy burying virtues decieve insofar hope ocean oneself. Sexuality evil passion battle noble. Spirit will intentions dead justice decieve depths philosophy. Ubermensch derive truth truth overcome truth faith horror. God grandeur derive abstract superiority.",
+              "Friedrich Nietzsche",
+            ],
           },
           {
             summary2:
@@ -535,8 +559,10 @@ const content = [
             God hatred aversion convictions war depths superiority inexpedient of sea. Superiority deceptions god horror virtues free horror suicide law marvelous fearful eternal-return superiority ultimate. Marvelous will pinnacle chaos hope prejudice noble fearful play depths god ideal law. Ocean virtues holiest justice gains burying salvation horror self strong joy burying. Merciful suicide good abstract selfish."`,
           },
           {
-            accent:
+            quote: [
               "Decrepit merciful faithful eternal-return philosophy burying virtues decieve insofar hope ocean oneself. Sexuality evil passion battle noble. Spirit will intentions dead justice decieve depths philosophy. Ubermensch derive truth truth overcome truth faith horror. God grandeur derive abstract superiority.",
+              "Friedrich Nietzsche",
+            ],
           },
           {
             summary2:
@@ -575,8 +601,10 @@ const content = [
             God hatred aversion convictions war depths superiority inexpedient of sea. Superiority deceptions god horror virtues free horror suicide law marvelous fearful eternal-return superiority ultimate. Marvelous will pinnacle chaos hope prejudice noble fearful play depths god ideal law. Ocean virtues holiest justice gains burying salvation horror self strong joy burying. Merciful suicide good abstract selfish."`,
           },
           {
-            accent:
+            quote: [
               "Decrepit merciful faithful eternal-return philosophy burying virtues decieve insofar hope ocean oneself. Sexuality evil passion battle noble. Spirit will intentions dead justice decieve depths philosophy. Ubermensch derive truth truth overcome truth faith horror. God grandeur derive abstract superiority.",
+              "Friedrich Nietzsche",
+            ],
           },
           {
             summary2:
@@ -623,8 +651,10 @@ const content = [
             God hatred aversion convictions war depths superiority inexpedient of sea. Superiority deceptions god horror virtues free horror suicide law marvelous fearful eternal-return superiority ultimate. Marvelous will pinnacle chaos hope prejudice noble fearful play depths god ideal law. Ocean virtues holiest justice gains burying salvation horror self strong joy burying. Merciful suicide good abstract selfish."`,
           },
           {
-            accent:
+            quote: [
               "Decrepit merciful faithful eternal-return philosophy burying virtues decieve insofar hope ocean oneself. Sexuality evil passion battle noble. Spirit will intentions dead justice decieve depths philosophy. Ubermensch derive truth truth overcome truth faith horror. God grandeur derive abstract superiority.",
+              "Friedrich Nietzsche",
+            ],
           },
           {
             summary2:
@@ -663,8 +693,10 @@ const content = [
             God hatred aversion convictions war depths superiority inexpedient of sea. Superiority deceptions god horror virtues free horror suicide law marvelous fearful eternal-return superiority ultimate. Marvelous will pinnacle chaos hope prejudice noble fearful play depths god ideal law. Ocean virtues holiest justice gains burying salvation horror self strong joy burying. Merciful suicide good abstract selfish."`,
           },
           {
-            accent:
+            quote: [
               "Decrepit merciful faithful eternal-return philosophy burying virtues decieve insofar hope ocean oneself. Sexuality evil passion battle noble. Spirit will intentions dead justice decieve depths philosophy. Ubermensch derive truth truth overcome truth faith horror. God grandeur derive abstract superiority.",
+              "Friedrich Nietzsche",
+            ],
           },
           {
             summary2:
@@ -711,8 +743,10 @@ const content = [
             God hatred aversion convictions war depths superiority inexpedient of sea. Superiority deceptions god horror virtues free horror suicide law marvelous fearful eternal-return superiority ultimate. Marvelous will pinnacle chaos hope prejudice noble fearful play depths god ideal law. Ocean virtues holiest justice gains burying salvation horror self strong joy burying. Merciful suicide good abstract selfish."`,
           },
           {
-            accent:
+            quote: [
               "Decrepit merciful faithful eternal-return philosophy burying virtues decieve insofar hope ocean oneself. Sexuality evil passion battle noble. Spirit will intentions dead justice decieve depths philosophy. Ubermensch derive truth truth overcome truth faith horror. God grandeur derive abstract superiority.",
+              "Friedrich Nietzsche",
+            ],
           },
           {
             summary2:
@@ -751,8 +785,10 @@ const content = [
             God hatred aversion convictions war depths superiority inexpedient of sea. Superiority deceptions god horror virtues free horror suicide law marvelous fearful eternal-return superiority ultimate. Marvelous will pinnacle chaos hope prejudice noble fearful play depths god ideal law. Ocean virtues holiest justice gains burying salvation horror self strong joy burying. Merciful suicide good abstract selfish."`,
           },
           {
-            accent:
+            quote: [
               "Decrepit merciful faithful eternal-return philosophy burying virtues decieve insofar hope ocean oneself. Sexuality evil passion battle noble. Spirit will intentions dead justice decieve depths philosophy. Ubermensch derive truth truth overcome truth faith horror. God grandeur derive abstract superiority.",
+              "Friedrich Nietzsche",
+            ],
           },
           {
             summary2:
@@ -768,3 +804,5 @@ const content = [
     ],
   },
 ];
+
+export default content;
