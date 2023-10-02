@@ -1,5 +1,6 @@
 const content = [
   {
+    id: 1,
     author: "Jakob Grønberg",
     job: "Artist",
     city: "Berlin",
@@ -12,8 +13,10 @@ const content = [
         date: "16 September 2023",
         read: "10 mins",
         label: "Art",
+        img: "/images/articles/preview/dont-close-your-eyes.jpg",
         content: [
           {
+            img: "/images/articles/single-post/dont-close-your-eyes.jpg",
             summary:
               "Sea virtues fearful snare passion good war prejudice. Law aversion eternal-return chaos decieve superiority convictions ideal ultimate free enlightenment. Free ascetic love oneself ultimate contradict transvaluation will christian. Dead mountains value holiest zarathustra god war pious. Oneself decrepit inexpedient victorious philosophy christian ocean virtues prejudice. Sea passion ocean victorious holiest depths. Contradict justice god pious convictions enlightenment moral good superiority abstract transvaluation.",
           },
@@ -54,8 +57,10 @@ const content = [
         date: "16 March 2022",
         read: "10 mins",
         label: "Art",
+        img: "/images/articles/preview/hope-dies-last.jpg",
         content: [
           {
+            img: "/images/articles/single-post/hope-dies-last.jpg",
             summary:
               "Sea virtues fearful snare passion good war prejudice. Law aversion eternal-return chaos decieve superiority convictions ideal ultimate free enlightenment. Free ascetic love oneself ultimate contradict transvaluation will christian. Dead mountains value holiest zarathustra god war pious. Oneself decrepit inexpedient victorious philosophy christian ocean virtues prejudice. Sea passion ocean victorious holiest depths. Contradict justice god pious convictions enlightenment moral good superiority abstract transvaluation.",
           },
@@ -96,8 +101,10 @@ const content = [
         date: "16 March 2022",
         read: "10 mins",
         label: "Sculptures",
+        img: "/images/articles/preview/the-best-art-museums.jpg",
         content: [
           {
+            img: "/images/articles/single-post/dont-close-your-eyes.jpg",
             summary:
               "Sea virtues fearful snare passion good war prejudice. Law aversion eternal-return chaos decieve superiority convictions ideal ultimate free enlightenment. Free ascetic love oneself ultimate contradict transvaluation will christian. Dead mountains value holiest zarathustra god war pious. Oneself decrepit inexpedient victorious philosophy christian ocean virtues prejudice. Sea passion ocean victorious holiest depths. Contradict justice god pious convictions enlightenment moral good superiority abstract transvaluation.",
           },
@@ -138,8 +145,10 @@ const content = [
         date: "16 March 2022",
         read: "10 mins",
         label: "Art",
+        img: "/images/articles/preview/the-devil-is-the-details.jpg",
         content: [
           {
+            img: "/images/articles/single-post/dont-close-your-eyes.jpg",
             summary:
               "Sea virtues fearful snare passion good war prejudice. Law aversion eternal-return chaos decieve superiority convictions ideal ultimate free enlightenment. Free ascetic love oneself ultimate contradict transvaluation will christian. Dead mountains value holiest zarathustra god war pious. Oneself decrepit inexpedient victorious philosophy christian ocean virtues prejudice. Sea passion ocean victorious holiest depths. Contradict justice god pious convictions enlightenment moral good superiority abstract transvaluation.",
           },
@@ -180,8 +189,10 @@ const content = [
         date: "16 March 2022",
         read: "10 mins",
         label: "Art",
+        img: "/images/articles/preview/an-indestructible-hope.jpg",
         content: [
           {
+            img: "/images/articles/single-post/an-indestructible-hope.jpg",
             summary:
               "Sea virtues fearful snare passion good war prejudice. Law aversion eternal-return chaos decieve superiority convictions ideal ultimate free enlightenment. Free ascetic love oneself ultimate contradict transvaluation will christian. Dead mountains value holiest zarathustra god war pious. Oneself decrepit inexpedient victorious philosophy christian ocean virtues prejudice. Sea passion ocean victorious holiest depths. Contradict justice god pious convictions enlightenment moral good superiority abstract transvaluation.",
           },
@@ -222,8 +233,10 @@ const content = [
         date: "16 March 2022",
         read: "10 mins",
         label: "Street art",
+        img: "/images/articles/preview/street-art-festivaljpg",
         content: [
           {
+            img: "/images/articles/single-post/street-art-festival.jpg",
             summary:
               "Sea virtues fearful snare passion good war prejudice. Law aversion eternal-return chaos decieve superiority convictions ideal ultimate free enlightenment. Free ascetic love oneself ultimate contradict transvaluation will christian. Dead mountains value holiest zarathustra god war pious. Oneself decrepit inexpedient victorious philosophy christian ocean virtues prejudice. Sea passion ocean victorious holiest depths. Contradict justice god pious convictions enlightenment moral good superiority abstract transvaluation.",
           },
@@ -264,8 +277,10 @@ const content = [
         date: "16 March 2022",
         read: "10 mins",
         label: "Street art",
+        img: "/images/articles/preview/through-the-eyes-of-street-artists.jpg",
         content: [
           {
+            img: "/images/articles/single-post/through-the-eyes-of-street-artists.jpg",
             summary:
               "Sea virtues fearful snare passion good war prejudice. Law aversion eternal-return chaos decieve superiority convictions ideal ultimate free enlightenment. Free ascetic love oneself ultimate contradict transvaluation will christian. Dead mountains value holiest zarathustra god war pious. Oneself decrepit inexpedient victorious philosophy christian ocean virtues prejudice. Sea passion ocean victorious holiest depths. Contradict justice god pious convictions enlightenment moral good superiority abstract transvaluation.",
           },
@@ -302,6 +317,7 @@ const content = [
     ],
   },
   {
+    id: 2,
     author: "Louise Jensen",
     job: "Artist",
     city: "London",
@@ -314,8 +330,10 @@ const content = [
         date: "16 September 2023",
         read: "10 mins",
         label: "Art",
+        img: "/images/articles/preview/the-chains-of-our-lives.jpg",
         content: [
           {
+            img: "/images/articles/single-post/the-chains-of-our-lives.jpg",
             summary:
               "Sea virtues fearful snare passion good war prejudice. Law aversion eternal-return chaos decieve superiority convictions ideal ultimate free enlightenment. Free ascetic love oneself ultimate contradict transvaluation will christian. Dead mountains value holiest zarathustra god war pious. Oneself decrepit inexpedient victorious philosophy christian ocean virtues prejudice. Sea passion ocean victorious holiest depths. Contradict justice god pious convictions enlightenment moral good superiority abstract transvaluation.",
           },
@@ -356,8 +374,10 @@ const content = [
         date: "16 March 2022",
         read: "10 mins",
         label: "Art",
+        img: "/images/articles/preview/how-are-you-really?.jpg",
         content: [
           {
+            img: "/images/articles/single-post/how-are-you-really.jpg",
             summary:
               "Sea virtues fearful snare passion good war prejudice. Law aversion eternal-return chaos decieve superiority convictions ideal ultimate free enlightenment. Free ascetic love oneself ultimate contradict transvaluation will christian. Dead mountains value holiest zarathustra god war pious. Oneself decrepit inexpedient victorious philosophy christian ocean virtues prejudice. Sea passion ocean victorious holiest depths. Contradict justice god pious convictions enlightenment moral good superiority abstract transvaluation.",
           },
@@ -398,8 +418,10 @@ const content = [
         date: "16 March 2022",
         read: "10 mins",
         label: "Art",
+        img: "/images/articles/preview/beauty-of-colors.jpg",
         content: [
           {
+            img: "/images/articles/single-post/beauty-of-colors.jpg",
             summary:
               "Sea virtues fearful snare passion good war prejudice. Law aversion eternal-return chaos decieve superiority convictions ideal ultimate free enlightenment. Free ascetic love oneself ultimate contradict transvaluation will christian. Dead mountains value holiest zarathustra god war pious. Oneself decrepit inexpedient victorious philosophy christian ocean virtues prejudice. Sea passion ocean victorious holiest depths. Contradict justice god pious convictions enlightenment moral good superiority abstract transvaluation.",
           },
@@ -436,6 +458,7 @@ const content = [
     ],
   },
   {
+    id: 3,
     author: "Anne Henry",
     job: "Artist",
     city: "Hamburg",
@@ -448,8 +471,10 @@ const content = [
         date: "16 September 2023",
         read: "10 mins",
         label: "Art",
+        img: "/images/articles/preview/getting-real.jpg",
         content: [
           {
+            img: "/images/articles/single-post/getting-real.jpg",
             summary:
               "Sea virtues fearful snare passion good war prejudice. Law aversion eternal-return chaos decieve superiority convictions ideal ultimate free enlightenment. Free ascetic love oneself ultimate contradict transvaluation will christian. Dead mountains value holiest zarathustra god war pious. Oneself decrepit inexpedient victorious philosophy christian ocean virtues prejudice. Sea passion ocean victorious holiest depths. Contradict justice god pious convictions enlightenment moral good superiority abstract transvaluation.",
           },
@@ -490,8 +515,10 @@ const content = [
         date: "16 March 2022",
         read: "10 mins",
         label: "Art",
+        img: "/images/articles/preview/secret-garden.jpg",
         content: [
           {
+            img: "/images/articles/single-post/secret-garden.jpg",
             summary:
               "Sea virtues fearful snare passion good war prejudice. Law aversion eternal-return chaos decieve superiority convictions ideal ultimate free enlightenment. Free ascetic love oneself ultimate contradict transvaluation will christian. Dead mountains value holiest zarathustra god war pious. Oneself decrepit inexpedient victorious philosophy christian ocean virtues prejudice. Sea passion ocean victorious holiest depths. Contradict justice god pious convictions enlightenment moral good superiority abstract transvaluation.",
           },
@@ -528,6 +555,7 @@ const content = [
     ],
   },
   {
+    id: 4,
     author: "Anna Nielsen",
     job: "Artist",
     city: "Copenhagen",
@@ -540,8 +568,10 @@ const content = [
         date: "16 September 2023",
         read: "10 mins",
         label: "Art",
+        img: "/images/articles/preview/history-of-paper.jpg",
         content: [
           {
+            img: "/images/articles/single-post/history-of-paper.jpg",
             summary:
               "Sea virtues fearful snare passion good war prejudice. Law aversion eternal-return chaos decieve superiority convictions ideal ultimate free enlightenment. Free ascetic love oneself ultimate contradict transvaluation will christian. Dead mountains value holiest zarathustra god war pious. Oneself decrepit inexpedient victorious philosophy christian ocean virtues prejudice. Sea passion ocean victorious holiest depths. Contradict justice god pious convictions enlightenment moral good superiority abstract transvaluation.",
           },
@@ -582,8 +612,10 @@ const content = [
         date: "16 March 2022",
         read: "10 mins",
         label: "Art",
+        img: "/images/articles/preview/keep-on-smiling.jpg",
         content: [
           {
+            img: "/images/articles/single-post/keep-on-smiling.jpg",
             summary:
               "Sea virtues fearful snare passion good war prejudice. Law aversion eternal-return chaos decieve superiority convictions ideal ultimate free enlightenment. Free ascetic love oneself ultimate contradict transvaluation will christian. Dead mountains value holiest zarathustra god war pious. Oneself decrepit inexpedient victorious philosophy christian ocean virtues prejudice. Sea passion ocean victorious holiest depths. Contradict justice god pious convictions enlightenment moral good superiority abstract transvaluation.",
           },
@@ -620,6 +652,7 @@ const content = [
     ],
   },
   {
+    id: 5,
     author: "Jane Cooper",
     job: "Artist",
     city: "Berlin",
@@ -632,8 +665,10 @@ const content = [
         date: "16 September 2023",
         read: "10 mins",
         label: "Art",
+        img: "/images/articles/preview/colorful-future.jpg",
         content: [
           {
+            img: "/images/articles/single-post/beauty-of-colors.jpg",
             summary:
               "Sea virtues fearful snare passion good war prejudice. Law aversion eternal-return chaos decieve superiority convictions ideal ultimate free enlightenment. Free ascetic love oneself ultimate contradict transvaluation will christian. Dead mountains value holiest zarathustra god war pious. Oneself decrepit inexpedient victorious philosophy christian ocean virtues prejudice. Sea passion ocean victorious holiest depths. Contradict justice god pious convictions enlightenment moral good superiority abstract transvaluation.",
           },
@@ -674,8 +709,10 @@ const content = [
         date: "16 March 2022",
         read: "10 mins",
         label: "Street art",
+        img: "/images/articles/preview/artists-who-want-to-rise-above.jpg",
         content: [
           {
+            img: "/images/articles/single-post/artists-who-want-to-rise-above.jpg",
             summary:
               "Sea virtues fearful snare passion good war prejudice. Law aversion eternal-return chaos decieve superiority convictions ideal ultimate free enlightenment. Free ascetic love oneself ultimate contradict transvaluation will christian. Dead mountains value holiest zarathustra god war pious. Oneself decrepit inexpedient victorious philosophy christian ocean virtues prejudice. Sea passion ocean victorious holiest depths. Contradict justice god pious convictions enlightenment moral good superiority abstract transvaluation.",
           },
@@ -712,6 +749,7 @@ const content = [
     ],
   },
   {
+    id: 6,
     author: "Cristofer Vaccaro",
     job: "Artist",
     city: "Berlin",
@@ -724,8 +762,10 @@ const content = [
         date: "16 September 2023",
         read: "10 mins",
         label: "Art",
+        img: "/images/articles/preview/only-in-your-heart.jpg",
         content: [
           {
+            img: "/images/articles/single-post/only-in-your-heart.jpg",
             summary:
               "Sea virtues fearful snare passion good war prejudice. Law aversion eternal-return chaos decieve superiority convictions ideal ultimate free enlightenment. Free ascetic love oneself ultimate contradict transvaluation will christian. Dead mountains value holiest zarathustra god war pious. Oneself decrepit inexpedient victorious philosophy christian ocean virtues prejudice. Sea passion ocean victorious holiest depths. Contradict justice god pious convictions enlightenment moral good superiority abstract transvaluation.",
           },
@@ -766,8 +806,10 @@ const content = [
         date: "16 March 2022",
         read: "10 mins",
         label: "Art",
+        img: "/images/articles/preview/most-colorful-places.jpg",
         content: [
           {
+            img: "/images/articles/single-post/most-colorful-places.jpg",
             summary:
               "Sea virtues fearful snare passion good war prejudice. Law aversion eternal-return chaos decieve superiority convictions ideal ultimate free enlightenment. Free ascetic love oneself ultimate contradict transvaluation will christian. Dead mountains value holiest zarathustra god war pious. Oneself decrepit inexpedient victorious philosophy christian ocean virtues prejudice. Sea passion ocean victorious holiest depths. Contradict justice god pious convictions enlightenment moral good superiority abstract transvaluation.",
           },
