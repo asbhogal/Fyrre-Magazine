@@ -78,7 +78,7 @@
   }
   .text-subtitle {
     font-weight: 600;
-    font-size: 6.5rem;
+    font-size: clamp(2.625rem, 1.9917rem + 3.1667vw, 5rem);
     text-transform: uppercase;
     line-height: 1;
   }
