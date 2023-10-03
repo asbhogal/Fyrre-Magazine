@@ -1,13 +1,14 @@
 "use client";
 
 import { createContext, useEffect, useState } from "react";
+import { getPodcasts, PodcastType } from "@/functions/getPodcasts";
 
 type PodcastContextProviderType = {
   children: React.ReactNode;
 };
 
 type PodcastContextType = {
-  data: object[];
+  data: PodcastType[];
 };
 
 const PodcastContext = createContext<PodcastContextType | null>(null);
@@ -15,18 +16,14 @@ const PodcastContext = createContext<PodcastContextType | null>(null);
 export default function PodcastContextProvider({
   children,
 }: PodcastContextProviderType) {
-  const [data, setData] = useState<object[]>([]);
+  const [data, setData] = useState<PodcastType[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("./data/podcasts.ts");
-        if (res.ok) {
-          const responseData = await res.json();
-          setData(responseData);
-        } else {
-          throw new Error("Failed to fetch data");
-        }
+        const responseData = await getPodcasts();
+        setData(responseData);
+        console.log("Fetched data:", responseData);
       } catch (err) {
         console.log("Error fetching data", err);
       }
@@ -36,6 +33,8 @@ export default function PodcastContextProvider({
   }, []);
 
   return (
-    <PodcastContext.Provider value={data}>{children}</PodcastContext.Provider>
+    <PodcastContext.Provider value={{ data }}>
+      {children}
+    </PodcastContext.Provider>
   );
 }

@@ -1,8 +1,26 @@
-export default async function getPodcasts() {
-  const res = await fetch("http://localhost:3000/data/podcasts.ts");
+export type PodcastType = {
+  id: number;
+  title: string;
+  img: string;
+  date: string;
+  duration: string;
+  content: {
+    episode: string;
+    summary: string;
+    section1: string;
+    quote: [string, string];
+    section2: string;
+  }[];
+};
+
+export async function getPodcasts(): Promise<PodcastType[]> {
+  const res = await fetch(
+    "https://raw.githubusercontent.com/asbhogal/Fyrre-Magazine/main/json/podcasts.json"
+  );
 
   if (!res.ok) {
-    throw new Error("Error fetching data");
+    throw new Error("Failed to fetch podcast data");
   }
+
   return res.json();
 }
