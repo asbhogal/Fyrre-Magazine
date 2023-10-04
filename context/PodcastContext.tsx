@@ -23,7 +23,7 @@ export default function PodcastContextProvider({
       try {
         const responseData = await getPodcasts();
         setData(responseData);
-        console.log("Fetched data:", responseData);
+        console.log("Fetched podcast data:", responseData);
       } catch (err) {
         console.log("Error fetching data", err);
       }
