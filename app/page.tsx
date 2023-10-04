@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import NewsTicker from "@/components/NewsTicker";
 import PageTitle from "@/components/PageTitle";
+import Podcasts from "@/components/Podcasts";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       </PageTitle>
       <NewsTicker />
       <Hero />
+      <Podcasts />
     </main>
   );
 }

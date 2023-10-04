@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { getPodcasts, PodcastType } from "@/functions/getPodcasts";
 
 type PodcastContextProviderType = {
@@ -9,6 +9,7 @@ type PodcastContextProviderType = {
 
 type PodcastContextType = {
   data: PodcastType[];
+  setData: React.Dispatch<React.SetStateAction<PodcastType[]>>;
 };
 
 const PodcastContext = createContext<PodcastContextType | null>(null);
@@ -33,8 +34,20 @@ export default function PodcastContextProvider({
   }, []);
 
   return (
-    <PodcastContext.Provider value={{ data }}>
+    <PodcastContext.Provider value={{ data, setData }}>
       {children}
     </PodcastContext.Provider>
   );
+}
+
+export function usePodcastContext() {
+  const podcastContext = useContext(PodcastContext);
+
+  if (!podcastContext) {
+    throw new Error(
+      "usePodcastContext must be used within a PodcastContextProvider"
+    );
+  }
+
+  return podcastContext;
 }
