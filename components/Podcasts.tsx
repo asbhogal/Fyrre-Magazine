@@ -2,7 +2,9 @@
 
 import { usePodcastContext } from "@/context/PodcastContext";
 
-export default function Articles() {
-  const { data, setData } = usePodcastContext();
+type PodcastProps = {};
+
+export default function Podcasts() {
+  const { data } = usePodcastContext();
   return <div>{JSON.stringify(data)}</div>;
 }

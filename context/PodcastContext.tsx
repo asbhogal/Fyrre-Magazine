@@ -5,6 +5,7 @@ import { getPodcasts, PodcastType } from "@/functions/getPodcasts";
 
 type PodcastContextProviderType = {
   children: React.ReactNode;
+  limit?: number | null;
 };
 
 type PodcastContextType = {
@@ -16,6 +17,7 @@ const PodcastContext = createContext<PodcastContextType | null>(null);
 
 export default function PodcastContextProvider({
   children,
+  limit = null,
 }: PodcastContextProviderType) {
   const [data, setData] = useState<PodcastType[]>([]);
 
@@ -23,15 +25,18 @@ export default function PodcastContextProvider({
     const fetchData = async () => {
       try {
         const responseData = await getPodcasts();
-        setData(responseData);
-        console.log("Fetched podcast data:", responseData);
+        const limitedData = limit
+          ? responseData.splice(0, limit)
+          : responseData;
+        setData(limitedData);
+        console.log("Fetched podcast data:", limitedData);
       } catch (err) {
         console.log("Error fetching data", err);
       }
     };
 
     fetchData();
-  }, []);
+  }, [limit]);
 
   return (
     <PodcastContext.Provider value={{ data, setData }}>
