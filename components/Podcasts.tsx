@@ -1,7 +1,6 @@
 "use client";
 
 import { usePodcastContext } from "@/context/PodcastContext";
-import Link from "next/link";
 
 type PodcastProps = {
   showTitle?: boolean;
@@ -9,11 +8,15 @@ type PodcastProps = {
   showDate?: boolean;
   showDuration?: boolean;
   showContent?: boolean;
+  showEpisode?: boolean;
+  showEpisodeNumber?: boolean;
   customPodcastContainerClasses?: string;
+  customPodcastCardClasses?: string;
   customTitleClasses?: string;
   customImgClasses?: string;
   customDateClasses?: string;
   customDurationClasses?: string;
+  customEpisodeClasses?: string;
 };
 
 export default function Podcasts({
@@ -22,18 +25,22 @@ export default function Podcasts({
   showDate,
   showDuration,
   showContent,
+  showEpisode,
+  showEpisodeNumber,
   customPodcastContainerClasses,
+  customPodcastCardClasses,
   customTitleClasses,
   customImgClasses,
   customDateClasses,
   customDurationClasses,
+  customEpisodeClasses,
 }: PodcastProps) {
   const { data } = usePodcastContext();
 
   return (
     <div className={`${customPodcastContainerClasses}`}>
       {data.map((podcast) => (
-        <Link href="#" key={podcast.id}>
+        <div className={`${customPodcastCardClasses}`} key={podcast.id}>
           {showTitle && (
             <h2 className={` ${customTitleClasses}`}>{podcast.title}</h2>
           )}
@@ -50,12 +57,17 @@ export default function Podcasts({
           {showDuration && (
             <p className={` ${customDurationClasses}`}>{podcast.duration}</p>
           )}
+          {showEpisode && (
+            <p className={` ${customEpisodeClasses}`}>
+              {showEpisodeNumber ? podcast.episode.slice(-2) : podcast.episode}
+            </p>
+          )}
           {showContent && (
             <div>
               {podcast.content.map((section, index) => (
                 <div key={index}>
                   <h2>{podcast.title}</h2>
-                  <h3>{section.episode}</h3>
+                  <h3>{podcast.episode}</h3>
                   <p>{section.summary}</p>
                   <p>{section.section1}</p>
                   <p>{section.quote[0]}</p>
@@ -65,7 +77,7 @@ export default function Podcasts({
               ))}
             </div>
           )}
-        </Link>
+        </div>
       ))}
     </div>
   );

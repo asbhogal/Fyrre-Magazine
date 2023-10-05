@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState } from "react";
-import { getPodcasts, PodcastType } from "@/functions/getPodcasts";
+import { getPodcasts, PodcastType } from "@/app/functions/getPodcasts";
 
 type PodcastContextProviderType = {
   children: React.ReactNode;

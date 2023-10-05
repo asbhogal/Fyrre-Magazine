@@ -4,8 +4,8 @@ export type PodcastType = {
   img: string;
   date: string;
   duration: string;
+  episode: string;
   content: {
-    episode: string;
     summary: string;
     section1: string;
     quote: [string, string];

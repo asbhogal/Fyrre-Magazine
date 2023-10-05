@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useEffect, useState } from "react";
-import { getArticles, ArticleType } from "@/functions/getArticles";
+import { getArticles, ArticleType } from "@/app/functions/getArticles";
 
 type ArticleContextProviderType = {
   children: React.ReactNode;
