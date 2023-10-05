@@ -41,6 +41,11 @@ export default function Podcasts({
     <div className={`${customPodcastContainerClasses}`}>
       {data.map((podcast) => (
         <div className={`${customPodcastCardClasses}`} key={podcast.id}>
+          {(showEpisode || showEpisodeNumber) && (
+            <p className={` ${customEpisodeClasses}`}>
+              {showEpisodeNumber ? podcast.episode.slice(-2) : podcast.episode}
+            </p>
+          )}
           {showTitle && (
             <h2 className={` ${customTitleClasses}`}>{podcast.title}</h2>
           )}
@@ -56,11 +61,6 @@ export default function Podcasts({
           )}
           {showDuration && (
             <p className={` ${customDurationClasses}`}>{podcast.duration}</p>
-          )}
-          {showEpisode && (
-            <p className={` ${customEpisodeClasses}`}>
-              {showEpisodeNumber ? podcast.episode.slice(-2) : podcast.episode}
-            </p>
           )}
           {showContent && (
             <div>
