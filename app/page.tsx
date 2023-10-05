@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import NewsTicker from "@/components/NewsTicker";
 import PageTitle from "@/components/PageTitle";
 import Podcasts from "@/components/Podcasts";
+import Subheading from "@/components/Subheading";
 import PodcastContextProvider from "@/context/PodcastContext";
 
 export default function Home() {
@@ -13,7 +14,14 @@ export default function Home() {
         </PageTitle>
         <NewsTicker />
         <Hero />
-        <Podcasts />
+        <Subheading>Podcast</Subheading>
+        <Podcasts
+          showTitle
+          showImg
+          showDate
+          showDuration
+          customPodcastContainerClasses="grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-3"
+        />
       </main>
     </PodcastContextProvider>
   );
