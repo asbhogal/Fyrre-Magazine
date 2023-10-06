@@ -10,7 +10,7 @@ export default function PageTitle({
   imgSrc,
 }: PageTitleProps) {
   return (
-    <div>
+    <div className="max-w-[95rem] w-full mx-auto">
       <h1 className={className}>{children}</h1>
       {imgSrc && (
         <img

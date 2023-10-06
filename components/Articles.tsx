@@ -1,6 +1,8 @@
 "use client";
 
+import formatString from "@/app/functions/formatString";
 import { useArticleContext } from "@/hooks/useArticleContext";
+import Link from "next/link";
 
 export default function Articles() {
   const { data } = useArticleContext();
@@ -17,13 +19,17 @@ export default function Articles() {
                   <p className="uppercase">{articleData.label}</p>
                 </span>
               </div>
-              <img
-                className="w-full py-8"
-                src={articleData.img}
-                alt={articleData.title}
-              />
-              <h2 className="heading3-title pb-3">{articleData.title}</h2>
-              <p className="pt-3 pb-12">{articleData.description}</p>
+              <Link href={`articles/${formatString(articleData.title)}`}>
+                <img
+                  className="w-full my-8"
+                  src={articleData.img}
+                  alt={articleData.title}
+                />
+              </Link>
+              <Link href={`articles/${formatString(articleData.title)}`}>
+                <h2 className="heading3-title mb-3">{articleData.title}</h2>
+              </Link>
+              <p className="mt-3 mb-12">{articleData.description}</p>
               <div className="flex flex-wrap gap-4">
                 <span className="flex">
                   <p className="font-semibold pr-2">Text</p>
