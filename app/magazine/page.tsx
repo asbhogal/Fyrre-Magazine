@@ -7,6 +7,9 @@ export default function MagazinePage() {
       <PageTitle className="sr-only" imgSrc="/images/titles/Magazine.svg">
         Magazine
       </PageTitle>
+      <div className="flex">
+        <p className="font-semibold uppercase">Categories</p>
+      </div>
       <Articles />
     </main>
   );
