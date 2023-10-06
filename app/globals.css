@@ -76,6 +76,11 @@
   body {
     @apply bg-background text-foreground;
   }
+  .heading3-title {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+  }
   .text-subheading {
     font-weight: 600;
     font-size: 6.5rem;

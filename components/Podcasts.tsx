@@ -3,8 +3,8 @@
 import { usePodcastContext } from "@/context/PodcastContext";
 
 type PodcastProps = {
-  showTitle?: boolean;
   showImg?: boolean;
+  showTitle?: boolean;
   showDate?: boolean;
   showDuration?: boolean;
   showContent?: boolean;
@@ -20,8 +20,8 @@ type PodcastProps = {
 };
 
 export default function Podcasts({
-  showTitle,
   showImg,
+  showTitle,
   showDate,
   showDuration,
   showContent,
@@ -46,9 +46,6 @@ export default function Podcasts({
               {showEpisodeNumber ? podcast.episode.slice(-2) : podcast.episode}
             </p>
           )}
-          {showTitle && (
-            <h2 className={` ${customTitleClasses}`}>{podcast.title}</h2>
-          )}
           {showImg && (
             <img
               className={` ${customImgClasses}`}
@@ -56,11 +53,20 @@ export default function Podcasts({
               alt={podcast.title}
             />
           )}
+          {showTitle && (
+            <h2 className={` ${customTitleClasses}`}>{podcast.title}</h2>
+          )}
           {showDate && (
-            <p className={` ${customDateClasses}`}>{podcast.date}</p>
+            <span className="flex">
+              <p className="font-semibold pr-2">Date</p>
+              <p className={` ${customDateClasses}`}>{podcast.date}</p>
+            </span>
           )}
           {showDuration && (
-            <p className={` ${customDurationClasses}`}>{podcast.duration}</p>
+            <span className="flex">
+              <p className="font-semibold pr-2">Duration</p>
+              <p className={` ${customDurationClasses}`}>{podcast.duration}</p>
+            </span>
           )}
           {showContent && (
             <div>
