@@ -1,6 +1,6 @@
 "use client";
 
-import { usePodcastContext } from "@/context/PodcastContext";
+import { usePodcastContext } from "@/hooks/usePodcastContext";
 import Link from "next/link";
 
 export default function LatestPodcasts() {

@@ -1,4 +1,4 @@
-"use client";
+/* "use client";
 
 import { usePodcastContext } from "@/context/PodcastContext";
 
@@ -88,3 +88,4 @@ export default function Podcasts({
     </div>
   );
 }
+ */
