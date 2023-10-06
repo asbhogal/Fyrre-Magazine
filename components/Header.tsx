@@ -5,7 +5,7 @@ import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 
 export default function Header() {
   return (
-    <header className="flex justify-between w-[105rem] mx-auto px-4 lg:px-8 lg:pt-16 md:pt-8 sm:pt-4 xs:pt-2 lg:pb-4 md:pb-4 sm:pb-2 xs:pb-2 border-b border-black">
+    <header className="flex justify-between max-w-[105rem] w-full mx-auto px-4 lg:px-8 lg:pt-16 md:pt-8 sm:pt-4 xs:pt-2 lg:pb-4 md:pb-4 sm:pb-2 xs:pb-2 border-b border-black">
       <div className="flex flex-1">
         <Link href="/" aria-label="Return to homepage">
           <img
