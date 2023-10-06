@@ -76,6 +76,9 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@layer utilities {
   .heading3-title {
     font-size: 2rem;
     font-weight: 600;
@@ -83,21 +86,21 @@
   }
   .text-subheading {
     font-weight: 600;
-    font-size: 6.5rem;
+    font-size: clamp(3.25rem, 2.4853rem + 3.8235vw, 6.5rem);
     text-transform: uppercase;
     line-height: 1;
   }
   .text-subtitle {
-    font-weight: 600;
-    font-size: clamp(2.625rem, 1.9917rem + 3.1667vw, 5rem);
-    text-transform: uppercase;
     line-height: 1;
   }
   .text-footer-title {
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: clamp(2.625rem, 1.9917rem + 3.1667vw, 5rem);
     color: #ffffff;
+  }
+  .text-subtitle,
+  .text-footer-title {
+    font-size: clamp(2.625rem, 1.9917rem + 3.1667vw, 5rem);
+    font-weight: 600;
+    text-transform: uppercase;
   }
 }
 
