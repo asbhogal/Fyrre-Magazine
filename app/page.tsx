@@ -1,3 +1,4 @@
+import Authors from "@/components/Authors";
 import Hero from "@/components/Hero";
 import LatestPodcasts from "@/components/LatestPodcasts";
 import NewsTicker from "@/components/NewsTicker";
@@ -16,6 +17,8 @@ export default function Home() {
         <Hero />
         <Subheading className="text-subheading">Podcast</Subheading>
         <LatestPodcasts />
+        <Subheading className="text-subheading">Authors</Subheading>
+        <Authors />
       </main>
     </PodcastContextProvider>
   );

@@ -1,7 +1,8 @@
 "use client";
 
-import { createContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getArticles, ArticleType } from "@/app/functions/getArticles";
+import { ArticleContext } from "@/hooks/useArticleContext";
 
 type ArticleContextProviderType = {
   children: React.ReactNode;
@@ -10,8 +11,6 @@ type ArticleContextProviderType = {
 type ArticleContextType = {
   data: ArticleType[];
 };
-
-const ArticleContext = createContext<ArticleContextType | null>(null);
 
 export default function ArticleContextProvider({
   children,

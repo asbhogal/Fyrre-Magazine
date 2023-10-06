@@ -13,7 +13,7 @@ export default function LatestPodcasts() {
             <img src={podcast.img} alt={podcast.title} />
           </Link>
           <Link href={`podcasts/${podcast.title}`}>
-            <h2 className="heading3-title pt-8 pb-12">{podcast.title}</h2>
+            <h2 className="heading3-title mt-8 mb-12">{podcast.title}</h2>
           </Link>
           <div className="flex flex-wrap gap-4">
             <div>

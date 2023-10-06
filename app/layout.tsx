@@ -26,15 +26,15 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <PodcastContextProvider>
-          <ArticleContextProvider>
+        <ArticleContextProvider>
+          <PodcastContextProvider>
             <Container>
               <Header />
               {children}
               <Footer />
             </Container>
-          </ArticleContextProvider>
-        </PodcastContextProvider>
+          </PodcastContextProvider>
+        </ArticleContextProvider>
       </body>
     </html>
   );
