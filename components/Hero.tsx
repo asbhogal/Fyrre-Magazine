@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <div className="flex flex-col gap-12 py-10">
+    <div className="flex flex-col gap-12 py-10 max-w-[95rem] w-full mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div className="">
           <h2 className="text-subtitle">Don&apos;t close your eyes</h2>

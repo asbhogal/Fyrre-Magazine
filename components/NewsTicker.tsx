@@ -1,6 +1,6 @@
 export default function NewsTicker() {
   return (
-    <div className="flex flex-wrap bg-black text-white p-5">
+    <div className="flex flex-wrap bg-black text-white p-5 max-w-[95rem] w-full mx-auto">
       <span className="pr-6">
         <p className="font-semibold uppercase">News Ticker +++</p>
       </span>

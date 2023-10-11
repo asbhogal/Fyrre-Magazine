@@ -1,91 +1,45 @@
-/* "use client";
+"use client";
 
-import { usePodcastContext } from "@/context/PodcastContext";
+import { usePodcastContext } from "@/hooks/usePodcastContext";
+import Link from "next/link";
+import formatString from "@/app/functions/formatString";
+import { Separator } from "@radix-ui/react-separator";
 
-type PodcastProps = {
-  showImg?: boolean;
-  showTitle?: boolean;
-  showDate?: boolean;
-  showDuration?: boolean;
-  showContent?: boolean;
-  showEpisode?: boolean;
-  showEpisodeNumber?: boolean;
-  customPodcastContainerClasses?: string;
-  customPodcastCardClasses?: string;
-  customTitleClasses?: string;
-  customImgClasses?: string;
-  customDateClasses?: string;
-  customDurationClasses?: string;
-  customEpisodeClasses?: string;
-};
-
-export default function Podcasts({
-  showImg,
-  showTitle,
-  showDate,
-  showDuration,
-  showContent,
-  showEpisode,
-  showEpisodeNumber,
-  customPodcastContainerClasses,
-  customPodcastCardClasses,
-  customTitleClasses,
-  customImgClasses,
-  customDateClasses,
-  customDurationClasses,
-  customEpisodeClasses,
-}: PodcastProps) {
+export default function Podcasts() {
   const { data } = usePodcastContext();
 
   return (
-    <div className={`${customPodcastContainerClasses}`}>
-      {data.map((podcast) => (
-        <div className={`${customPodcastCardClasses}`} key={podcast.id}>
-          {(showEpisode || showEpisodeNumber) && (
-            <p className={` ${customEpisodeClasses}`}>
-              {showEpisodeNumber ? podcast.episode.slice(-2) : podcast.episode}
-            </p>
-          )}
-          {showImg && (
+    <div className="flex flex-col gap-12 max-w-[95rem] w-full mx-auto">
+      {data.map((podcasts, index) => (
+        <div
+          className="flex flex-col md:flex-row justify-between md:items-center gap-2 md:gap-0"
+          key={podcasts.id}
+        >
+          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-16">
+            <p className="font-semibold">{podcasts.episode.slice(7)}</p>
             <img
-              className={` ${customImgClasses}`}
-              src={podcast.img}
-              alt={podcast.title}
+              className="w-[15rem] h-[15rem]"
+              src={podcasts.img}
+              alt={podcasts.title}
             />
-          )}
-          {showTitle && (
-            <h2 className={` ${customTitleClasses}`}>{podcast.title}</h2>
-          )}
-          {showDate && (
-            <span className="flex">
-              <p className="font-semibold pr-2">Date</p>
-              <p className={` ${customDateClasses}`}>{podcast.date}</p>
-            </span>
-          )}
-          {showDuration && (
-            <span className="flex">
-              <p className="font-semibold pr-2">Duration</p>
-              <p className={` ${customDurationClasses}`}>{podcast.duration}</p>
-            </span>
-          )}
-          {showContent && (
-            <div>
-              {podcast.content.map((section, index) => (
-                <div key={index}>
-                  <h2>{podcast.title}</h2>
-                  <h3>{podcast.episode}</h3>
-                  <p>{section.summary}</p>
-                  <p>{section.section1}</p>
-                  <p>{section.quote[0]}</p>
-                  <p>{section.quote[1]}</p>
-                  <p>{section.section2}</p>
-                </div>
-              ))}
-            </div>
-          )}
+            <h2 className="heading3-title">{podcasts.title}</h2>
+          </div>
+          <div className="flex flex-col md:flex-row md:items-center flex-wrap gap-2 lg:gap-16">
+            <p>{podcasts.date}</p>
+            <p>{podcasts.duration}</p>
+            <Link
+              className="flex gap-2"
+              href={`podcasts/${formatString(podcasts.title)}`}
+            >
+              <span className="uppercase font-semibold">Listen</span>
+              <img
+                src="/icons/ri_arrow-right-line.svg"
+                alt="An arrow pointing right"
+              />
+            </Link>
+          </div>
         </div>
       ))}
     </div>
   );
 }
- */

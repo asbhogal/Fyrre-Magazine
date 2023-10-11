@@ -1,4 +1,5 @@
 import PageTitle from "@/components/PageTitle";
+import Podcasts from "@/components/Podcasts";
 import PodcastContextProvider from "@/context/PodcastContext";
 
 export default function PodcastsPage() {
@@ -8,15 +9,7 @@ export default function PodcastsPage() {
         <PageTitle className="sr-only" imgSrc="/images/titles/Podcast.svg">
           Podcast
         </PageTitle>
-        {/* <Podcasts
-          showEpisodeNumber
-          showTitle
-          showDate
-          showDuration
-          showImg
-          customPodcastContainerClasses="grid"
-          customPodcastCardClasses="grid grid-cols-1 md:grid-cols-5"
-        /> */}
+        <Podcasts />
       </main>
     </PodcastContextProvider>
   );
