@@ -21,7 +21,6 @@ export default function PodcastContextProvider({
         const responseData = await getPodcasts();
         const limitedData = limit ? responseData.slice(0, limit) : responseData;
         setData(limitedData);
-        console.log("Fetched podcast data:", limitedData);
       } catch (err) {
         console.log("Error fetching data", err);
       }

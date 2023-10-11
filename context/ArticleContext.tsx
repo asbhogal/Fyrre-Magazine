@@ -22,7 +22,6 @@ export default function ArticleContextProvider({
       try {
         const responseData = await getArticles();
         setData(responseData);
-        console.log("Fetched article data:", responseData);
       } catch (err) {
         console.log("Error fetching data", err);
       }

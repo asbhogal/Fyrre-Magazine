@@ -33,7 +33,7 @@ export default function AuthorsList() {
             </div>
             <Link
               className="flex gap-2"
-              href={`podcasts/${formatString(authors.author)}`}
+              href={`authors/${formatString(authors.author)}`}
             >
               <span className="uppercase font-semibold">About</span>
               <img
