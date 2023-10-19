@@ -35,7 +35,22 @@ export default function Header() {
               </Link>
             ))}
             <img className="w-fit" src="/icons/line.svg" alt="line" />
-            <SocialSharing />
+            <SocialSharing
+              links={[
+                {
+                  href: "#",
+                  ariaLabel: "Visit our Instagram page",
+                  src: "/icons/ri_instagram-line.svg",
+                  alt: "Instagram logo",
+                },
+                {
+                  href: "#",
+                  ariaLabel: "Visit our Twitter page",
+                  src: "/icons/ri_twitter-fill.svg",
+                  alt: "Twitter logo",
+                },
+              ]}
+            />
           </nav>
         </SheetContent>
       </Sheet>
@@ -46,7 +61,34 @@ export default function Header() {
           </Link>
         ))}
         <img className="w-fit" src="/icons/line.svg" alt="line" />
-        <SocialSharing />
+        <SocialSharing
+          links={[
+            {
+              href: "#",
+              ariaLabel: "Visit our Instagram page",
+              src: "/icons/ri_instagram-line.svg",
+              alt: "Instagram logo",
+            },
+            {
+              href: "#",
+              ariaLabel: "Visit our Twitter page",
+              src: "/icons/ri_twitter-fill.svg",
+              alt: "Twitter logo",
+            },
+            {
+              href: "#",
+              ariaLabel: "Visit our YouTube page",
+              src: "/icons/ri_youtube-fill.svg",
+              alt: "YouTube logo",
+            },
+            {
+              href: "#",
+              ariaLabel: "Visit our RSS feed",
+              src: "/icons/ri_rss-fill.svg",
+              alt: "RSS feed logo",
+            },
+          ]}
+        />
       </nav>
     </header>
   );

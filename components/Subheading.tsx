@@ -1,6 +1,6 @@
 type SubheadingProps = {
   children: React.ReactNode;
-  className?: string;
+  className: string;
 };
 
 export default function Subheading({ children, className }: SubheadingProps) {
