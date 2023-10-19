@@ -108,16 +108,20 @@ export default async function AuthorDetails({
 
 function AuthorArticles({ articles }: { articles: ArticleData[] }) {
   return (
-    <div className="grid md:grid-cols-2">
+    <div className="grid md:grid-cols-2 border-collapse">
       {articles.map((article, index) => (
         <Link
           className="flex items-center gap-12 p-8 border border-black"
           key={index}
           href={`/articles/${formatString(article.title)}`}
         >
-          <img className="w-16 h-16" src={article.img} alt={article.title} />
+          <img
+            className="h-[9.375rem] w-[9.375rem]"
+            src={article.img}
+            alt={article.title}
+          />
           <div>
-            <p>{article.title}</p>
+            <p className="heading3-title pb-4">{article.title}</p>
             <div className="flex gap-8">
               <span className="flex">
                 <p className="font-semibold pr-2">Job</p>

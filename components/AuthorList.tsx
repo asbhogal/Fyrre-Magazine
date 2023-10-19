@@ -19,7 +19,7 @@ export default function AuthorsList() {
         >
           <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-16">
             <img
-              className="h-[150px] w-[150px]"
+              className="h-[9.375rem] w-[9.375rem]"
               src={authors.avatar}
               alt={authors.author}
             />
