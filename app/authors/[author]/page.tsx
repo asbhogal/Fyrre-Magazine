@@ -1,5 +1,7 @@
+import formatString from "@/app/functions/formatString";
 import PostNavigation from "@/components/PostNavigation";
 import SocialSharing from "@/components/SocialSharing";
+import Link from "next/link";
 
 type AuthorData = {
   author: string;
@@ -11,6 +13,19 @@ type AuthorData = {
     summary: string;
     body: string;
   };
+  articles: ArticleData[];
+};
+
+type ArticleData = {
+  title: string;
+  img: string;
+  date: string;
+  read: string;
+  label: string;
+};
+
+type ArticleProps = {
+  article: ArticleData;
 };
 
 async function getAuthorDetails() {
@@ -78,6 +93,8 @@ export default async function AuthorDetails({
               <p>{authorData.biography.body}</p>
             </div>
           </div>
+          <h2>Articles by {authorData.author}</h2>
+          <AuthorArticles articles={authorData.articles} />
         </div>
       );
     } else {
@@ -87,4 +104,33 @@ export default async function AuthorDetails({
     console.error("Error fetching author details:", error);
     return <p>Error fetching author details</p>;
   }
+}
+
+function AuthorArticles({ articles }: { articles: ArticleData[] }) {
+  return (
+    <div className="grid md:grid-cols-2">
+      {articles.map((article, index) => (
+        <Link
+          className="flex items-center gap-12 p-8 border border-black"
+          key={index}
+          href={`/articles/${formatString(article.title)}`}
+        >
+          <img className="w-16 h-16" src={article.img} alt={article.title} />
+          <div>
+            <p>{article.title}</p>
+            <div className="flex gap-8">
+              <span className="flex">
+                <p className="font-semibold pr-2">Job</p>
+                <p className="">{article.date}</p>
+              </span>
+              <span className="flex">
+                <p className="font-semibold pr-2">City</p>
+                <p className="">{article.label}</p>
+              </span>
+            </div>
+          </div>
+        </Link>
+      ))}
+    </div>
+  );
 }

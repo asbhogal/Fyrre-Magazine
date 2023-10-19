@@ -34,7 +34,10 @@ export default function AuthorsList() {
               <p className="font-semibold">City</p>
               <p>{authors.city}</p>
             </div>
-            <Link className="flex gap-2" href={`authors/${authors.slug}`}>
+            <Link
+              className="flex gap-2"
+              href={`authors/${formatString(authors.author)}`}
+            >
               <span className="uppercase font-semibold">About</span>
               <img
                 src="/icons/ri_arrow-right-line.svg"
