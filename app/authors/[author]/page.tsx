@@ -39,8 +39,16 @@ async function getAuthorDetails() {
 export default async function AuthorDetails({ params }: AuthorPageProps) {
   try {
     const authors: AuthorData[] = await getAuthorDetails();
+
+    // Debugging: Log the params.author and normalized slugs
+    console.log("params.author:", params.author);
+    authors.forEach((author) => {
+      console.log("Normalized slug:", author.slug);
+    });
+
+    const decodedAuthor = decodeURIComponent(params.author);
     const authorData = authors.find(
-      (author: AuthorData) => author.slug === params.author
+      (author: AuthorData) => author.slug === decodedAuthor
     );
 
     if (authorData) {
