@@ -4,6 +4,7 @@ export type ArticleType = {
   job: string;
   city: string;
   avatar: string;
+  slug: string;
   articles: Array<{
     title: string;
     description: string;
@@ -24,11 +25,12 @@ export type ArticleType = {
 
 export async function getArticles() {
   const res = await fetch(
-    "https://raw.githubusercontent.com/asbhogal/Fyrre-Magazine/main/json/articles.json"
+    "https://raw.githubusercontent.com/asbhogal/Fyrre-Magazine/main/json/articles.json",
+    { cache: "no-store" }
   );
 
   if (!res.ok) {
-    throw new Error("Failed to fetch podcast data");
+    throw new Error("Failed to fetch article data");
   }
 
   return res.json();

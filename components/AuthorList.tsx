@@ -7,6 +7,9 @@ import Link from "next/link";
 export default function AuthorsList() {
   const { data } = useArticleContext();
 
+  {
+    console.log(data);
+  }
   return (
     <div className="flex flex-col gap-12 max-w-[95rem] w-full mx-auto py-8 lg:pt-24 lg:pb-48">
       {data.map((authors) => (
@@ -31,10 +34,7 @@ export default function AuthorsList() {
               <p className="font-semibold">City</p>
               <p>{authors.city}</p>
             </div>
-            <Link
-              className="flex gap-2"
-              href={`authors/${formatString(authors.author)}`}
-            >
+            <Link className="flex gap-2" href={`authors/${authors.slug}`}>
               <span className="uppercase font-semibold">About</span>
               <img
                 src="/icons/ri_arrow-right-line.svg"

@@ -14,7 +14,7 @@ export default function Authors() {
           className="flex items-center gap-12 p-8 border border-black"
           key={article.id}
         >
-          <Link href={`authors/${formatString(article.author)}`}>
+          <Link href={`authors/${article.slug}`}>
             <img
               className="w-[9.375rem] h-[9.375rem] object-cover rounded-full"
               src={article.avatar}

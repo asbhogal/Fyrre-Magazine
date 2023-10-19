@@ -15,7 +15,8 @@ export type PodcastType = {
 
 export async function getPodcasts(): Promise<PodcastType[]> {
   const res = await fetch(
-    "https://raw.githubusercontent.com/asbhogal/Fyrre-Magazine/main/json/podcasts.json"
+    "https://raw.githubusercontent.com/asbhogal/Fyrre-Magazine/main/json/podcasts.json",
+    { cache: "no-store" }
   );
 
   if (!res.ok) {
