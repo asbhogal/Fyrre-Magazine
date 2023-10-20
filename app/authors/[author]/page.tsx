@@ -3,6 +3,8 @@ import PostNavigation from "@/components/PostNavigation";
 import SocialSharing from "@/components/SocialSharing";
 import Link from "next/link";
 
+export const revalidate = 10;
+
 type AuthorData = {
   author: string;
   job: string;
@@ -24,13 +26,10 @@ type ArticleData = {
   label: string;
 };
 
-type ArticleProps = {
-  article: ArticleData;
-};
-
 async function getAuthorDetails() {
   const res = await fetch(
-    "https://raw.githubusercontent.com/asbhogal/Fyrre-Magazine/2eac71632cf6b13cfdc8b302ce0589ecf263c03c/json/articles.json"
+    "https://raw.githubusercontent.com/asbhogal/Fyrre-Magazine/main/json/articles.json",
+    { cache: "no-store" }
   );
 
   if (!res.ok) {
@@ -58,11 +57,11 @@ export default async function AuthorDetails({
       return (
         <div className="max-w-[95rem] w-full mx-auto">
           <PostNavigation>Author</PostNavigation>
-          <div className="max-w-[1200px] w-full mx-auto grid md:grid-cols-2">
+          <div className="max-w-[75rem] w-full mx-auto grid lg:grid-cols-[300px_680px] gap-8 md:gap-0 justify-around">
             <div className="w-fit">
               <img src={authorData.avatar} alt={authorData.author} />
-              <div className="flex justify-between border-top border-t border-black">
-                <p>Follow</p>
+              <div className="flex justify-between border-top border-t border-black mt-12">
+                <p className="uppercase font-semibold text-lg">Follow</p>
                 <SocialSharing
                   links={[
                     {
@@ -88,13 +87,19 @@ export default async function AuthorDetails({
               </div>
             </div>
             <div>
-              <h1 className="text-subheading">{authorData.author}</h1>
-              <p className="font-semibold">{authorData.biography.summary}</p>
+              <h1 className="text-subheading pb-8">{authorData.author}</h1>
+              <p className="text-blog-summary pb-12">
+                {authorData.biography.summary}
+              </p>
               <p>{authorData.biography.body}</p>
             </div>
           </div>
-          <h2>Articles by {authorData.author}</h2>
-          <AuthorArticles articles={authorData.articles} />
+          <div className="pb-12 md:pb-48">
+            <h2 className="text-blog-subheading border border-black mt-[9.5rem] pt-12 pb-12 md:pb-24">
+              Articles by {authorData.author}
+            </h2>
+            <AuthorArticles articles={authorData.articles} />
+          </div>
         </div>
       );
     } else {
@@ -111,7 +116,7 @@ function AuthorArticles({ articles }: { articles: ArticleData[] }) {
     <div className="grid md:grid-cols-2 border-collapse">
       {articles.map((article, index) => (
         <Link
-          className="flex items-center gap-12 p-8 border border-black"
+          className="flex flex-wrap items-center gap-2 md:gap-12 p-8 border border-black"
           key={index}
           href={`/articles/${formatString(article.title)}`}
         >
