@@ -1,15 +1,12 @@
 "use client";
 
-import formatString from "@/app/functions/formatString";
 import { useArticleContext } from "@/hooks/useArticleContext";
+import formatString from "@/app/functions/formatString";
 import Link from "next/link";
 
 export default function AuthorsList() {
   const { data } = useArticleContext();
 
-  {
-    console.log(data);
-  }
   return (
     <div className="flex flex-col gap-12 max-w-[95rem] w-full mx-auto py-8 lg:pt-24 lg:pb-48">
       {data.map((authors) => (

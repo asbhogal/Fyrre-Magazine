@@ -33,7 +33,7 @@ async function getAuthorDetails() {
   );
 
   if (!res.ok) {
-    throw new Error(`HTTP error! Status: ${res.status}`);
+    throw new Error("Failed to fetch article data");
   }
 
   return res.json() as Promise<AuthorData[]>;

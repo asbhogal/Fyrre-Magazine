@@ -1,16 +1,15 @@
 "use client";
 
 import { usePodcastContext } from "@/hooks/usePodcastContext";
-import Link from "next/link";
 import formatString from "@/app/functions/formatString";
-import { Separator } from "@radix-ui/react-separator";
+import Link from "next/link";
 
-export default function Podcasts() {
+export default function PodcastsList() {
   const { data } = usePodcastContext();
 
   return (
-    <div className="flex flex-col gap-12 max-w-[95rem] w-full mx-auto">
-      {data.map((podcasts, index) => (
+    <div className="flex flex-col gap-12 max-w-[95rem] w-full mx-auto py-12 md:py-48">
+      {data.map((podcasts) => (
         <div
           className="flex flex-col md:flex-row justify-between md:items-center gap-2 md:gap-0"
           key={podcasts.id}
