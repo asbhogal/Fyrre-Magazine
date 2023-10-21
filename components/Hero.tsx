@@ -1,4 +1,13 @@
+"use client";
+
+import { useArticleContext } from "@/hooks/useArticleContext";
+
 export default function Hero() {
+  const { data } = useArticleContext();
+  //const firstArticle = data[0].articles[0];
+
+  console.log(data);
+
   return (
     <div className="flex flex-col gap-12 py-10 max-w-[95rem] w-full mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

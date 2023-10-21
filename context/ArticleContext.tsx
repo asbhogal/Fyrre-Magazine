@@ -8,10 +8,6 @@ type ArticleContextProviderType = {
   children: React.ReactNode;
 };
 
-type ArticleContextType = {
-  data: ArticleType[];
-};
-
 export default function ArticleContextProvider({
   children,
 }: ArticleContextProviderType) {

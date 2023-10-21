@@ -11,7 +11,7 @@ export default function Authors() {
     <div className="grid grid-cols-1 lg:grid-cols-2 pb-48 max-w-[95rem] w-full mx-auto">
       {data.map((article) => (
         <div
-          className="flex items-center gap-12 p-8 border border-black"
+          className="flex flex-wrap items-center gap-8 md:gap-12 p-4 md:p-8 border border-black"
           key={article.id}
         >
           <Link href={`authors/${article.slug}`}>
