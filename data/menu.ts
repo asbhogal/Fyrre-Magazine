@@ -9,8 +9,8 @@ const menu: MenuItem[] = [
     label: "Magazine",
   },
   {
-    href: "/podcast",
-    label: "Podcast",
+    href: "/podcasts",
+    label: "Podcasts",
   },
   {
     href: "/authors",
