@@ -19,7 +19,7 @@ export default function PopularArticles() {
           href={`/magazine/${formatString(article.title)}`}
           key={article.title}
         >
-          <div className="grid grid-cols-[0.1fr_1fr] gap-8">
+          <div className="grid grid-cols-[0fr_1fr] gap-8">
             <p className="text-2xl font-semibold">{`0${index + 1}`}</p>
             <div className="flex flex-col gap-4">
               <p className="text-2xl font-semibold">{article.title}</p>

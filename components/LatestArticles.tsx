@@ -2,6 +2,7 @@
 
 import { useArticleContext } from "@/hooks/useArticleContext";
 import Sidebar from "./Sidebar";
+import { Separator } from "@radix-ui/react-separator";
 
 export default function LatestArticles() {
   const { data } = useArticleContext();
@@ -40,40 +41,45 @@ export default function LatestArticles() {
 
         <div className="flex flex-col-reverse lg:flex-row gap-12">
           <div className="lg:w-2/3">
-            {remainingArticles.map((article) => (
-              <div className="flex gap-12" key={article.title}>
-                <div className="h-full w-full">
-                  <img
-                    className="h-60 w-60 object-cover"
-                    src={article.img}
-                    alt={article.title}
-                  />
-                </div>
-                <div className="flex flex-col justify-between">
-                  <div>
-                    <h3 className="heading3-title mb-3">{article.title}</h3>
-                    <p>{article.description}</p>
+            {remainingArticles.map((article, index) => (
+              <div key={article.title}>
+                <div className="grid md:grid-cols-[0fr_1fr] gap-12">
+                  <div className="h-60 w-60">
+                    <img
+                      className="w-full h-full object-cover"
+                      src={article.img}
+                      alt={article.title}
+                    />
                   </div>
-                  <div className="flex justify-between items-center">
-                    <div className="flex gap-6">
-                      <span className="flex">
-                        <p className="font-semibold pr-2">Text</p>
-                        <p>{data[0].author}</p>
-                      </span>
-                      <span className="flex">
-                        <p className="font-semibold pr-2">Date</p>
-                        <p>{article.date}</p>
-                      </span>
-                      <span className="flex">
-                        <p className="font-semibold pr-2">Read</p>
-                        <p>{article.read}</p>
+                  <div className="flex flex-col justify-between">
+                    <div>
+                      <h3 className="heading3-title mb-3">{article.title}</h3>
+                      <p>{article.description}</p>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <div className="flex gap-6">
+                        <span className="flex">
+                          <p className="font-semibold pr-2">Text</p>
+                          <p>{data[0].author}</p>
+                        </span>
+                        <span className="flex">
+                          <p className="font-semibold pr-2">Date</p>
+                          <p>{article.date}</p>
+                        </span>
+                        <span className="flex">
+                          <p className="font-semibold pr-2">Read</p>
+                          <p>{article.read}</p>
+                        </span>
+                      </div>
+                      <span className="px-3 py-2 border border-black rounded-full">
+                        <p className="uppercase">{article.label}</p>
                       </span>
                     </div>
-                    <span className="px-3 py-2 border border-black rounded-full">
-                      <p className="uppercase">{article.label}</p>
-                    </span>
                   </div>
                 </div>
+                {index < remainingArticles.length - 1 && (
+                  <Separator className="border border-black my-6" />
+                )}
               </div>
             ))}
           </div>
