@@ -33,14 +33,14 @@ export default function LatestArticles() {
           <div>
             <img
               className="w-full object-cover"
-              src={latestArticle.img}
+              src={latestArticle.content[0].img}
               alt={latestArticle.title}
             />
           </div>
         </div>
 
-        <div className="flex flex-col-reverse lg:flex-row gap-12">
-          <div className="lg:w-2/3">
+        <div className="flex flex-col-reverse lg:flex-row gap-24">
+          <div className="w-3/4">
             {remainingArticles.map((article, index) => (
               <div key={article.title}>
                 <div className="grid md:grid-cols-[0fr_1fr] gap-12">
@@ -83,7 +83,7 @@ export default function LatestArticles() {
               </div>
             ))}
           </div>
-          <div className="lg:w-1/3">
+          <div className="w-1/4">
             <Sidebar />
           </div>
         </div>

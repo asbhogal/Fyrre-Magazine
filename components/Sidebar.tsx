@@ -1,3 +1,4 @@
+import NewsletterSignUp from "./NewsletterSignUp";
 import PopularArticles from "./PopularArticles";
 import { Button } from "./ui/button";
 
@@ -14,6 +15,7 @@ export default function Sidebar() {
       <Button>Button</Button>
       <h3 className="uppercase font-semibold mt-16 mb-8">Most Popular</h3>
       <PopularArticles />
+      <NewsletterSignUp />
     </aside>
   );
 }
