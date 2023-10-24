@@ -12,7 +12,7 @@ export default function Sidebar() {
         alt="A magazine cover"
       />
       <Button>Button</Button>
-      <h3 className="uppercase font-semibold mt-8">Most Popular</h3>
+      <h3 className="uppercase font-semibold mt-16 mb-8">Most Popular</h3>
       <PopularArticles />
     </aside>
   );
