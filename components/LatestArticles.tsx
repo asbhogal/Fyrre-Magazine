@@ -25,9 +25,22 @@ export default function LatestArticles() {
             <div key={latestArticle.title}>
               <h2 className="text-subtitle">{latestArticle.title}</h2>
             </div>
-            <div>
+            <div className="flex flex-col justify-between">
               <p>{latestArticle.description}</p>
-              <p>Author: {data[0].author}</p>
+              <div className="flex gap-6">
+                <span className="flex">
+                  <p className="font-semibold pr-2">Text</p>
+                  <p>{data[0].author}</p>
+                </span>
+                <span className="flex">
+                  <p className="font-semibold pr-2">Date</p>
+                  <p>{data[0].articles[0].date}</p>
+                </span>
+                <span className="flex">
+                  <p className="font-semibold pr-2">Read</p>
+                  <p>{data[0].articles[0].read}</p>
+                </span>
+              </div>
             </div>
           </div>
           <div>
@@ -39,8 +52,8 @@ export default function LatestArticles() {
           </div>
         </div>
 
-        <div className="flex flex-col-reverse lg:flex-row gap-24">
-          <div className="w-3/4">
+        <div className="flex flex-col-reverse lg:flex-row lg:gap-12 xl:gap-24">
+          <div className="lg:w-3/4">
             {remainingArticles.map((article, index) => (
               <div key={article.title}>
                 <div className="grid md:grid-cols-[0fr_1fr] gap-12">
@@ -52,11 +65,11 @@ export default function LatestArticles() {
                     />
                   </div>
                   <div className="flex flex-col justify-between">
-                    <div>
+                    <div className="mb-4 :md:mb-0">
                       <h3 className="heading3-title mb-3">{article.title}</h3>
                       <p>{article.description}</p>
                     </div>
-                    <div className="flex justify-between items-center">
+                    <div className="flex flex-wrap gap-4 justify-between items-center">
                       <div className="flex gap-6">
                         <span className="flex">
                           <p className="font-semibold pr-2">Text</p>
@@ -83,7 +96,7 @@ export default function LatestArticles() {
               </div>
             ))}
           </div>
-          <div className="w-1/4">
+          <div className="lg:w-1/4">
             <Sidebar />
           </div>
         </div>
