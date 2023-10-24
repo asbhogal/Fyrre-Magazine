@@ -7,6 +7,8 @@ export type ArticleType = {
   slug: string;
   articles: Array<{
     title: string;
+    popular: boolean;
+    popularity: number;
     description: string;
     date: string;
     read: string;
