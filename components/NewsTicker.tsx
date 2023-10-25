@@ -20,12 +20,11 @@ export default function NewsTicker() {
 
     gsap.set(ticker, { x: xPercent });
 
-    // Create the animation
     const animation = gsap.to(ticker, {
       x: -tickerWidth,
       duration: animationDuration,
       ease: "linear",
-      repeat: -1, // Infinite repeat
+      repeat: -1,
       onRepeat: () => {
         gsap.set(ticker, { x: 0 });
       },
@@ -37,12 +36,12 @@ export default function NewsTicker() {
   }, []);
 
   return (
-    <div className="flex xs:flex-col sm:flex-row bg-black text-white p-5 max-w-[95rem] w-full mx-auto relative overflow-hidden">
-      <span className="pr-6">
+    <div className="flex xs:flex-col sm:flex-row bg-black text-white py-5 max-w-[95rem] w-full mx-auto relative overflow-hidden">
+      <div className="bg-black z-10 px-6">
         <p className="bg-black font-semibold uppercase whitespace-nowrap">
           News Ticker +++
         </p>
-      </span>
+      </div>
       <div ref={newsText} className="flex gap-4 sliding-ticker relative">
         {news.map((newsItem, index) => (
           <div
