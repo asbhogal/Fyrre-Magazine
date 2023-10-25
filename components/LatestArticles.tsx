@@ -27,18 +27,23 @@ export default function LatestArticles() {
             </div>
             <div className="flex flex-col justify-between">
               <p>{latestArticle.description}</p>
-              <div className="flex gap-6">
-                <span className="flex">
-                  <p className="font-semibold pr-2">Text</p>
-                  <p>{data[0].author}</p>
-                </span>
-                <span className="flex">
-                  <p className="font-semibold pr-2">Date</p>
-                  <p>{data[0].articles[0].date}</p>
-                </span>
-                <span className="flex">
-                  <p className="font-semibold pr-2">Read</p>
-                  <p>{data[0].articles[0].read}</p>
+              <div className="flex flex-wrap justify-between items-center">
+                <div className="flex flex-wrap gap-2 sm:gap-6">
+                  <span className="flex flex-wrap">
+                    <p className="font-semibold pr-2">Text</p>
+                    <p>{data[0].author}</p>
+                  </span>
+                  <span className="flex flex-wrap">
+                    <p className="font-semibold pr-2">Date</p>
+                    <p>{data[0].articles[0].date}</p>
+                  </span>
+                  <span className="flex flex-wrap">
+                    <p className="font-semibold pr-2">Read</p>
+                    <p>{data[0].articles[0].read}</p>
+                  </span>
+                </div>
+                <span className="px-3 py-2 border border-black rounded-full">
+                  <p className="uppercase">{data[0].articles[0].label}</p>
                 </span>
               </div>
             </div>
@@ -71,15 +76,15 @@ export default function LatestArticles() {
                     </div>
                     <div className="flex flex-wrap gap-4 justify-between items-center">
                       <div className="flex gap-6">
-                        <span className="flex">
+                        <span className="flex flex-wrap">
                           <p className="font-semibold pr-2">Text</p>
                           <p>{data[0].author}</p>
                         </span>
-                        <span className="flex">
+                        <span className="flex flex-wrap">
                           <p className="font-semibold pr-2">Date</p>
                           <p>{article.date}</p>
                         </span>
-                        <span className="flex">
+                        <span className="flex flex-wrap">
                           <p className="font-semibold pr-2">Read</p>
                           <p>{article.read}</p>
                         </span>
