@@ -36,7 +36,7 @@ export default function NewsTicker() {
   }, []);
 
   return (
-    <div className="flex xs:flex-col sm:flex-row bg-black text-white py-5 max-w-[95rem] w-full mx-auto relative overflow-hidden">
+    <div className="flex xs:gap-4 xs:flex-col sm:flex-row bg-black text-white py-5 max-w-[95rem] w-full mx-auto relative overflow-hidden">
       <div className="bg-black z-10 px-6">
         <p className="bg-black font-semibold uppercase whitespace-nowrap">
           News Ticker +++

@@ -20,7 +20,7 @@ export default function LatestArticles() {
 
     return (
       <div>
-        <div className="flex flex-col gap-12 py-10 max-w-[95rem] w-full mx-auto">
+        <div className="flex flex-col-reverse sm:flex-col gap-12 py-10 max-w-[95rem] w-full mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div key={latestArticle.title}>
               <h2 className="text-subtitle">{latestArticle.title}</h2>
