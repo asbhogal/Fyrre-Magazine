@@ -1,12 +1,27 @@
+import news from "../json/news.json";
+
 export default function NewsTicker() {
+  console.log(news);
   return (
-    <div className="flex flex-wrap bg-black text-white p-5 max-w-[95rem] w-full mx-auto">
+    <div className="flex bg-black text-white p-5 max-w-[95rem] w-full mx-auto relative">
       <span className="pr-6">
-        <p className="font-semibold uppercase">News Ticker +++</p>
+        <p className="font-semibold uppercase whitespace-nowrap">
+          News Ticker +++
+        </p>
       </span>
-      <span className="sliding-ticker">
-        Christopher Vaccaro reports on the latest street art festival+++
-      </span>
+      <div className="flex gap-4 sliding-ticker relative">
+        {news.map((newsItem, index) => (
+          <div
+            key={index}
+            className={`whitespace-nowrap ${
+              index === news.length - 1 ? "overflow-visible" : "overflow-hidden"
+            }`}
+            style={{ right: index === news.length - 1 ? "0" : "" }}
+          >
+            <p>{newsItem}+++</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
