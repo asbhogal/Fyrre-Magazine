@@ -19,6 +19,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/dont-close-your-eyes.jpg",
+        "slug": "dont-close-your-eyes",
         "content": [
           {
             "img": "/images/articles/single-post/dont-close-your-eyes.jpg",
@@ -50,6 +51,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/hope-dies-last.jpg",
+        "slug": "hope-dies-last",
         "content": [
           {
             "img": "/images/articles/single-post/hope-dies-last.jpg",
@@ -80,6 +82,7 @@
         "read": "10 mins",
         "label": "Sculptures",
         "img": "/images/articles/preview/the-best-art-museums.jpg",
+        "slug": "the-best-art-museums",
         "content": [
           {
             "img": "/images/articles/single-post/dont-close-your-eyes.jpg",
@@ -110,6 +113,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/the-devil-is-the-details.jpg",
+        "slug": "the-devil-is-the-details",
         "content": [
           {
             "img": "/images/articles/single-post/dont-close-your-eyes.jpg",
@@ -140,6 +144,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/an-indestructible-hope.jpg",
+        "slug": "an-indestructible-hope",
         "content": [
           {
             "img": "/images/articles/single-post/an-indestructible-hope.jpg",
@@ -171,6 +176,7 @@
         "read": "10 mins",
         "label": "Street art",
         "img": "/images/articles/preview/street-art-festival.jpg",
+        "slug": "street-art-festival",
         "content": [
           {
             "img": "/images/articles/single-post/street-art-festival.jpg",
@@ -201,6 +207,7 @@
         "read": "10 mins",
         "label": "Street art",
         "img": "/images/articles/preview/through-the-eyes-of-street-artists.jpg",
+        "slug": "through-the-eyes-of-street-artists",
         "content": [
           {
             "img": "/images/articles/single-post/through-the-eyes-of-street-artists.jpg",
@@ -245,6 +252,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/the-chains-of-our-lives.jpg",
+        "slug": "the-chains-of-our-lives",
         "content": [
           {
             "img": "/images/articles/single-post/the-chains-of-our-lives.jpg",
@@ -275,6 +283,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/how-are-you-really.jpg",
+        "slug": "how-are-you-really",
         "content": [
           {
             "img": "/images/articles/single-post/how-are-you-really.jpg",
@@ -305,6 +314,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/beauty-of-colors.jpg",
+        "slug": "beauty-of-colors",
         "content": [
           {
             "img": "/images/articles/single-post/beauty-of-colors.jpg",
@@ -349,6 +359,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/getting-real.jpg",
+        "slug": "getting-real",
         "content": [
           {
             "img": "/images/articles/single-post/getting-real.jpg",
@@ -379,6 +390,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/secret-garden.jpg",
+        "slug": "secret-garden",
         "content": [
           {
             "img": "/images/articles/single-post/secret-garden.jpg",
@@ -423,6 +435,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/history-of-paper.jpg",
+        "slug": "history-of-paper",
         "content": [
           {
             "img": "/images/articles/single-post/history-of-paper.jpg",
@@ -453,6 +466,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/keep-on-smiling.jpg",
+        "slug": "keep-on-smiling",
         "content": [
           {
             "img": "/images/articles/single-post/keep-on-smiling.jpg",
@@ -497,6 +511,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/colorful-future.jpg",
+        "slug": "colorful-future",
         "content": [
           {
             "img": "/images/articles/single-post/beauty-of-colors.jpg",
@@ -528,6 +543,7 @@
         "read": "10 mins",
         "label": "Street art",
         "img": "/images/articles/preview/artists-who-want-to-rise-above.jpg",
+        "slug": "artists-who-want-to-rise-above",
         "content": [
           {
             "img": "/images/articles/single-post/artists-who-want-to-rise-above.jpg",
@@ -572,6 +588,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/only-in-your-heart.jpg",
+        "slug": "only-in-your-heart",
         "content": [
           {
             "img": "/images/articles/single-post/only-in-your-heart.jpg",
@@ -602,6 +619,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/most-colorful-places.jpg",
+        "slug": "most-colorful-places",
         "content": [
           {
             "img": "/images/articles/single-post/most-colorful-places.jpg",
