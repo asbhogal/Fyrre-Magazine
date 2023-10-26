@@ -25,9 +25,9 @@ export default function LatestArticles() {
             <div key={latestArticle.title}>
               <h2 className="text-subtitle">{latestArticle.title}</h2>
             </div>
-            <div className="flex flex-col justify-between">
+            <div className="flex flex-col justify-between md:gap-2">
               <p>{latestArticle.description}</p>
-              <div className="flex flex-wrap justify-between items-center">
+              <div className="flex flex-wrap justify-between items-center gap-2">
                 <div className="flex flex-wrap gap-2 sm:gap-6">
                   <span className="flex flex-wrap">
                     <p className="font-semibold pr-2">Text</p>

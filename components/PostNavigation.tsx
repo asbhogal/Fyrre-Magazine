@@ -7,8 +7,11 @@ type PostNavigationProps = {
 
 export default function PostNavigation({ children }: PostNavigationProps) {
   return (
-    <div className="flex justify-between pt-8 pb-24">
-      <Link className="flex gap-2 uppercase font-semibold" href="/authors">
+    <div className="flex justify-between py-4 md:pt-8 md:pb-24">
+      <Link
+        className="flex gap-2 uppercase font-semibold w-full"
+        href="/authors"
+      >
         <img
           className="rotate-180"
           src="/icons/ri_arrow-right-line.svg"
@@ -16,7 +19,9 @@ export default function PostNavigation({ children }: PostNavigationProps) {
         />
         Go Back
       </Link>
-      <p className="uppercase font-semibold">{children}</p>
+      <p className="uppercase font-semibold text-lg md:text-[2rem]">
+        {children}
+      </p>
     </div>
   );
 }

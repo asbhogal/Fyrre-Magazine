@@ -84,9 +84,18 @@
     font-weight: 600;
     line-height: 2.4rem;
   }
+  .podcast-title {
+    font-weight: 600;
+    font-size: clamp(1rem, 0.8997rem + 3.3439vw, 6.25rem);
+    text-transform: uppercase;
+  }
   .text-blog-subheading {
     font-weight: 600;
     font-size: clamp(3rem, 2.7857rem + 1.0714vw, 4.5rem);
+  }
+  .text-blog-quote {
+    font-weight: 600;
+    font-size: clamp(2rem, 1.8571rem + 0.7143vw, 3rem);
   }
   .text-blog-summary {
     font-weight: 500;

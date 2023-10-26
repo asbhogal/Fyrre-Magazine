@@ -8,7 +8,7 @@ import news from "../json/news.json";
 export default function NewsTicker() {
   console.log(news);
 
-  const newsText = useRef(null);
+  const newsText = useRef<HTMLDivElement | null>(null);
   let tickerWidth = 0;
   let xPercent = 0;
   const animationDuration = 20;
@@ -16,24 +16,26 @@ export default function NewsTicker() {
   useEffect(() => {
     const ticker = newsText.current;
 
-    tickerWidth = ticker.offsetWidth;
+    if (ticker) {
+      const tickerWidth = ticker.offsetWidth; // Moved tickerWidth inside useEffect
 
-    gsap.set(ticker, { x: xPercent });
+      gsap.set(ticker, { x: xPercent });
 
-    const animation = gsap.to(ticker, {
-      x: -tickerWidth,
-      duration: animationDuration,
-      ease: "linear",
-      repeat: -1,
-      onRepeat: () => {
-        gsap.set(ticker, { x: 0 });
-      },
-    });
+      const animation = gsap.to(ticker, {
+        x: -tickerWidth,
+        duration: animationDuration,
+        ease: "linear",
+        repeat: -1,
+        onRepeat: () => {
+          gsap.set(ticker, { x: 0 });
+        },
+      });
 
-    return () => {
-      animation.kill();
-    };
-  }, []);
+      return () => {
+        animation.kill();
+      };
+    }
+  }, [xPercent]);
 
   return (
     <div className="flex xs:gap-4 xs:flex-col sm:flex-row bg-black text-white py-5 max-w-[95rem] w-full mx-auto relative overflow-hidden">
