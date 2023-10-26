@@ -19,14 +19,14 @@ export default function Articles() {
                   <p className="uppercase">{articleData.label}</p>
                 </span>
               </div>
-              <Link href={`articles/${formatString(articleData.title)}`}>
+              <Link href={`magazine/${formatString(articleData.title)}`}>
                 <img
                   className="w-full my-8"
                   src={articleData.img}
                   alt={articleData.title}
                 />
               </Link>
-              <Link href={`articles/${formatString(articleData.title)}`}>
+              <Link href={`magazine/${formatString(articleData.title)}`}>
                 <h2 className="heading3-title mb-3">{articleData.title}</h2>
               </Link>
               <p className="mt-3 mb-12">{articleData.description}</p>

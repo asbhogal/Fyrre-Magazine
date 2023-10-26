@@ -14,6 +14,7 @@ export type ArticleType = {
     read: string;
     label: string;
     img: string;
+    slug: string;
     content: Array<{
       img: string;
       summary: string;
