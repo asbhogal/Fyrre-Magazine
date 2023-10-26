@@ -5,6 +5,7 @@ export type PodcastType = {
   date: string;
   duration: string;
   episode: string;
+  slug: string;
   content: {
     summary: string;
     section1: string;

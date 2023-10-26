@@ -53,58 +53,58 @@ export default async function AuthorDetails({
       (author: AuthorData) => author.slug === decodedAuthor
     );
 
-    if (authorData) {
-      return (
-        <div className="max-w-[95rem] w-full mx-auto px-4 lg:pt-16 md:pt-8 sm:pt-4 xs:pt-2 lg:pb-4 md:pb-4 sm:pb-2 xs:pb-2">
-          <PostNavigation>Author</PostNavigation>
-          <div className="max-w-[75rem] w-full mx-auto grid lg:grid-cols-[300px_680px] gap-8 md:gap-0 justify-around">
-            <div className="w-fit">
-              <img src={authorData.avatar} alt={authorData.author} />
-              <div className="flex justify-between border-top border-t border-black mt-12">
-                <p className="uppercase font-semibold text-lg">Follow</p>
-                <SocialSharing
-                  links={[
-                    {
-                      href: "#",
-                      ariaLabel: "Visit our Instagram page",
-                      src: "/icons/ri_instagram-line.svg",
-                      alt: "Instagram logo",
-                    },
-                    {
-                      href: "#",
-                      ariaLabel: "Visit our Twitter page",
-                      src: "/icons/ri_twitter-fill.svg",
-                      alt: "Twitter logo",
-                    },
-                    {
-                      href: "#",
-                      ariaLabel: "Visit our YouTube page",
-                      src: "/icons/ri_youtube-fill.svg",
-                      alt: "YouTube logo",
-                    },
-                  ]}
-                />
-              </div>
-            </div>
-            <div>
-              <h1 className="text-subheading pb-8">{authorData.author}</h1>
-              <p className="text-blog-summary pb-12">
-                {authorData.biography.summary}
-              </p>
-              <p>{authorData.biography.body}</p>
-            </div>
-          </div>
-          <div className="pb-12 md:pb-48">
-            <h2 className="text-blog-subheading border border-black mt-[9.5rem] pt-12 pb-12 md:pb-24">
-              Articles by {authorData.author}
-            </h2>
-            <AuthorArticles articles={authorData.articles} />
-          </div>
-        </div>
-      );
-    } else {
+    if (!authorData) {
       return <p>Author not found</p>;
     }
+
+    return (
+      <div className="max-w-[95rem] w-full mx-auto px-4 lg:pt-16 md:pt-8 sm:pt-4 xs:pt-2 lg:pb-4 md:pb-4 sm:pb-2 xs:pb-2">
+        <PostNavigation>Author</PostNavigation>
+        <div className="max-w-[75rem] w-full mx-auto grid lg:grid-cols-[300px_680px] gap-8 md:gap-0 justify-around">
+          <div className="w-fit">
+            <img src={authorData.avatar} alt={authorData.author} />
+            <div className="flex justify-between border-top border-t border-black mt-12">
+              <p className="uppercase font-semibold text-lg">Follow</p>
+              <SocialSharing
+                links={[
+                  {
+                    href: "#",
+                    ariaLabel: "Visit our Instagram page",
+                    src: "/icons/ri_instagram-line.svg",
+                    alt: "Instagram logo",
+                  },
+                  {
+                    href: "#",
+                    ariaLabel: "Visit our Twitter page",
+                    src: "/icons/ri_twitter-fill.svg",
+                    alt: "Twitter logo",
+                  },
+                  {
+                    href: "#",
+                    ariaLabel: "Visit our YouTube page",
+                    src: "/icons/ri_youtube-fill.svg",
+                    alt: "YouTube logo",
+                  },
+                ]}
+              />
+            </div>
+          </div>
+          <div>
+            <h1 className="text-subheading pb-8">{authorData.author}</h1>
+            <p className="text-blog-summary pb-12">
+              {authorData.biography.summary}
+            </p>
+            <p>{authorData.biography.body}</p>
+          </div>
+        </div>
+        <div className="pb-12 md:pb-48">
+          <h2 className="text-blog-subheading border border-black mt-[9.5rem] pt-12 pb-12 md:pb-24">
+            Articles by {authorData.author}
+          </h2>
+          <AuthorArticles articles={authorData.articles} />
+        </div>
+      </div>
+    );
   } catch (error) {
     console.error("Error fetching author details:", error);
     return <p>Error fetching author details</p>;
