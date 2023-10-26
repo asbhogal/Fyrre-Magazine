@@ -1,8 +1,8 @@
-import { ArticleType } from "@/app/functions/getArticles";
+import { ArticleType, getArticles } from "@/app/functions/getArticles";
 
 export const revalidate = 10;
 
-async function getArticleDetails() {
+/* async function getArticleDetails() {
   const res = await fetch(
     "https://raw.githubusercontent.com/asbhogal/Fyrre-Magazine/main/json/articles.json",
     { cache: "no-store" }
@@ -13,7 +13,7 @@ async function getArticleDetails() {
   }
 
   return res.json() as Promise<ArticleType[]>;
-}
+} */
 
 export default async function ArticleDetails({
   params,
@@ -22,7 +22,7 @@ export default async function ArticleDetails({
 }) {
   console.log(params);
   try {
-    const articles: ArticleType[] = await getArticleDetails();
+    const articles: ArticleType[] = await getArticles();
 
     const articleData = articles.find((article) =>
       article.articles.find((articleItem) => articleItem.slug === params.title)

@@ -1,4 +1,4 @@
-import { PodcastType } from "@/app/functions/getPodcasts";
+import { PodcastType, getPodcasts } from "@/app/functions/getPodcasts";
 import LatestPodcasts from "@/components/LatestPodcasts";
 import PostNavigation from "@/components/PostNavigation";
 import SocialSharing from "@/components/SocialSharing";
@@ -6,7 +6,7 @@ import PodcastContextProvider from "@/context/PodcastContext";
 
 export const revalidate = 10;
 
-async function getPodcastDetails() {
+/* async function getPodcastDetails() {
   const res = await fetch(
     "https://raw.githubusercontent.com/asbhogal/Fyrre-Magazine/main/json/podcasts.json",
     { cache: "no-store" }
@@ -17,7 +17,7 @@ async function getPodcastDetails() {
   }
 
   return res.json() as Promise<PodcastType[]>;
-}
+} */
 
 export default async function PodcastDetails({
   params,
@@ -25,7 +25,7 @@ export default async function PodcastDetails({
   params: { title: string };
 }) {
   try {
-    const podcast: PodcastType[] = await getPodcastDetails();
+    const podcast: PodcastType[] = await getPodcasts();
 
     const podcastData = podcast.find(
       (podcast: PodcastType) => podcast.slug === params.title

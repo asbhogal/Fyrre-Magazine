@@ -1,4 +1,5 @@
 import formatString from "@/app/functions/formatString";
+import { getArticles } from "@/app/functions/getArticles";
 import PostNavigation from "@/components/PostNavigation";
 import SocialSharing from "@/components/SocialSharing";
 import Link from "next/link";
@@ -26,7 +27,7 @@ type ArticleData = {
   label: string;
 };
 
-async function getAuthorDetails() {
+/* async function getAuthorDetails() {
   const res = await fetch(
     "https://raw.githubusercontent.com/asbhogal/Fyrre-Magazine/main/json/articles.json",
     { cache: "no-store" }
@@ -37,7 +38,7 @@ async function getAuthorDetails() {
   }
 
   return res.json() as Promise<AuthorData[]>;
-}
+} */
 
 export default async function AuthorDetails({
   params,
@@ -45,7 +46,7 @@ export default async function AuthorDetails({
   params: { author: string };
 }) {
   try {
-    const authors: AuthorData[] = await getAuthorDetails();
+    const authors: AuthorData[] = await getArticles();
 
     const decodedAuthor = decodeURIComponent(params.author);
 
