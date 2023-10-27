@@ -1,4 +1,5 @@
 import { ArticleType, getArticles } from "@/app/functions/getArticles";
+import SocialSharing from "@/components/SocialSharing";
 
 export const revalidate = 10;
 
@@ -46,7 +47,7 @@ export default async function ArticleDetails({
           <h2 className="text-subtitle">{matchingArticle.title}</h2>
           <p>{matchingArticle.description}</p>
         </div>
-        <div className="flex flex-col md:flex-row justify-between">
+        <div className="flex flex-col md:flex-row justify-between mb-8">
           <div className="flex items-center gap-6">
             <span className="flex flex-wrap">
               <p className="font-semibold pr-2">Text</p>
@@ -71,7 +72,63 @@ export default async function ArticleDetails({
             src={matchingArticle.content[0].img}
             alt={matchingArticle.title}
           />
-          <p>{matchingArticle.content[0].summary}</p>
+        </div>
+
+        <div className="flex gap-16 max-w-[62.5rem] w-full mx-auto mt-24">
+          <div className="flex flex-col w-fit lg:w-1/4">
+            <div className="flex gap-4 items-center">
+              <img
+                className="w-[5rem] h-[5rem]"
+                src={articleData.avatar}
+                alt={articleData.author}
+              />
+              <p className="text-[2rem] font-semibold">{articleData.author}</p>
+            </div>
+
+            <div className="flex flex-col gap-4 pt-8">
+              <div className="flex flex-wrap justify-between">
+                <p>Date</p>
+                <p>{matchingArticle.date}</p>
+              </div>
+              <div className="flex flex-wrap justify-between">
+                <p>Read</p>
+                <p>{matchingArticle.read}</p>
+              </div>
+              <div className="flex flex-wrap justify-between">
+                <p className="flex">Share</p>
+                <SocialSharing
+                  links={[
+                    {
+                      href: "#",
+                      ariaLabel: "Visit our Instagram page",
+                      src: "/icons/ri_instagram-line.svg",
+                      alt: "Instagram logo",
+                    },
+                    {
+                      href: "#",
+                      ariaLabel: "Visit our Twitter page",
+                      src: "/icons/ri_twitter-fill.svg",
+                      alt: "Twitter logo",
+                    },
+                    {
+                      href: "#",
+                      ariaLabel: "Visit our YouTube page",
+                      src: "/icons/ri_youtube-fill.svg",
+                      alt: "YouTube logo",
+                    },
+                  ]}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="w-3/4">
+            <p>{matchingArticle.content[0].summary}</p>
+            <p>{matchingArticle.content[1].section1}</p>
+            <p>{matchingArticle.content[2].quote[0]}</p>
+            <p>{matchingArticle.content[2].quote[1]}</p>
+            <p>{matchingArticle.content[3].summary2}</p>
+            <p>{matchingArticle.content[4].section2}</p>
+          </div>
         </div>
       </main>
     );
