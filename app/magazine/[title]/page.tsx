@@ -21,7 +21,6 @@ export default async function ArticleDetails({
 }: {
   params: { title: string };
 }) {
-  console.log(params);
   try {
     const articles: ArticleType[] = await getArticles();
 
@@ -43,12 +42,12 @@ export default async function ArticleDetails({
 
     return (
       <main className="max-w-[95rem] w-full mx-auto px-4 lg:pt-16 md:pt-8 sm:pt-4 xs:pt-2 lg:pb-4 md:pb-4 sm:pb-2 xs:pb-2">
-        <div className="grid md:grid-cols-2 pb-24">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-0 pb-6 md:pb-24">
           <h2 className="text-subtitle">{matchingArticle.title}</h2>
           <p>{matchingArticle.description}</p>
         </div>
-        <div className="flex flex-col md:flex-row justify-between mb-8">
-          <div className="flex items-center gap-6">
+        <div className="flex flex-col md:flex-row justify-between gap-6 md:gap-0 mb-8">
+          <div className="flex md:items-center gap-6">
             <span className="flex flex-wrap">
               <p className="font-semibold pr-2">Text</p>
               <p>{articleData.author}</p>
@@ -62,7 +61,7 @@ export default async function ArticleDetails({
               <p>{matchingArticle.read}</p>
             </span>
           </div>
-          <span className="px-3 py-2 border border-black rounded-full">
+          <span className="px-3 py-2 border border-black rounded-full w-fit">
             <p>{matchingArticle.label}</p>
           </span>
         </div>
@@ -74,8 +73,8 @@ export default async function ArticleDetails({
           />
         </div>
 
-        <div className="flex gap-16 max-w-[62.5rem] w-full mx-auto mt-24">
-          <div className="flex flex-col w-fit lg:w-1/4">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-16 max-w-[62.5rem] w-full mx-auto mt-6 md:mt-24">
+          <div className="flex flex-col w-fit">
             <div className="flex gap-4 items-center">
               <img
                 className="w-[5rem] h-[5rem]"
@@ -121,12 +120,20 @@ export default async function ArticleDetails({
               </div>
             </div>
           </div>
-          <div className="w-3/4">
-            <p>{matchingArticle.content[0].summary}</p>
-            <p>{matchingArticle.content[1].section1}</p>
-            <p>{matchingArticle.content[2].quote[0]}</p>
-            <p>{matchingArticle.content[2].quote[1]}</p>
-            <p>{matchingArticle.content[3].summary2}</p>
+          <div className="lg:w-3/4">
+            <p className="text-xl font-medium">
+              {matchingArticle.content[0].summary}
+            </p>
+            <p className="my-6">{matchingArticle.content[1].section1}</p>
+            <div className="border-t border-b border-black my-6 py-12">
+              <p className="text-blog-quote mb-6">
+                &ldquo;{matchingArticle.content[2].quote[0]}
+              </p>
+              <p>{matchingArticle.content[2].quote[1]}</p>
+            </div>
+            <p className="text-xl font-medium mb-6">
+              {matchingArticle.content[3].summary2}
+            </p>
             <p>{matchingArticle.content[4].section2}</p>
           </div>
         </div>
@@ -136,4 +143,8 @@ export default async function ArticleDetails({
     console.error("Error fetching article details:", error);
     return <p>Error fetching article details</p>;
   }
+}
+
+function LatestArticles() {
+  return <LatestArticles />;
 }
