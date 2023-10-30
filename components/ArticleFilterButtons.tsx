@@ -7,6 +7,7 @@ export default function ArticleFilterButtons() {
   const { data } = useArticleContext();
 
   const labels = [
+    "All",
     ...new Set(
       data.flatMap((article) => article.articles.map((item) => item.label))
     ),
