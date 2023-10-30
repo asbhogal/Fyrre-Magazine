@@ -26,9 +26,11 @@ export default function Articles() {
                   alt={articleData.title}
                 />
               </Link>
-              <Link href={`magazine/${formatString(articleData.title)}`}>
-                <h2 className="heading3-title mb-3">{articleData.title}</h2>
-              </Link>
+              <h2 className="heading3-title mb-3">
+                <Link href={`/magazine/${articleData.slug}`}>
+                  {articleData.title}
+                </Link>
+              </h2>
               <p className="mt-3 mb-12">{articleData.description}</p>
               <div className="flex flex-wrap gap-4">
                 <span className="flex">

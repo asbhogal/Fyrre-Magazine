@@ -16,13 +16,15 @@ export default function Authors() {
         >
           <Link href={`authors/${article.slug}`}>
             <img
-              className="w-[9.375rem] h-[9.375rem] object-cover rounded-full"
+              className="w-[9.375rem] h-[9.375rem] object-cover rounded-full hover:scale-105 transition"
               src={article.avatar}
               alt={`A picture of ${article.author}`}
             />
           </Link>
           <div>
-            <p className="heading3-title mb-4">{article.author}</p>
+            <p className="heading3-title mb-4">
+              <Link href={`/authors/${article.author}`}>{article.author}</Link>
+            </p>
             <div className="flex gap-8">
               <span className="flex">
                 <p className="font-semibold pr-2">Job</p>

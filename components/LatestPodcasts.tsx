@@ -17,9 +17,9 @@ export default function LatestPodcasts() {
               alt={podcast.title}
             />
           </Link>
-          <Link href={`podcasts/${formatString(podcast.title)}`}>
-            <h2 className="heading3-title mt-8 mb-12">{podcast.title}</h2>
-          </Link>
+          <h2 className="heading3-title mt-8 mb-12">
+            <Link href={`podcasts/${podcast.slug}`}>{podcast.title}</Link>
+          </h2>
           <div className="flex flex-wrap gap-4">
             <div>
               <span className="flex">

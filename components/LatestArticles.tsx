@@ -3,6 +3,7 @@
 import { useArticleContext } from "@/hooks/useArticleContext";
 import Sidebar from "./Sidebar";
 import { Separator } from "@radix-ui/react-separator";
+import Link from "next/link";
 
 export default function LatestArticles() {
   const { data } = useArticleContext();
@@ -22,9 +23,11 @@ export default function LatestArticles() {
       <div>
         <div className="flex flex-col-reverse sm:flex-col gap-12 py-10 max-w-[95rem] w-full mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div key={latestArticle.title}>
-              <h2 className="text-subtitle">{latestArticle.title}</h2>
-            </div>
+            <h2 className="text-subtitle">
+              <Link href={`/magazine/${latestArticle.slug}`}>
+                {latestArticle.title}
+              </Link>
+            </h2>
             <div className="flex flex-col justify-between md:gap-2">
               <p>{latestArticle.description}</p>
               <div className="flex flex-wrap justify-between items-center gap-2">
@@ -62,16 +65,21 @@ export default function LatestArticles() {
             {remainingArticles.map((article, index) => (
               <div key={article.title}>
                 <div className="grid md:grid-cols-[0fr_1fr] gap-12">
-                  <div className="h-60 w-60">
+                  <Link href={`magazine/${article.slug}`} className="h-60 w-60">
                     <img
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover hover:scale-105 transition"
                       src={article.img}
                       alt={article.title}
                     />
-                  </div>
+                  </Link>
                   <div className="flex flex-col justify-between">
                     <div className="mb-4 :md:mb-0">
-                      <h3 className="heading3-title mb-3">{article.title}</h3>
+                      <h3 className="heading3-title mb-3">
+                        <Link href={`/magazine/${latestArticle.slug}`}>
+                          {article.title}
+                        </Link>
+                      </h3>
+
                       <p>{article.description}</p>
                     </div>
                     <div className="flex flex-wrap gap-4 justify-between items-center">
