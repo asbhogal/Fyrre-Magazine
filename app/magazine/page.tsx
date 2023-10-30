@@ -8,7 +8,7 @@ export default function MagazinePage() {
       <PageTitle className="sr-only" imgSrc="/images/titles/Magazine.svg">
         Magazine
       </PageTitle>
-      <div className="flex justify-between">
+      <div className="flex justify-between items-center my-6">
         <p className="font-semibold uppercase">Categories</p>
         <ArticleFilterButtons />
       </div>
