@@ -1,11 +1,15 @@
 import Authors from "@/components/Authors";
-import Hero from "@/components/Hero";
 import LatestArticles from "@/components/LatestArticles";
 import LatestPodcasts from "@/components/LatestPodcasts";
 import NewsTicker from "@/components/NewsTicker";
 import PageTitle from "@/components/PageTitle";
 import Subheading from "@/components/Subheading";
 import PodcastContextProvider from "@/context/PodcastContext";
+
+export const metadata = {
+  title: "Fyrre Magazine | Art & Life | Home",
+  description: "Articles, podcasts and news from the Berlin cultural scene",
+};
 
 export default function Home() {
   return (

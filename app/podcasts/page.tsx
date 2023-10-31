@@ -1,6 +1,11 @@
 import PageTitle from "@/components/PageTitle";
 import PodcastsList from "@/components/PodcastsList";
 
+export const metadata = {
+  title: "Podcasts  | Fyrre Magazine",
+  description: "The latest podcasts list",
+};
+
 export default function PodcastsPage() {
   return (
     <main className="flex flex-col min-h-screen max-w-[95rem] w-full mx-auto px-4 lg:pt-0 md:pt-8 sm:pt-4 xs:pt-2 lg:pb-4 md:pb-4 sm:pb-2 xs:pb-2">
