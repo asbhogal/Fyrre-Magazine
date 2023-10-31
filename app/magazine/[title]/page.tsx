@@ -1,5 +1,9 @@
 import { ArticleType, getArticles } from "@/app/functions/getArticles";
+import Articles from "@/components/Articles";
 import SocialSharing from "@/components/SocialSharing";
+import Subheading from "@/components/Subheading";
+import ArticleContextProvider from "@/context/ArticleContext";
+import Link from "next/link";
 
 export const revalidate = 10;
 
@@ -36,8 +40,21 @@ export default async function ArticleDetails({
       (articleItem) => articleItem.slug === params.title
     );
 
+    const latestArticles = articles
+      .flatMap((articleData) => articleData.articles)
+      .sort((a, b) => {
+        const dateA = new Date(a.date).getTime();
+        const dateB = new Date(b.date).getTime();
+        return dateB - dateA;
+      })
+      .slice(0, 3);
+
     if (!matchingArticle) {
-      return <p>Article not found</p>;
+      return (
+        <main className="max-w-[95rem] w-full mx-auto px-4 lg:pt-16 md:pt-8 sm:pt-4 xs:pt-2 lg:pb-4 md:pb-4 sm:pb-2 xs:pb-2">
+          <p>Article not found</p>;
+        </main>
+      );
     }
 
     return (
@@ -137,14 +154,55 @@ export default async function ArticleDetails({
             <p>{matchingArticle.content[4].section2}</p>
           </div>
         </div>
+
+        <div>
+          <Subheading className="text-subheading">Latest Posts</Subheading>
+          {latestArticles.map((latestArticles) => (
+            <div key={latestArticles.slug}>
+              <p></p>
+            </div>
+          ))}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-black pb-48">
+            {latestArticles.map((latestArticle) => (
+              <div className="border border-black p-8" key={latestArticle.slug}>
+                <div className="flex items-center justify-between">
+                  <p>{latestArticle.date}</p>
+                  <span className="px-3 py-2 border border-black rounded-full">
+                    <p className="uppercase">{latestArticle.label}</p>
+                  </span>
+                </div>
+                <Link href={`magazine/${articleData.slug}`}>
+                  <img
+                    className="w-full my-8"
+                    src={latestArticle.img}
+                    alt={latestArticle.title}
+                  />
+                </Link>
+                <h2 className="heading3-title mb-3">
+                  <Link href={`/magazine/${articleData.slug}`}>
+                    {latestArticle.title}
+                  </Link>
+                </h2>
+                <p className="mt-3 mb-12">{latestArticle.description}</p>
+                <div className="flex flex-wrap gap-4">
+                  <span className="flex">
+                    <p className="font-semibold pr-2">Text</p>
+                    <p>{articleData.author}</p>
+                  </span>
+                  <span className="flex">
+                    <p className="font-semibold pr-2">Duration</p>
+                    <p>{latestArticle.read}</p>
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </main>
     );
   } catch (error) {
     console.error("Error fetching article details:", error);
     return <p>Error fetching article details</p>;
   }
-}
-
-function LatestArticles() {
-  return <LatestArticles />;
 }
