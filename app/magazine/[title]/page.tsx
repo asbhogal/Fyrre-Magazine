@@ -5,6 +5,30 @@ import Link from "next/link";
 
 export const revalidate = 10;
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { title: string };
+}) {
+  const articles: ArticleType[] = await getArticles();
+
+  const articleData = articles.find((article) =>
+    article.articles.find((articleItem) => articleItem.slug === params.title)
+  );
+
+  if (!articleData) {
+    return <p>Article not found</p>;
+  }
+
+  const matchingArticle = articleData.articles.find(
+    (articleItem) => articleItem.slug === params.title
+  );
+
+  return {
+    title: `${matchingArticle?.title} | Fyrre Magazine`,
+  };
+}
+
 export default async function ArticleDetails({
   params,
 }: {

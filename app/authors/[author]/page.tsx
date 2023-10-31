@@ -27,18 +27,29 @@ type ArticleData = {
   label: string;
 };
 
-/* async function getAuthorDetails() {
-  const res = await fetch(
-    "https://raw.githubusercontent.com/asbhogal/Fyrre-Magazine/main/json/articles.json",
-    { cache: "no-store" }
+export async function generateMetadata({
+  params,
+}: {
+  params: { author: string };
+}) {
+  const authors: AuthorData[] = await getArticles();
+
+  const decodedAuthor = decodeURIComponent(params.author);
+
+  const authorData = authors.find(
+    (author: AuthorData) => author.slug === decodedAuthor
   );
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch article data");
+  if (!authorData) {
+    return {
+      title: "Author Not Found",
+    };
   }
 
-  return res.json() as Promise<AuthorData[]>;
-} */
+  return {
+    title: `${authorData.author} | Fyrre Magazine`,
+  };
+}
 
 export default async function AuthorDetails({
   params,
@@ -119,7 +130,7 @@ function AuthorArticles({ articles }: { articles: ArticleData[] }) {
         <Link
           className="flex flex-wrap items-center gap-2 md:gap-12 p-8 border border-black"
           key={index}
-          href={`/articles/${formatString(article.title)}`}
+          href={`/magazine/${formatString(article.title)}`}
         >
           <img
             className="h-[9.375rem] w-[9.375rem]"
