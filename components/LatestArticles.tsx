@@ -75,7 +75,7 @@ export default function LatestArticles() {
                   <div className="flex flex-col justify-between">
                     <div className="mb-4 :md:mb-0">
                       <h3 className="heading3-title mb-3">
-                        <Link href={`/magazine/${latestArticle.slug}`}>
+                        <Link href={`/magazine/${article.slug}`}>
                           {article.title}
                         </Link>
                       </h3>
