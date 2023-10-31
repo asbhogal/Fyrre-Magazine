@@ -1,4 +1,3 @@
-import ArticleFilterButtons from "@/components/ArticleFilterButtons";
 import Articles from "@/components/Articles";
 import PageTitle from "@/components/PageTitle";
 
@@ -12,10 +11,6 @@ export default function MagazinePage() {
       >
         Magazine
       </PageTitle>
-      {/*  <div className="flex justify-between items-center my-6">
-        <p className="font-semibold uppercase">Categories</p>
-        <ArticleFilterButtons />
-      </div> */}
       <Articles />
     </main>
   );

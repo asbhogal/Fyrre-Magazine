@@ -20,9 +20,21 @@ export default function Home() {
         </PageTitle>
         <NewsTicker />
         <LatestArticles />
-        <Subheading className="text-subheading">Podcast</Subheading>
+        <Subheading
+          className="text-subheading"
+          url="/your-link-url"
+          linkText="All episodes"
+        >
+          Podcast
+        </Subheading>
         <LatestPodcasts />
-        <Subheading className="text-subheading">Authors</Subheading>
+        <Subheading
+          className="text-subheading"
+          url="/your-link-url"
+          linkText="All authors"
+        >
+          Authors
+        </Subheading>
         <Authors />
       </main>
     </PodcastContextProvider>

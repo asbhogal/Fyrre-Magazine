@@ -1,24 +1,9 @@
 import { ArticleType, getArticles } from "@/app/functions/getArticles";
-import Articles from "@/components/Articles";
 import SocialSharing from "@/components/SocialSharing";
 import Subheading from "@/components/Subheading";
-import ArticleContextProvider from "@/context/ArticleContext";
 import Link from "next/link";
 
 export const revalidate = 10;
-
-/* async function getArticleDetails() {
-  const res = await fetch(
-    "https://raw.githubusercontent.com/asbhogal/Fyrre-Magazine/main/json/articles.json",
-    { cache: "no-store" }
-  );
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch article data");
-  }
-
-  return res.json() as Promise<ArticleType[]>;
-} */
 
 export default async function ArticleDetails({
   params,
@@ -156,14 +141,20 @@ export default async function ArticleDetails({
         </div>
 
         <div>
-          <Subheading className="text-subheading">Latest Posts</Subheading>
+          <Subheading
+            className="text-subheading"
+            url="/your-link-url"
+            linkText="See all"
+          >
+            Latest Posts
+          </Subheading>
           {latestArticles.map((latestArticles) => (
             <div key={latestArticles.slug}>
               <p></p>
             </div>
           ))}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-black pb-48">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-black pb-6 md:pb-48">
             {latestArticles.map((latestArticle) => (
               <div className="border border-black p-8" key={latestArticle.slug}>
                 <div className="flex items-center justify-between">
