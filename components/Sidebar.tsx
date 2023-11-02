@@ -12,7 +12,7 @@ export default function Sidebar() {
         src="/images/homepage/magazine-cover.jpg"
         alt="A magazine cover"
       />
-      <Button>Button</Button>
+      <Button>Order</Button>
       <h3 className="uppercase font-semibold mt-16 mb-8">Most Popular</h3>
       <PopularArticles />
       <NewsletterSignUp />

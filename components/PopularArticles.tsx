@@ -1,4 +1,3 @@
-import formatString from "@/app/functions/formatString";
 import { useArticleContext } from "@/hooks/useArticleContext";
 import { Separator } from "@radix-ui/react-separator";
 import Link from "next/link";

@@ -25,6 +25,7 @@ type ArticleData = {
   date: string;
   read: string;
   label: string;
+  slug: string;
 };
 
 export async function generateMetadata({
@@ -127,18 +128,21 @@ function AuthorArticles({ articles }: { articles: ArticleData[] }) {
   return (
     <div className="grid md:grid-cols-2 border-collapse">
       {articles.map((article, index) => (
-        <Link
+        <div
           className="flex flex-wrap items-center gap-2 md:gap-12 p-8 border border-black"
           key={index}
-          href={`/magazine/${formatString(article.title)}`}
         >
-          <img
-            className="h-[9.375rem] w-[9.375rem]"
-            src={article.img}
-            alt={article.title}
-          />
+          <Link href={`/magazine/${article.slug}`}>
+            <img
+              className="h-[9.375rem] w-[9.375rem] hover:scale-105 transition"
+              src={article.img}
+              alt={article.title}
+            />
+          </Link>
           <div>
-            <p className="heading3-title pb-4">{article.title}</p>
+            <p className="heading3-title pb-4">
+              <Link href={`/magazine/${article.slug}`}>{article.title}</Link>
+            </p>
             <div className="flex gap-8">
               <span className="flex">
                 <p className="font-semibold pr-2">Job</p>
@@ -150,7 +154,7 @@ function AuthorArticles({ articles }: { articles: ArticleData[] }) {
               </span>
             </div>
           </div>
-        </Link>
+        </div>
       ))}
     </div>
   );

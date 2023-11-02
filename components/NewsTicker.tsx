@@ -6,8 +6,6 @@ import { useEffect, useRef } from "react";
 import news from "../json/news.json";
 
 export default function NewsTicker() {
-  console.log(news);
-
   const newsText = useRef<HTMLDivElement | null>(null);
   let tickerWidth = 0;
   let xPercent = 0;
@@ -17,7 +15,7 @@ export default function NewsTicker() {
     const ticker = newsText.current;
 
     if (ticker) {
-      const tickerWidth = ticker.offsetWidth; // Moved tickerWidth inside useEffect
+      const tickerWidth = ticker.offsetWidth;
 
       gsap.set(ticker, { x: xPercent });
 
