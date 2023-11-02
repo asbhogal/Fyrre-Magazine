@@ -187,7 +187,7 @@ export default async function ArticleDetails({
                     <p className="uppercase">{latestArticle.label}</p>
                   </span>
                 </div>
-                <Link href={`magazine/${articleData.slug}`}>
+                <Link href={`/magazine/${latestArticle.slug}`}>
                   <img
                     className="w-full my-8"
                     src={latestArticle.img}
@@ -195,7 +195,7 @@ export default async function ArticleDetails({
                   />
                 </Link>
                 <h2 className="heading3-title mb-3">
-                  <Link href={`/magazine/${articleData.slug}`}>
+                  <Link href={`/magazine/${latestArticle.slug}`}>
                     {latestArticle.title}
                   </Link>
                 </h2>
