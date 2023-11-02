@@ -44,7 +44,7 @@ export default async function PodcastDetails({
 
     return (
       <main className="max-w-[95rem] w-full mx-auto px-4 pb-12 md:pt-8 sm:pt-4 xs:pt-2 md:pb-4 sm:pb-2 xs:pb-2">
-        <PostNavigation>Podcast</PostNavigation>
+        <PostNavigation href="/podcasts">Podcast</PostNavigation>
         <div className="max-w-[75rem] w-full mx-auto flex flex-wrap gap-24">
           <div className="flex flex-col lg:w-1/4">
             <img className="" src={podcastData.img} alt={podcastData.title} />
@@ -119,7 +119,7 @@ export default async function PodcastDetails({
                   {podcastItem.summary}
                 </p>
                 <p>{podcastItem.section1}</p>
-                <div className="border-t border-b border-black my-6">
+                <div className="border-t-2 border-b-2 border-black my-6">
                   <div className="py-12">
                     <p className="text-blog-quote pb-6">
                       &ldquo;{podcastItem.quote[0]}
@@ -133,7 +133,7 @@ export default async function PodcastDetails({
           </div>
         </div>
         <div className="pb-12 md:pb-48">
-          <h2 className="text-blog-subheading border-t border-black mt-[9.5rem] pt-12 pb-12 md:pb-24">
+          <h2 className="text-blog-subheading border-t-2 border-black mt-[9.5rem] pt-12 pb-12 md:pb-24">
             Latest Episodes
           </h2>
           <PodcastContextProvider limit={3}>

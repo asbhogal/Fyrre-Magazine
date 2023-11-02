@@ -7,7 +7,7 @@ import formatString from "@/app/functions/formatString";
 export default function LatestPodcasts() {
   const { data } = usePodcastContext();
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-3 max-w-[95rem] w-full mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-3  xl:grid-cols-3 max-w-[95rem] w-full mx-auto border border-black border-collapse">
       {data.map((podcast) => (
         <div className="border border-black p-4 md:p-12" key={podcast.id}>
           <Link href={`/podcasts/${formatString(podcast.title)}`}>

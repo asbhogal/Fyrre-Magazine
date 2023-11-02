@@ -71,12 +71,12 @@ export default async function AuthorDetails({
     }
 
     return (
-      <main className="max-w-[95rem] w-full mx-auto px-4 lg:pt-16 md:pt-8 sm:pt-4 xs:pt-2 lg:pb-4 md:pb-4 sm:pb-2 xs:pb-2">
-        <PostNavigation>Author</PostNavigation>
+      <main className="max-w-[95rem] w-full mx-auto px-4 md:pt-8 sm:pt-4 xs:pt-2 lg:pb-4 md:pb-4 sm:pb-2 xs:pb-2">
+        <PostNavigation href="/authors">Author</PostNavigation>
         <div className="max-w-[75rem] w-full mx-auto grid lg:grid-cols-[300px_680px] gap-8 md:gap-0 justify-around">
           <div className="w-fit">
             <img src={authorData.avatar} alt={authorData.author} />
-            <div className="flex justify-between border-top border-t border-black mt-12">
+            <div className="flex justify-between border-top border-t border-black mt-12 pt-6">
               <p className="uppercase font-semibold text-lg">Follow</p>
               <SocialSharing
                 links={[
@@ -111,7 +111,7 @@ export default async function AuthorDetails({
           </div>
         </div>
         <div className="pb-12 md:pb-48">
-          <h2 className="text-blog-subheading border border-black mt-[9.5rem] pt-12 pb-12 md:pb-24">
+          <h2 className="text-blog-subheading mt-[9.5rem] pt-12 pb-12 md:pb-24">
             Articles by {authorData.author}
           </h2>
           <AuthorArticles articles={authorData.articles} />
@@ -126,10 +126,10 @@ export default async function AuthorDetails({
 
 function AuthorArticles({ articles }: { articles: ArticleData[] }) {
   return (
-    <div className="grid md:grid-cols-2 border-collapse">
+    <div className="grid md:grid-cols-2 border border-black border-collapse">
       {articles.map((article, index) => (
         <div
-          className="flex flex-wrap items-center gap-2 md:gap-12 p-8 border border-black"
+          className="flex items-center gap-2 md:gap-12 p-8 border border-black"
           key={index}
         >
           <Link href={`/magazine/${article.slug}`}>

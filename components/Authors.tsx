@@ -8,7 +8,7 @@ export default function Authors() {
   const { data } = useArticleContext();
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 pb-48 max-w-[95rem] w-full mx-auto">
+    <div className="grid grid-cols-1 lg:grid-cols-2 mb-48 max-w-[95rem] w-full mx-auto border border-black border-collapse">
       {data.map((article) => (
         <div
           className="flex flex-wrap items-center gap-8 md:gap-12 p-4 md:p-8 border border-black"

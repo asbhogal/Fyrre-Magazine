@@ -3,14 +3,18 @@ import Link from "next/link";
 type PostNavigationProps = {
   children: React.ReactNode;
   className?: string;
+  href: string;
 };
 
-export default function PostNavigation({ children }: PostNavigationProps) {
+export default function PostNavigation({
+  children,
+  href,
+}: PostNavigationProps) {
   return (
-    <div className="flex justify-between py-4 md:pt-8 md:pb-24">
+    <div className="flex items-center justify-between py-4 md:pt-8 md:pb-24">
       <Link
-        className="flex gap-2 uppercase font-semibold w-full"
-        href="/authors"
+        className="flex items-center gap-2 uppercase font-semibold w-full"
+        href={href}
       >
         <img
           className="rotate-180"

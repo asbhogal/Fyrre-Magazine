@@ -49,7 +49,7 @@ export default function Articles() {
           </div>
         )}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-black pb-48">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-black border-collapse mb-48">
         {filteredArticles.map((articleData, index) => (
           <div className="border border-black p-8" key={index}>
             <div className="flex items-center justify-between">

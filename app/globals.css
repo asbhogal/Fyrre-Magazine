@@ -121,9 +121,9 @@
   }
 }
 
-* {
+/* * {
   outline: 1px solid red;
-}
+} */
 
 @font-face {
   font-family: "General Sans";

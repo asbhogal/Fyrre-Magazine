@@ -1,4 +1,5 @@
 import { ArticleType, getArticles } from "@/app/functions/getArticles";
+import PostNavigation from "@/components/PostNavigation";
 import SocialSharing from "@/components/SocialSharing";
 import Subheading from "@/components/Subheading";
 import Link from "next/link";
@@ -60,14 +61,15 @@ export default async function ArticleDetails({
 
     if (!matchingArticle) {
       return (
-        <main className="max-w-[95rem] w-full mx-auto px-4 lg:pt-16 md:pt-8 sm:pt-4 xs:pt-2 lg:pb-4 md:pb-4 sm:pb-2 xs:pb-2">
+        <main className="max-w-[95rem] w-full mx-auto px-4 md:pt-8 sm:pt-4 xs:pt-2 lg:pb-4 md:pb-4 sm:pb-2 xs:pb-2">
           <p>Article not found</p>;
         </main>
       );
     }
 
     return (
-      <main className="max-w-[95rem] w-full mx-auto px-4 lg:pt-16 md:pt-8 sm:pt-4 xs:pt-2 lg:pb-4 md:pb-4 sm:pb-2 xs:pb-2">
+      <main className="max-w-[95rem] w-full mx-auto px-4 md:pt-8 sm:pt-4 xs:pt-2 lg:pb-4 md:pb-4 sm:pb-2 xs:pb-2">
+        <PostNavigation href="/magazine">Articles</PostNavigation>
         <div className="grid md:grid-cols-2 gap-6 md:gap-0 pb-6 md:pb-24">
           <h2 className="text-subtitle">{matchingArticle.title}</h2>
           <p>{matchingArticle.description}</p>
@@ -151,7 +153,7 @@ export default async function ArticleDetails({
               {matchingArticle.content[0].summary}
             </p>
             <p className="my-6">{matchingArticle.content[1].section1}</p>
-            <div className="border-t border-b border-black my-6 py-12">
+            <div className="border-t-2 border-b-2 border-black my-6 py-12">
               <p className="text-blog-quote mb-6">
                 &ldquo;{matchingArticle.content[2].quote[0]}
               </p>
@@ -167,7 +169,7 @@ export default async function ArticleDetails({
         <div>
           <Subheading
             className="text-subheading"
-            url="/your-link-url"
+            url="/magazine"
             linkText="See all"
           >
             Latest Posts
@@ -178,7 +180,7 @@ export default async function ArticleDetails({
             </div>
           ))}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-black pb-6 md:pb-48">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-black border-collapse">
             {latestArticles.map((latestArticle) => (
               <div className="border border-black p-8" key={latestArticle.slug}>
                 <div className="flex items-center justify-between">
