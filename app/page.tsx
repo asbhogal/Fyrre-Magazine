@@ -26,7 +26,7 @@ export default function Home() {
         <LatestArticles />
         <Subheading
           className="text-subheading"
-          url="/your-link-url"
+          url="/podcasts"
           linkText="All episodes"
         >
           Podcast
@@ -34,7 +34,7 @@ export default function Home() {
         <LatestPodcasts />
         <Subheading
           className="text-subheading"
-          url="/your-link-url"
+          url="/authors"
           linkText="All authors"
         >
           Authors
