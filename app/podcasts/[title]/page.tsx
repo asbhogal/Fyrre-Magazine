@@ -6,6 +6,26 @@ import PodcastContextProvider from "@/context/PodcastContext";
 
 export const revalidate = 10;
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { title: string };
+}) {
+  const podcast: PodcastType[] = await getPodcasts();
+
+  const podcastData = podcast.find(
+    (podcast: PodcastType) => podcast.slug === params.title
+  );
+
+  if (!podcastData) {
+    return <div>No matching podcast found</div>;
+  }
+
+  return {
+    title: `${podcastData.title} | Fyrre Magazine`,
+  };
+}
+
 export default async function PodcastDetails({
   params,
 }: {
@@ -18,7 +38,6 @@ export default async function PodcastDetails({
       (podcast: PodcastType) => podcast.slug === params.title
     );
 
-    console.log(podcast[0].title);
     if (!podcastData) {
       return <div>No matching podcast found</div>;
     }
