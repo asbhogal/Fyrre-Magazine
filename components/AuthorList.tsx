@@ -17,7 +17,7 @@ export default function AuthorsList() {
               <img
                 className="h-[9.375rem] w-[9.375rem]"
                 src={authors.avatar}
-                alt={authors.author}
+                alt={authors.imgAlt}
               />
               <h2 className="heading3-title">{authors.author}</h2>
             </div>

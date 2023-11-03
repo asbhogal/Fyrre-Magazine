@@ -107,7 +107,7 @@ export default async function ArticleDetails({
               <img
                 className="w-[5rem] h-[5rem]"
                 src={articleData.avatar}
-                alt={articleData.author}
+                alt={articleData.imgAlt}
               />
               <p className="text-[2rem] font-semibold">{articleData.author}</p>
             </div>

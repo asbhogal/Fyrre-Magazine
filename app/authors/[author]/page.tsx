@@ -11,6 +11,7 @@ type AuthorData = {
   job: string;
   city: string;
   avatar: string;
+  imgAlt: string;
   slug: string;
   biography: {
     summary: string;
@@ -75,7 +76,7 @@ export default async function AuthorDetails({
         <PostNavigation href="/authors">Author</PostNavigation>
         <div className="max-w-[75rem] w-full mx-auto grid lg:grid-cols-[300px_680px] gap-8 md:gap-0 justify-around">
           <div className="w-fit">
-            <img src={authorData.avatar} alt={authorData.author} />
+            <img src={authorData.avatar} alt={authorData.imgAlt} />
             <div className="flex justify-between border-top border-t border-black mt-12 pt-6">
               <p className="uppercase font-semibold text-lg">Follow</p>
               <SocialSharing

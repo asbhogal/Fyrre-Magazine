@@ -4,6 +4,7 @@ export type ArticleType = {
   job: string;
   city: string;
   avatar: string;
+  imgAlt: string;
   slug: string;
   articles: Array<{
     title: string;
