@@ -47,7 +47,7 @@ export default async function PodcastDetails({
         <PostNavigation href="/podcasts">Podcast</PostNavigation>
         <div className="max-w-[75rem] w-full mx-auto flex flex-wrap gap-24">
           <div className="flex flex-col lg:w-1/4">
-            <img className="" src={podcastData.img} alt={podcastData.title} />
+            <img className="" src={podcastData.img} alt={podcastData.imgAlt} />
             <div className="flex justify-between mt-8 pb-12 border-b border-black">
               <p className="text-xl font-semibold">Listen On</p>
               <SocialSharing

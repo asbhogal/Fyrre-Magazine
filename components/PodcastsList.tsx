@@ -18,7 +18,7 @@ export default function PodcastsList() {
               <img
                 className="w-[15rem] h-[15rem]"
                 src={podcasts.img}
-                alt={podcasts.title}
+                alt={podcasts.imgAlt}
               />
               <h2 className="heading3-title">{podcasts.title}</h2>
             </div>

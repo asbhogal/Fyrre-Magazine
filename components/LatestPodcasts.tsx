@@ -10,11 +10,11 @@ export default function LatestPodcasts() {
     <div className="grid grid-cols-1 md:grid-cols-3  xl:grid-cols-3 max-w-[95rem] w-full mx-auto border border-black border-collapse">
       {data.map((podcast) => (
         <div className="border border-black p-4 md:p-12" key={podcast.id}>
-          <Link href={`/podcasts/${formatString(podcast.title)}`}>
+          <Link href={`/podcasts/${podcast.slug}`}>
             <img
               className="hover:scale-105 transition"
               src={podcast.img}
-              alt={podcast.title}
+              alt={podcast.imgAlt}
             />
           </Link>
           <h2 className="heading3-title mt-8 mb-12">
