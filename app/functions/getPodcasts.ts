@@ -2,6 +2,7 @@ export type PodcastType = {
   id: number;
   title: string;
   img: string;
+  imgAlt: string;
   date: string;
   duration: string;
   episode: string;
