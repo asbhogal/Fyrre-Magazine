@@ -5,6 +5,7 @@
     "job": "Artist",
     "city": "Berlin",
     "avatar": "/images/authors/jakob-gr\u00F8nberg.jpg",
+    "imgAlt": "A black and white headshot of a man in his late thirties smiling at the camera with combed over hair and stubble",
     "slug": "jakob-gr\u00F8nberg",
     "biography": {
       "summary": "Jakob Grønberg is a distinguished writer and co-founder of the fictional magazine, Fyrre, based in Berlin. Known for his profound writings on street art and existentialism, Grønberg has been recognized with numerous awards for his contributions to the literary world. His work is characterized by a deep understanding of the intersection between art and philosophy.",
@@ -238,6 +239,7 @@
     "job": "Artist",
     "city": "London",
     "avatar": "/images/authors/louise-jensen.jpg",
+    "imgAlt": "A black and white headshot of a young girl in her mid-twenties with wide hooped earings and a sweater staring at the camera",
     "slug": "louise-jensen",
     "biography": {
       "summary": "Louise Jensen is a Berlin-based writer renowned for her insightful articles on street art. She holds a Masters in Creative Writing and is a frequent contributor to the fictional magazine, Fyrre. Jensen's work is characterized by her unique perspective and deep understanding of urban art culture.",
@@ -345,6 +347,7 @@
     "job": "Artist",
     "city": "Hamburg",
     "avatar": "/images/authors/anne-henry.jpg",
+    "imgAlt": "A black and white headshot of a young girl in her mid-twenties with dark, curly hair and a striped top staring at the camera positioned sideways",
     "slug": "anne-henry",
     "biography": {
       "summary": "Anne Henry is a rising star in the world of art journalism, currently working at the fictional magazine, Fyrre. Starting as an intern, she recently secured a permanent position at the magazine. Henry specializes in abstract art and is deeply immersed in the cultural and museum scene of Hamburg.",
@@ -421,6 +424,7 @@
     "job": "Artist",
     "city": "Copenhagen",
     "avatar": "/images/authors/anna-nielsen.jpg",
+    "imgAlt": "A black and white headshot of a woman in her early fourties with small studded earings and wavy fringe hair smiling at something in the distance",
     "slug": "anna-nielsen",
     "biography": {
       "summary": "Anna Nielsen is a co-founder and the Chief Editor of the fictional magazine, Fyrre. Based in Copenhagen, she also teaches Literature at Københavns Universitet. Nielsen divides her time between Denmark and Belgium, contributing to the literary world through her editorial work and academic pursuits.",
@@ -497,6 +501,7 @@
     "job": "Artist",
     "city": "Berlin",
     "avatar": "/images/authors/jane-cooper.jpg",
+    "imgAlt": "A black and white headshot of a young woman in her mid-twenties with decorative earrings and a white fleece staring at the camera, positioned sideways",
     "slug": "jane-cooper",
     "biography": {
       "summary": "Jane Cooper, a St Louis native now based in Barcelona, is a globe-trotting writer known for her insightful pieces on grassroots movements and the cathartic power of art. Her work, characterized by a deep understanding of the human condition and the transformative potential of art, has made her a respected figure in the literary world.",
@@ -574,6 +579,7 @@
     "job": "Artist",
     "city": "Berlin",
     "avatar": "/images/authors/cristofer-vaccaro.jpg",
+    "imgAlt": "A black and white headshot of a man in his early fourties with a short head of hair, trimmed beard and black v-neck top staring at the camera",
     "slug": "cristofer-vaccaro",
     "biography": {
       "summary": "Cristofer Vaccaro is a Berlin native who writes about the metaphysical arts and the void between the living and the dead. His work includes written and spoken poetry and prose, and he is known for his exploration of underground music that goes against society's standards. Vaccaro's work is characterized by his deep understanding of the human condition and his ability to capture the essence of the mystical and the mythical.",
