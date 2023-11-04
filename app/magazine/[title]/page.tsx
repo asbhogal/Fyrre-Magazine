@@ -70,7 +70,7 @@ export default async function ArticleDetails({
     return (
       <main className="max-w-[95rem] w-full mx-auto px-4 md:pt-8 sm:pt-4 xs:pt-2 lg:pb-4 md:pb-4 sm:pb-2 xs:pb-2">
         <PostNavigation href="/magazine">Articles</PostNavigation>
-        <div className="grid md:grid-cols-2 gap-6 md:gap-0 pb-6 md:pb-24">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-6 pb-6 md:pb-24">
           <h2 className="text-subtitle">{matchingArticle.title}</h2>
           <p>{matchingArticle.description}</p>
         </div>

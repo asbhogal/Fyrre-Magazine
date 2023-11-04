@@ -20,6 +20,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/dont-close-your-eyes.jpg",
+        "imgAlt": "A large mural of three abstract male faces next to one another, with the middle held with thumbs covering the eyelids and jagged lines running diagonally from top left to bottom right",
         "slug": "dont-close-your-eyes",
         "content": [
           {
@@ -52,6 +53,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/hope-dies-last.jpg",
+        "imgAlt": "A black and white outline-styled sketch of a pensive woman with long, curly hair looking at the viewer, against a backdrop of dark water waves",
         "slug": "hope-dies-last",
         "content": [
           {
@@ -83,6 +85,7 @@
         "read": "10 mins",
         "label": "Sculptures",
         "img": "/images/articles/preview/the-best-art-museums.jpg",
+        "imgAlt": "A close-up of two sketched faces, one bald and staring at something to the left with large, piercing eyes and another in the foreground with its mouth open, wailing, and its eyes closed",
         "slug": "the-best-art-museums",
         "content": [
           {
@@ -114,6 +117,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/the-devil-is-the-details.jpg",
+        "imgAlt": "A sketch of a Victorian woman sitting at a desk looking at a sheet of paper, dressed in long dark garments, holding a quill in her right hand and a collection of papers in her left, with the numbers 1882 in the bottom left and a figure with a heart-shaped head in between the second and third numbers",
         "slug": "the-devil-is-the-details",
         "content": [
           {
@@ -145,6 +149,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/an-indestructible-hope.jpg",
+        "imgAlt": "A detailed black and white sketch of an eye featuring a series of smudge trails rolling down, inside a triangular shape with faces of women along the outside",
         "slug": "an-indestructible-hope",
         "content": [
           {
@@ -177,6 +182,7 @@
         "read": "10 mins",
         "label": "Street art",
         "img": "/images/articles/preview/street-art-festival.jpg",
+        "imgAlt": "A mural of a young girl in a black hoodie on a tall face of a street building, looking at the viewer with her hands loosely clutching around the rim of her hood and neck, with long, dark, wavy hair flowing to the right (her perspective)",
         "slug": "street-art-festival",
         "content": [
           {
@@ -208,6 +214,7 @@
         "read": "10 mins",
         "label": "Street art",
         "img": "/images/articles/preview/through-the-eyes-of-street-artists.jpg",
+        "imgAlt": "A colorful patchwork of old, partly-torn posters on a wall, with various words interspersed across incl. 'theory', 'touache' and 'Adidas' with the brand logo in the bottom left, and the faces of two men with beards, one with sunglasses, and two young women ",
         "slug": "through-the-eyes-of-street-artists",
         "content": [
           {
@@ -254,6 +261,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/the-chains-of-our-lives.jpg",
+        "imgAlt": "A side-view of a sculpture of an elderly man emerging from a wall, with shackles on his left wrist and chains along the bricks as he looks outwards, with a barred window in the corner brick wall gap in the foreground",
         "slug": "the-chains-of-our-lives",
         "content": [
           {
@@ -285,6 +293,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/how-are-you-really.jpg",
+        "imgAlt": "A sculpture of an expressive figure with long, wavy hair, looking upwards with wide, shocked eyes and open mouthed",
         "slug": "how-are-you-really",
         "content": [
           {
@@ -316,6 +325,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/beauty-of-colors.jpg",
+        "imgAlt": "A large, vibrant painting of a woman's face on a series of news clippings using a combination of pink, orange, green, blue and black tones",
         "slug": "beauty-of-colors",
         "content": [
           {
@@ -362,6 +372,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/getting-real.jpg",
+        "imgAlt": "An obscure, expressive painting of various horizontal and vertical brush strokes with light cream and white tones at the top, eventually changing to dark and blacker tones at the bottom",
         "slug": "getting-real",
         "content": [
           {
@@ -393,6 +404,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/secret-garden.jpg",
+        "imgAlt": "An abstract painting of tomatoes and meat, with a jug and a bottle in the backdrop, against muted and high-toned greens, with pinks in the foreground and white strawberries",
         "slug": "secret-garden",
         "content": [
           {
@@ -439,6 +451,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/history-of-paper.jpg",
+        "imgAlt": "A collage of layered posters on a wall, with a large rip running from the top down to expose the different layers underneath. The numbers '88' with an arrow pointing up is printed on the right and big, bold white lettering against a black backdrop on the left",
         "slug": "history-of-paper",
         "content": [
           {
@@ -470,6 +483,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/keep-on-smiling.jpg",
+        "imgAlt": "A large image of a young child, smiling at something in the distance, painted against a very tall block of residential flats on a foggy day with trees in the foreground",
         "slug": "keep-on-smiling",
         "content": [
           {
@@ -516,6 +530,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/colorful-future.jpg",
+        "imgAlt": "A mass of glossy pink and red paint swirls following irregular patterns, overlapping one another",
         "slug": "colorful-future",
         "content": [
           {
@@ -548,6 +563,7 @@
         "read": "10 mins",
         "label": "Street art",
         "img": "/images/articles/preview/artists-who-want-to-rise-above.jpg",
+        "imgAlt": "A sketch of an old man looking to the distance on the left printed against the side of a house, with a low fence in the foreground, a closed gate in the middle of it and the numbers '26' printed to the right",
         "slug": "artists-who-want-to-rise-above",
         "content": [
           {
@@ -594,6 +610,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/only-in-your-heart.jpg",
+        "imgAlt": "A broken pale sculpture of a figure resting it's head on its left hand with a red rose perched just above, resting on the top",
         "slug": "only-in-your-heart",
         "content": [
           {
@@ -625,6 +642,7 @@
         "read": "10 mins",
         "label": "Art",
         "img": "/images/articles/preview/most-colorful-places.jpg",
+        "imgAlt": "A futuristic, neon-styled painting of a woman with the sides of her face loosely covered by a pair of hands, and various galactic objects dotted around, including galaxies, stars and comets in various shades of greenish-blue, with orange swirls and the words 'REFLEXION RESPECT' printed at the bottom",
         "slug": "most-colorful-places",
         "content": [
           {
