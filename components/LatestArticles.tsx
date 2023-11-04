@@ -55,7 +55,7 @@ export default function LatestArticles() {
             <img
               className="w-full object-cover"
               src={latestArticle.content[0].img}
-              alt={latestArticle.title}
+              alt={latestArticle.imgAlt}
             />
           </div>
         </div>
@@ -69,7 +69,7 @@ export default function LatestArticles() {
                     <img
                       className="w-full h-full object-cover hover:scale-105 transition"
                       src={article.img}
-                      alt={article.title}
+                      alt={article.imgAlt}
                     />
                   </Link>
                   <div className="flex flex-col justify-between">

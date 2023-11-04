@@ -62,7 +62,7 @@ export default function Articles() {
               <img
                 className="w-full my-8"
                 src={articleData.img}
-                alt={articleData.title}
+                alt={articleData.imgAlt}
               />
             </Link>
             <h2 className="heading3-title mb-3">

@@ -97,7 +97,7 @@ export default async function ArticleDetails({
         <div>
           <img
             src={matchingArticle.content[0].img}
-            alt={matchingArticle.title}
+            alt={matchingArticle.imgAlt}
           />
         </div>
 
@@ -193,7 +193,7 @@ export default async function ArticleDetails({
                   <img
                     className="w-full my-8"
                     src={latestArticle.img}
-                    alt={latestArticle.title}
+                    alt={latestArticle.imgAlt}
                   />
                 </Link>
                 <h2 className="heading3-title mb-3">
