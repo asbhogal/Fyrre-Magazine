@@ -1,5 +1,5 @@
 import Authors from "@/components/Authors";
-import LatestArticles from "@/components/LatestArticles";
+import LatestArticles from "@/components/LatestArticles/LatestArticles";
 import LatestPodcasts from "@/components/LatestPodcasts";
 import NewsTicker from "@/components/NewsTicker";
 import PageTitle from "@/components/PageTitle";

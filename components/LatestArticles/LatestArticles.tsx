@@ -1,12 +1,15 @@
 "use client";
 
 import { useArticleContext } from "@/hooks/useArticleContext";
-import Sidebar from "./Sidebar";
+import Sidebar from "../Sidebar";
 import { Separator } from "@radix-ui/react-separator";
 import Link from "next/link";
+import Loading from "./loading";
 
 export default function LatestArticles() {
   const { data } = useArticleContext();
+
+  return <Loading />;
 
   if (data.length > 0 && data[0].articles.length > 0) {
     const allArticles = data[0].articles.sort((a, b) => {
