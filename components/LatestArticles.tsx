@@ -22,16 +22,16 @@ export default function LatestArticles() {
     return (
       <div>
         <div className="flex flex-col-reverse sm:flex-col gap-12 py-10 max-w-[95rem] w-full mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
             <h2 className="text-subtitle">
               <Link href={`/magazine/${latestArticle.slug}`}>
                 {latestArticle.title}
               </Link>
             </h2>
-            <div className="flex flex-col justify-between md:gap-2">
+            <div className="flex flex-col justify-between gap-2">
               <p>{latestArticle.description}</p>
-              <div className="flex flex-wrap justify-between items-center gap-2">
-                <div className="flex flex-wrap gap-2 sm:gap-6">
+              <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-2">
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-6">
                   <span className="flex flex-wrap">
                     <p className="font-semibold pr-2">Text</p>
                     <p>{data[0].author}</p>
@@ -45,7 +45,7 @@ export default function LatestArticles() {
                     <p>{data[0].articles[0].read}</p>
                   </span>
                 </div>
-                <span className="px-3 py-2 border border-black rounded-full">
+                <span className="px-3 py-2 border border-black rounded-full w-fit">
                   <p className="uppercase">{data[0].articles[0].label}</p>
                 </span>
               </div>
