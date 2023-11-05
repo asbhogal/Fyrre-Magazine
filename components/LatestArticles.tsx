@@ -60,11 +60,11 @@ export default function LatestArticles() {
           </div>
         </div>
 
-        <div className="flex flex-col-reverse lg:flex-row lg:gap-12 xl:gap-24">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 xl:gap-24">
           <div className="lg:w-3/4">
             {remainingArticles.map((article, index) => (
               <div key={article.title}>
-                <div className="grid md:grid-cols-[0fr_1fr] gap-12">
+                <div className="grid md:grid-cols-[0fr_1fr] gap-6 sm:gap-12">
                   <Link href={`magazine/${article.slug}`} className="h-60 w-60">
                     <img
                       className="w-full h-full object-cover hover:scale-105 transition"
@@ -82,8 +82,8 @@ export default function LatestArticles() {
 
                       <p>{article.description}</p>
                     </div>
-                    <div className="flex flex-wrap gap-4 justify-between items-center">
-                      <div className="flex gap-6">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-between sm:items-center">
+                      <div className="flex flex-col sm:flex-row gap-2 sm:gap-6">
                         <span className="flex flex-wrap">
                           <p className="font-semibold pr-2">Text</p>
                           <p>{data[0].author}</p>
@@ -97,7 +97,7 @@ export default function LatestArticles() {
                           <p>{article.read}</p>
                         </span>
                       </div>
-                      <span className="px-3 py-2 border border-black rounded-full">
+                      <span className="px-3 py-2 border border-black rounded-full w-fit">
                         <p className="uppercase">{article.label}</p>
                       </span>
                     </div>

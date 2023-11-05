@@ -16,7 +16,7 @@ export default function Subheading({
   return (
     <div className="flex justify-between">
       <h2
-        className={`pt-4 pb-8 md:pt-12 md:pb-16 max-w-[95rem] w-full mx-auto ${className}`}
+        className={`mt-4 mb-8 md:mt-12 md:mb-16 max-w-[95rem] w-full mx-auto ${className}`}
       >
         {children}
       </h2>
@@ -24,7 +24,7 @@ export default function Subheading({
         className="flex justify-end items-center gap-2 uppercase font-semibold w-full"
         href={url}
       >
-        <p className="uppercase font-semibold text-lg md:text-[2rem]">
+        <p className="uppercase font-semibold text-lg hidden sm:block md:text-[2rem]">
           {linkText}
         </p>
         <img

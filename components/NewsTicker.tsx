@@ -36,11 +36,13 @@ export default function NewsTicker() {
   }, [xPercent]);
 
   return (
-    <div className="flex xs:gap-4 xs:flex-col sm:flex-row bg-black text-white py-5 max-w-[95rem] w-full mx-auto relative overflow-hidden">
+    <div className="flex bg-black text-white py-5 max-w-[95rem] w-full mx-auto relative overflow-hidden">
       <div className="bg-black z-10 px-6">
-        <p className="bg-black font-semibold uppercase whitespace-nowrap">
-          News Ticker +++
-        </p>
+        <span className="flex gap-2 bg-black font-semibold uppercase whitespace-nowrap">
+          <p>News</p>
+          <p className="block sm:hidden">+++</p>
+          <p className="hidden sm:block">Ticker +++</p>
+        </span>
       </div>
       <div ref={newsText} className="flex gap-4 sliding-ticker relative">
         {news.map((newsItem, index) => (

@@ -69,13 +69,13 @@ export default async function ArticleDetails({
 
     return (
       <main className="max-w-[95rem] w-full mx-auto px-4 md:pt-8 sm:pt-4 xs:pt-2 lg:pb-4 md:pb-4 sm:pb-2 xs:pb-2">
-        <PostNavigation href="/magazine">Articles</PostNavigation>
+        <PostNavigation href="/magazine">Magazine</PostNavigation>
         <div className="grid md:grid-cols-2 gap-6 md:gap-6 pb-6 md:pb-24">
           <h2 className="text-subtitle">{matchingArticle.title}</h2>
           <p>{matchingArticle.description}</p>
         </div>
         <div className="flex flex-col md:flex-row justify-between gap-6 md:gap-0 mb-8">
-          <div className="flex md:items-center gap-6">
+          <div className="flex flex-col sm:flex-row md:items-center gap-2 sm:gap-6">
             <span className="flex flex-wrap">
               <p className="font-semibold pr-2">Text</p>
               <p>{articleData.author}</p>
@@ -90,7 +90,7 @@ export default async function ArticleDetails({
             </span>
           </div>
           <span className="px-3 py-2 border border-black rounded-full w-fit">
-            <p>{matchingArticle.label}</p>
+            <p className="uppercase">{matchingArticle.label}</p>
           </span>
         </div>
 
