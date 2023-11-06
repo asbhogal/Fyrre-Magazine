@@ -2,7 +2,6 @@
 
 import { usePodcastContext } from "@/hooks/usePodcastContext";
 import Link from "next/link";
-import formatString from "@/app/functions/formatString";
 
 export default function LatestPodcasts() {
   const { data } = usePodcastContext();

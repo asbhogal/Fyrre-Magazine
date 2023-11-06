@@ -29,7 +29,7 @@ export default function Loading() {
 
       <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 xl:gap-24">
         <div className="lg:w-3/4">
-          <div className="grid gap-6 sm:gap-12">
+          <div className="grid sm:gap-12">
             <div className="grid md:grid-cols-[0fr_1fr] gap-6 sm:gap-12">
               <Skeleton className="bg-[#a1a1a1] w-[15rem] h-[15rem] rounded-none"></Skeleton>
               <div className="flex flex-col justify-between">
