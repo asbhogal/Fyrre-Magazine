@@ -1,10 +1,12 @@
 import Authors from "@/components/Authors";
 import LatestArticles from "@/components/LatestArticles/LatestArticles";
+import Loading from "@/components/LatestArticles/loading";
 import LatestPodcasts from "@/components/LatestPodcasts";
 import NewsTicker from "@/components/NewsTicker";
 import PageTitle from "@/components/PageTitle";
 import Subheading from "@/components/Subheading";
 import PodcastContextProvider from "@/context/PodcastContext";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "Fyrre Magazine | Art & Life | Home",
@@ -23,7 +25,9 @@ export default function Home() {
           Art & Life
         </PageTitle>
         <NewsTicker />
-        <LatestArticles />
+        <Suspense fallback={<Loading />}>
+          <LatestArticles />
+        </Suspense>
         <Subheading
           className="text-subheading"
           url="/podcasts"
