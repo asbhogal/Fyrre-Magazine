@@ -4,6 +4,7 @@ import { useArticleContext } from "@/hooks/useArticleContext";
 import Sidebar from "../Sidebar";
 import { Separator } from "@radix-ui/react-separator";
 import Link from "next/link";
+import Loading from "./loading";
 
 export default function LatestArticles() {
   const { data } = useArticleContext();
@@ -116,10 +117,6 @@ export default function LatestArticles() {
       </div>
     );
   } else {
-    return (
-      <div>
-        <p>No articles available</p>
-      </div>
-    );
+    return <Loading />;
   }
 }
