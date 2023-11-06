@@ -3,7 +3,7 @@
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 
-import news from "../json/news.json";
+import news from "../../json/news.json";
 
 export default function NewsTicker() {
   const newsText = useRef<HTMLDivElement | null>(null);
