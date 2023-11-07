@@ -2,11 +2,13 @@
 
 import { usePodcastContext } from "@/hooks/usePodcastContext";
 import Link from "next/link";
+import LatestPodcastLoading from "./loading";
 
 export default function LatestPodcasts() {
   const { data } = usePodcastContext();
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3  xl:grid-cols-3 max-w-[95rem] w-full mx-auto border border-black border-collapse">
+    <LatestPodcastLoading />
+    /* <div className="grid grid-cols-1 md:grid-cols-3  xl:grid-cols-3 max-w-[95rem] w-full mx-auto border border-black border-collapse">
       {data.map((podcast) => (
         <div className="border border-black p-4 md:p-12" key={podcast.id}>
           <Link href={`/podcasts/${podcast.slug}`}>
@@ -35,6 +37,6 @@ export default function LatestPodcasts() {
           </div>
         </div>
       ))}
-    </div>
+    </div> */
   );
 }
