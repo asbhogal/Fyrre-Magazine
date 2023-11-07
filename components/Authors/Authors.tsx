@@ -2,7 +2,6 @@
 
 import { useArticleContext } from "@/hooks/useArticleContext";
 import Link from "next/link";
-import formatString from "@/app/functions/formatString";
 
 export default function Authors() {
   const { data } = useArticleContext();

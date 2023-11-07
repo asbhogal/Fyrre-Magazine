@@ -7,8 +7,7 @@ import Link from "next/link";
 import Loading from "./loading";
 
 export default function LatestArticles() {
-  return <Loading />;
-  /* const { data } = useArticleContext();
+  const { data } = useArticleContext();
 
   if (data.length > 0 && data[0].articles.length > 0) {
     const allArticles = data[0].articles.sort((a, b) => {
@@ -119,5 +118,5 @@ export default function LatestArticles() {
     );
   } else {
     return <Loading />;
-  } */
+  }
 }

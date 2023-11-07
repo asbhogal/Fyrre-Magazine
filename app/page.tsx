@@ -1,8 +1,9 @@
-import Authors from "@/components/Authors";
+import Authors from "@/components/Authors/Authors";
 import LatestArticles from "@/components/LatestArticles/LatestArticles";
 import Loading from "@/components/LatestArticles/loading";
 import NewsLoading from "@/components/NewsTicker/loading";
 import LatestPodcasts from "@/components/LatestPodcasts/LatestPodcasts";
+import LatestPodcastsLoading from "@/components/LatestPodcasts/loading";
 import NewsTicker from "@/components/NewsTicker/NewsTicker";
 import PageTitle from "@/components/PageTitle";
 import Subheading from "@/components/Subheading";
@@ -37,7 +38,9 @@ export default function Home() {
         >
           Podcast
         </Subheading>
-        <LatestPodcasts />
+        <Suspense fallback={<p>Test</p>}>
+          <LatestPodcasts />
+        </Suspense>
         <Subheading
           className="text-subheading"
           url="/authors"
