@@ -14,9 +14,9 @@ export default function Loading() {
 
       <div className="max-w-[75rem] w-full mx-auto flex flex-col md:flex-row flex-wrap gap-24">
         <div className="flex flex-col lg:w-1/4">
-          <Skeleton className="bg-[#a1a1a1] h-[300px] max-w-[300px] w-full rounded-none"></Skeleton>
+          <Skeleton className="bg-[#a1a1a1] h-[18.75rem] max-w-[18.75rem] w-full rounded-none"></Skeleton>
           <div className="flex justify-between mt-8 pb-12">
-            <Skeleton className="bg-[#a1a1a1] h-[28px] w-[91px] rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-[1.75rem] w-[5.6875rem] rounded-none"></Skeleton>
             <div className="flex gap-3">
               <Skeleton className="bg-[#a1a1a1] h-6 w-6 rounded-full"></Skeleton>
               <Skeleton className="bg-[#a1a1a1] h-6 w-6 rounded-full"></Skeleton>
