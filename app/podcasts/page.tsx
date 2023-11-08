@@ -1,6 +1,4 @@
 import PageTitle from "@/components/PageTitle";
-import { getPodcasts } from "../functions/getPodcasts";
-import Link from "next/link";
 import Loading from "@/components/PodcastsList/loading";
 import PodcastsList from "@/components/PodcastsList/PodcastsList";
 import { Suspense } from "react";
