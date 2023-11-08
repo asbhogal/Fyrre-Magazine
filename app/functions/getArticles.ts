@@ -38,5 +38,5 @@ export async function getArticles() {
     throw new Error("Failed to fetch article data");
   }
 
-  return res.json();
+  return res.json() as Promise<ArticleType[]>;
 }
