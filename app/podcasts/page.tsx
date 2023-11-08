@@ -1,5 +1,9 @@
 import PageTitle from "@/components/PageTitle";
+import { getPodcasts } from "../functions/getPodcasts";
+import Link from "next/link";
+import Loading from "./loading";
 import PodcastsList from "@/components/PodcastsList";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "Podcasts  | Fyrre Magazine",
@@ -16,7 +20,9 @@ export default function PodcastsPage() {
       >
         Podcast
       </PageTitle>
-      <PodcastsList />
+      <Suspense fallback={<Loading />}>
+        <PodcastsList />
+      </Suspense>
     </main>
   );
 }
