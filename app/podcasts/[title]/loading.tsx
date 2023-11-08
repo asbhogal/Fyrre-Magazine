@@ -1,3 +1,4 @@
+import SkeletonCard from "@/components/LatestPodcasts/SkeletonCard";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Loading() {
@@ -13,7 +14,7 @@ export default function Loading() {
 
       <div className="max-w-[75rem] w-full mx-auto flex flex-col md:flex-row flex-wrap gap-24">
         <div className="flex flex-col lg:w-1/4">
-          <Skeleton className="bg-[#a1a1a1] h-[300px] w-[300px] rounded-none"></Skeleton>
+          <Skeleton className="bg-[#a1a1a1] h-[300px] max-w-[300px] w-full rounded-none"></Skeleton>
           <div className="flex justify-between mt-8 pb-12">
             <Skeleton className="bg-[#a1a1a1] h-[28px] w-[91px] rounded-none"></Skeleton>
             <div className="flex gap-3">
@@ -41,10 +42,10 @@ export default function Loading() {
         <div className="flex flex-col flex-1 w-full">
           <Skeleton className="bg-[#a1a1a1] h-6 w-28 mb-8 rounded-none"></Skeleton>
           <div className="flex flex-col gap-2 mb-12">
-            <Skeleton className="bg-[#a1a1a1] h-20 w-full rounded-none"></Skeleton>
-            <Skeleton className="bg-[#a1a1a1] h-20 w-full rounded-none"></Skeleton>
-            <Skeleton className="bg-[#a1a1a1] h-20 w-full rounded-none"></Skeleton>
-            <Skeleton className="bg-[#a1a1a1] h-20 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-20 lg:h-32 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-20 lg:h-32 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-20 lg:h-32 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-20 lg:h-32 w-full rounded-none"></Skeleton>
           </div>
           <div className="flex flex-col gap-2 pt-8 pb-16">
             <Skeleton className="bg-[#a1a1a1] h-6 w-full rounded-none"></Skeleton>
@@ -59,7 +60,48 @@ export default function Loading() {
             <Skeleton className="bg-[#a1a1a1] h-4 w-full rounded-none"></Skeleton>
             <Skeleton className="bg-[#a1a1a1] h-4 w-full rounded-none"></Skeleton>
             <Skeleton className="bg-[#a1a1a1] h-4 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-4 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-4 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-4 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-4 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-4 w-full rounded-none"></Skeleton>
           </div>
+          <Skeleton className="bg-[#a1a1a1] h-0.5 mt-6 mb-12 w-full"></Skeleton>
+          <div className="flex flex-col gap-2 pt-8 pb-16">
+            <Skeleton className="bg-[#a1a1a1] h-12 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-12 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-12 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-12 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-12 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-4 mt-6 w-[25%] rounded-none"></Skeleton>
+          </div>
+          <Skeleton className="bg-[#a1a1a1] h-0.5 mb-6 mt-12 w-full"></Skeleton>
+          <div className="flex flex-col gap-2">
+            <Skeleton className="bg-[#a1a1a1] h-4 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-4 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-4 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-4 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-4 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-4 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-4 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-4 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-4 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-4 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-4 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-4 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-4 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-4 w-full rounded-none"></Skeleton>
+            <Skeleton className="bg-[#a1a1a1] h-4 w-full rounded-none"></Skeleton>
+          </div>
+        </div>
+      </div>
+      <div className="pb-12 md:pb-48">
+        <Skeleton className="bg-[#a1a1a1] h-0.5 mt-[9.5rem] mb-12 md:mb-24 w-full"></Skeleton>
+        <Skeleton className="bg-[#a1a1a1] h-16 md:h-28 mt-12 mb-12 md:mb-24 w-full rounded-none"></Skeleton>
+        <div className="grid grid-cols-1 md:grid-cols-3  xl:grid-cols-3 max-w-[95rem] w-full mx-auto">
+          <SkeletonCard />
+          <SkeletonCard />
+          <SkeletonCard />
         </div>
       </div>
     </div>

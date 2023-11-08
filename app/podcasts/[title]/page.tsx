@@ -3,7 +3,6 @@ import LatestPodcasts from "@/components/LatestPodcasts/LatestPodcasts";
 import PostNavigation from "@/components/PostNavigation";
 import SocialSharing from "@/components/SocialSharing";
 import PodcastContextProvider from "@/context/PodcastContext";
-import Loading from "./loading";
 
 export const revalidate = 10;
 
@@ -44,8 +43,7 @@ export default async function PodcastDetails({
     }
 
     return (
-      <Loading />
-      /* <main className="max-w-[95rem] w-full mx-auto px-4 pb-12 md:pt-8 sm:pt-4 xs:pt-2 md:pb-4 sm:pb-2 xs:pb-2">
+      <main className="max-w-[95rem] w-full mx-auto px-4 pb-12 md:pt-8 sm:pt-4 xs:pt-2 md:pb-4 sm:pb-2 xs:pb-2">
         <PostNavigation href="/podcasts">Podcast</PostNavigation>
         <div className="max-w-[75rem] w-full mx-auto flex flex-wrap gap-24">
           <div className="flex flex-col lg:w-1/4">
@@ -142,7 +140,7 @@ export default async function PodcastDetails({
             <LatestPodcasts />
           </PodcastContextProvider>
         </div>
-      </main> */
+      </main>
     );
   } catch (error) {
     console.error("Error in PodcastDetails component:", error);
