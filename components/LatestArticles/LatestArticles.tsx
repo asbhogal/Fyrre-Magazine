@@ -22,7 +22,7 @@ export default function LatestArticles() {
 
     return (
       <div>
-        <div className="flex flex-col-reverse sm:flex-col gap-12 py-10 max-w-[95rem] w-full mx-auto">
+        <div className="flex flex-col-reverse sm:flex-col gap-6 md:gap-12 py-6 md:py-10 max-w-[95rem] w-full mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
             <h2 className="text-subtitle">
               <Link href={`/magazine/${latestArticle.slug}`}>
@@ -54,7 +54,7 @@ export default function LatestArticles() {
           </div>
           <div>
             <img
-              className="w-full object-cover"
+              className="w-full object-cover aspect-[9/6]"
               src={latestArticle.content[0].img}
               alt={latestArticle.imgAlt}
             />

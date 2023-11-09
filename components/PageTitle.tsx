@@ -14,7 +14,9 @@ export default function PageTitle({
   return (
     <div className="max-w-[95rem] w-full mx-auto">
       <h1 className={className}>{children}</h1>
-      {imgSrc && <img src={imgSrc} alt={imgAlt} className="py-12 w-full" />}
+      {imgSrc && (
+        <img src={imgSrc} alt={imgAlt} className="py-6 md:py-12 w-full" />
+      )}
     </div>
   );
 }

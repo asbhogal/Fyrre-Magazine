@@ -72,7 +72,7 @@ export default async function AuthorDetails({
     }
 
     return (
-      <main className="max-w-[95rem] w-full mx-auto px-4 md:pt-8 sm:pt-4 xs:pt-2 lg:pb-4 md:pb-4 sm:pb-2 xs:pb-2">
+      <main className="max-w-[95rem] w-full mx-auto px-4 sm:pt-4 xs:pt-2 lg:pb-4 md:pb-4 sm:pb-2 xs:pb-2">
         <PostNavigation href="/authors">Author</PostNavigation>
         <div className="max-w-[75rem] w-full mx-auto grid lg:grid-cols-[300px_680px] gap-8 md:gap-0 justify-around">
           <div className="w-fit">

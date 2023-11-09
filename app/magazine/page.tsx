@@ -1,5 +1,7 @@
-import Articles from "@/components/Articles";
+import Articles from "@/components/Articles/Articles";
+import Loading from "@/components/Articles/loading";
 import PageTitle from "@/components/PageTitle";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "Articles  | Fyrre Magazine",
@@ -8,7 +10,7 @@ export const metadata = {
 
 export default function MagazinePage() {
   return (
-    <main className="flex flex-col min-h-screen max-w-[95rem] w-full mx-auto px-4 lg:pt-0 md:pt-8 sm:pt-4 xs:pt-2 lg:pb-4 md:pb-4 sm:pb-2 xs:pb-2">
+    <main className="flex flex-col min-h-screen max-w-[95rem] w-full mx-auto px-4 lg:pt-0 sm:pt-4 xs:pt-2 lg:pb-4 md:pb-4 sm:pb-2 xs:pb-2">
       <PageTitle
         className="sr-only"
         imgSrc="/images/titles/Magazine.svg"
@@ -16,7 +18,9 @@ export default function MagazinePage() {
       >
         Magazine
       </PageTitle>
-      <Articles />
+      <Suspense fallback={<Loading />}>
+        <Articles />
+      </Suspense>
     </main>
   );
 }

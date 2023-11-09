@@ -2,7 +2,7 @@
 
 import { useArticleContext } from "@/hooks/useArticleContext";
 import Link from "next/link";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { useState } from "react";
 
 export default function Articles() {
@@ -60,7 +60,7 @@ export default function Articles() {
             </div>
             <Link href={`magazine/${articleData.slug}`}>
               <img
-                className="w-full my-8"
+                className="w-full my-8 hover:scale-105 transition"
                 src={articleData.img}
                 alt={articleData.imgAlt}
               />
