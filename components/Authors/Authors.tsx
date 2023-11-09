@@ -1,10 +1,8 @@
-"use client";
-
-import { useArticleContext } from "@/hooks/useArticleContext";
+import { ArticleType, getArticles } from "@/app/functions/getArticles";
 import Link from "next/link";
 
-export default function Authors() {
-  const { data } = useArticleContext();
+export default async function Authors() {
+  const data: ArticleType[] = await getArticles();
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 mb-48 max-w-[95rem] w-full mx-auto border border-black border-collapse">

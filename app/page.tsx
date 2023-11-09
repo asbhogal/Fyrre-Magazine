@@ -3,6 +3,7 @@ import LatestArticles from "@/components/LatestArticles/LatestArticles";
 import NewsLoading from "@/components/NewsTicker/loading";
 import LatestPodcasts from "@/components/LatestPodcasts/LatestPodcasts";
 import LatestPodcastsLoading from "@/components/LatestPodcasts/loading";
+import AuthorsLoading from "@/components/Authors/loading";
 import NewsTicker from "@/components/NewsTicker/NewsTicker";
 import PageTitle from "@/components/PageTitle";
 import Subheading from "@/components/Subheading";
@@ -27,7 +28,9 @@ export default function Home() {
       <Suspense fallback={<NewsLoading />}>
         <NewsTicker />
       </Suspense>
+
       <LatestArticles />
+
       <Subheading
         className="text-subheading"
         url="/podcasts"
@@ -35,9 +38,11 @@ export default function Home() {
       >
         Podcast
       </Subheading>
+
       <Suspense fallback={<LatestPodcastsLoading />}>
         <LatestPodcasts />
       </Suspense>
+
       <Subheading
         className="text-subheading"
         url="/authors"
@@ -45,7 +50,10 @@ export default function Home() {
       >
         Authors
       </Subheading>
-      <Authors />
+
+      <Suspense fallback={<AuthorsLoading />}>
+        <Authors />
+      </Suspense>
     </main>
   );
 }
