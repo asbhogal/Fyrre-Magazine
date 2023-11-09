@@ -1,6 +1,5 @@
 import Authors from "@/components/Authors/Authors";
 import LatestArticles from "@/components/LatestArticles/LatestArticles";
-import Loading from "@/components/LatestArticles/loading";
 import NewsLoading from "@/components/NewsTicker/loading";
 import LatestPodcasts from "@/components/LatestPodcasts/LatestPodcasts";
 import LatestPodcastsLoading from "@/components/LatestPodcasts/loading";
@@ -38,7 +37,7 @@ export default function Home() {
         >
           Podcast
         </Subheading>
-        <Suspense fallback={<p>Test</p>}>
+        <Suspense fallback={<LatestPodcastsLoading />}>
           <LatestPodcasts />
         </Suspense>
         <Subheading
