@@ -9,7 +9,7 @@ export default function Articles() {
   const { data } = useArticleContext();
   const [selectedLabel, setSelectedLabel] = useState("All");
 
-  const labels = [
+  const labels: string[] = [
     "All",
     ...new Set(
       data.flatMap((article) => article.articles.map((item) => item.label))
