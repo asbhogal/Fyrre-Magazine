@@ -6,7 +6,7 @@ import FooterSocialLinks from "./FooterSocialsLinks";
 
 export default function Footer() {
   return (
-    <footer className="bg-black">
+    <footer className="bg-black overflow-hidden">
       <NewsletterTicker />
       <div className="max-w-[95rem] mx-auto px-6">
         <div className="py-8 xl:py-[128px] grid grid-cols-1 2xl:grid-cols-2 gap-2 xl:gap-32 items-center">

@@ -1,12 +1,11 @@
-import { getNews } from "@/app/functions/getNews";
+"use client";
+
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
+import news from "@/json/news.json";
 
-export default async function NewsTicker() {
-  const news = await getNews();
-
-  /* const newsText = useRef<HTMLDivElement | null>(null);
-  let tickerWidth = 0;
+export default function NewsTicker() {
+  const newsText = useRef<HTMLDivElement | null>(null);
   let xPercent = 0;
   const animationDuration = 20;
 
@@ -32,7 +31,7 @@ export default async function NewsTicker() {
         animation.kill();
       };
     }
-  }, [xPercent]); */
+  }, [xPercent]);
 
   return (
     <div className="flex bg-black text-white py-5 max-w-[95rem] w-full mx-auto relative overflow-hidden">
@@ -43,7 +42,7 @@ export default async function NewsTicker() {
           <p className="hidden sm:block">Ticker +++</p>
         </span>
       </div>
-      <div /* ref={newsText} */ className="flex gap-4 sliding-ticker relative">
+      <div ref={newsText} className="flex gap-4 sliding-ticker relative">
         {news.map((newsItem, index) => (
           <div
             key={index}
