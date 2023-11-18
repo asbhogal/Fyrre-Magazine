@@ -15,6 +15,7 @@ A bold, striking arts and life magazine website build as an SPA from Figma templ
 - TypeScript to enforce type safety
 - React Context API to store data fetched at top level
 - Custom hooks for podcast and article context store calls
+- GSAP animations for horizontal sliding text
 - Shadcn for accessible components
 - Tailwind CSS for mobile-first responsiveness
 - E2E testing across multiple browsers using Playwright
@@ -28,7 +29,8 @@ A bold, striking arts and life magazine website build as an SPA from Figma templ
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/tailwindcss/tailwindcss-plain.svg"><img src="https://github.com/devicons/devicon/blob/master/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind logo" width="50" height="50" style="max-width:100%;"></a>
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/shadcn-ui/ui/blob/main/apps/www/public/favicon-32x32.png"><img src="https://github.com/shadcn-ui/ui/blob/main/apps/www/public/favicon-32x32.png" alt="Shadcn logo" width="50" height="50" style="max-width:100%;"></a>
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/eslint/eslint-original.svg"><img src="https://github.com/devicons/devicon/blob/master/icons/eslint/eslint-original.svg" alt="ES Lint logo" width="50" height="50" style="max-width:100%;"></a>
-<a target="_blank" rel="noopener noreferrer" href="https://playwright.dev/img/playwright-logo.svg"><img src="https://playwright.dev/img/playwright-logo.svg" alt="ES Lint logo" width="50" height="50" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://playwright.dev/img/playwright-logo.svg"><img src="https://playwright.dev/img/playwright-logo.svg" alt="Playwright logo" width="50" height="50" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://avatars.githubusercontent.com/u/2386673?s=200&v=4"><img src="https://avatars.githubusercontent.com/u/2386673?s=200&v=4" alt="GSAP logo" width="50" height="50" style="max-width:100%;"></a>
 
 <strong>Links</strong>
 - <a target="_blank" rel="noopener noreferrer" href="https://fyrre-magazine.vercel.app/">Fyrre Magazine Site</a>
