@@ -4,7 +4,7 @@
 
 </div>
 
-A bold, striking arts and life magazine website build as an SPA from Figma templates (designed by Webflow designer <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/@pawelgola">Pawel Gola</a>), using Next.js, React Server Components, React Suspense, TypeScript, Tailwind, Shadcn and ES Lint and incorporates E2E testing using Playwright.  This repo is currently under development.
+A bold, striking arts and life magazine website build as an SPA from Figma templates (designed by Webflow designer <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/@pawelgola">Pawel Gola</a>), using Next.js, React Server Components, React Suspense, TypeScript, Tailwind, Shadcn and ES Lint and incorporates E2E testing using Playwright.
 
 <strong>Features</strong>
 - Faithful adaptation to Figma designs
