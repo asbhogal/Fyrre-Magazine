@@ -19,6 +19,7 @@ A bold, striking arts and life magazine website build as an SPA from Figma templ
 - Shadcn for accessible components
 - Tailwind CSS for mobile-first responsiveness
 - E2E testing across multiple browsers using Playwright
+- Husky to run lint and testing prior to Git Commit
 
 <strong>Stacks & Tools</strong>
 <br>
