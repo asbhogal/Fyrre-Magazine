@@ -38,4 +38,4 @@ A bold, striking arts and life magazine website build as an SPA from Figma templ
 
 <strong>Disclaimer</strong>
 
-As far as the developer's knowledge goes, all the people mentioned in the previous responses are purely fictionalized. Any resemblance to individuals or entities, living or dead, is entirely coincidental. The developer bears no responsibility for any such resemblance. 
+As far as the developer is aware all the individuals mentioned in this website are purely fictionalized. Any resemblance to individuals or entities, living or dead, is entirely coincidental and the developer bears no responsibility for any such resemblance. 
