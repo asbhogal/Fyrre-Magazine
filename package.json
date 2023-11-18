@@ -6,7 +6,8 @@
     "dev": "rd /s /Q .next && next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "1.0.4",
@@ -24,6 +25,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@playwright/test": "^1.40.0",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
