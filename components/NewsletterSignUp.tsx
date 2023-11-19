@@ -1,24 +1,24 @@
-import { useForm, type FieldValues } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  TSubscribeNewsletterSchema,
+  subscribeNewsletterSchema,
+} from "@/lib/types";
 
 export default function NewsletterSignUp() {
-  const REGEX_PATTERN = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting, isSubmitted },
+    formState: { errors, isSubmitting },
     reset,
-    getValues,
-  } = useForm();
+  } = useForm<TSubscribeNewsletterSchema>({
+    resolver: zodResolver(subscribeNewsletterSchema),
+  });
 
-  const validateEmail = (value: string) => {
-    return REGEX_PATTERN.test(value) || "Please enter a valid email address";
-  };
-
-  const onSubmit = async (data: FieldValues) => {
+  const onSubmit = async (data: TSubscribeNewsletterSchema) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
-
     reset();
   };
 
@@ -28,23 +28,7 @@ export default function NewsletterSignUp() {
       <p className="heading3-title mb-4">Design News to your Inbox</p>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Input
-          {...register("email", {
-            required: "Please enter a valid email address to subscribe",
-            pattern: {
-              value: REGEX_PATTERN,
-              message: "Please enter a valid email address",
-            },
-            validate: validateEmail,
-            minLength: {
-              value: 5,
-              message: "Please enter an email address longer than 5 characters",
-            },
-            maxLength: {
-              value: 40,
-              message:
-                "Please enter an email address shorter than 40 characters",
-            },
-          })}
+          {...register("email")}
           className="mb-2"
           type="text"
           placeholder="Email Address"
