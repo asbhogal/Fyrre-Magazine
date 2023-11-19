@@ -1,58 +1,56 @@
 "use client";
 
-import { useState } from "react";
+import { useForm } from "react-hook-form";
+import type { FieldValues } from "react-hook-form";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 
 export default function NewsletterSignUp() {
-  const [emailAddress, setEmailAddress] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [errors, setErrors] = useState<string[]>([]);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+    getValues,
+  } = useForm();
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    if (!regex.test(emailAddress)) {
-      setErrors(["Email address must be the correct format"]);
-      setIsSubmitting(false);
-      return;
-    }
-
+  const onSubmit = async (data: FieldValues) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    setEmailAddress("");
-
-    setIsSubmitting(false);
+    reset(data);
   };
 
   return (
     <div className="bg-[#f8f8f8] p-[1.88rem] mt-16">
       <h3 className="uppercase font-semibold mb-2">Newsletter</h3>
       <p className="heading3-title mb-4">Design News to your Inbox</p>
-      <form onSubmit={handleSubmit}>
-        {errors.length > 0 && (
-          <ul>
-            {errors.map((error) => (
-              <li key={error} className="text-red-500">
-                {error}
-              </li>
-            ))}
-          </ul>
-        )}
+      <form onSubmit={handleSubmit(onSubmit)}>
         <Input
+          {...register("email", {
+            required: "An email address is required",
+            minLength: {
+              value: 5,
+              message:
+                "Please enter an email address more than 5 characters long",
+            },
+            maxLength: {
+              value: 40,
+              message:
+                "Please enter an email address less than 40 characters long",
+            },
+          })}
           className="mb-2"
           type="text"
           placeholder="Email Address"
           name="email address"
-          value={emailAddress}
-          onChange={(e) => setEmailAddress(e.currentTarget.value)}
           required
         />
+        {errors.email && (
+          <p className="text-red-500">{`${errors.email.message}`}</p>
+        )}
         <Button
-          type="submit"
           disabled={isSubmitting}
+          type="submit"
           className="disabled:cursor-none"
         >
           Sign Up

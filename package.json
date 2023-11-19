@@ -21,6 +21,7 @@
     "next": "^13.5.5",
     "react": "latest",
     "react-dom": "latest",
+    "react-hook-form": "^7.48.2",
     "shadcn-ui": "^0.4.0",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7"
@@ -33,9 +34,9 @@
     "autoprefixer": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",
+    "husky": "^8.0.0",
     "postcss": "latest",
     "tailwindcss": "latest",
-    "typescript": "latest",
-    "husky": "^8.0.0"
+    "typescript": "latest"
   }
 }
