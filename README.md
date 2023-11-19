@@ -8,6 +8,7 @@ A bold, striking arts and life magazine website build as an SPA from Figma templ
 
 <strong>Features</strong>
 - Faithful adaptation to Figma designs
+- Custom designed and developed 404 error page
 - Dynamic rendering of podcast, article and author data
 - JSON data created for articles, podcast and authors to emulate API endpoints
 - React Suspense for UI loading states until async fetched content is available
@@ -20,6 +21,8 @@ A bold, striking arts and life magazine website build as an SPA from Figma templ
 - Tailwind CSS for mobile-first responsiveness
 - E2E testing across multiple browsers using Playwright
 - Husky to run lint and testing prior to Git Commit
+- React Hook form with Zod Schema validation for email subscription input
+- Server Actions and Errors using Next.js api routes for server-side validation
 
 <strong>Stacks & Tools</strong>
 <br>
@@ -30,8 +33,10 @@ A bold, striking arts and life magazine website build as an SPA from Figma templ
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/tailwindcss/tailwindcss-plain.svg"><img src="https://github.com/devicons/devicon/blob/master/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind logo" width="50" height="50" style="max-width:100%;"></a>
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/shadcn-ui/ui/blob/main/apps/www/public/favicon-32x32.png"><img src="https://github.com/shadcn-ui/ui/blob/main/apps/www/public/favicon-32x32.png" alt="Shadcn logo" width="50" height="50" style="max-width:100%;"></a>
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/eslint/eslint-original.svg"><img src="https://github.com/devicons/devicon/blob/master/icons/eslint/eslint-original.svg" alt="ES Lint logo" width="50" height="50" style="max-width:100%;"></a>
-<a target="_blank" rel="noopener noreferrer" href="https://playwright.dev/img/playwright-logo.svg"><img src="https://playwright.dev/img/playwright-logo.svg" alt="Playwright logo" width="50" height="50" style="max-width:100%;"></a>
 <a target="_blank" rel="noopener noreferrer" href="https://avatars.githubusercontent.com/u/2386673?s=200&v=4"><img src="https://avatars.githubusercontent.com/u/2386673?s=200&v=4" alt="GSAP logo" width="50" height="50" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://playwright.dev/img/playwright-logo.svg"><img src="https://playwright.dev/img/playwright-logo.svg" alt="Playwright logo" width="50" height="50" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://avatars.githubusercontent.com/u/53986236?s=280&v=4"><img src="https://avatars.githubusercontent.com/u/53986236?s=280&v=4" alt="React Hook Form logo" width="50" height="50" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://zod.dev/logo.svg"><img src="https://zod.dev/logo.svg" alt="Zod logo" width="50" height="50" style="max-width:100%;"></a>
 
 <strong>Links</strong>
 - <a target="_blank" rel="noopener noreferrer" href="https://fyrre-magazine.vercel.app/">Fyrre Magazine Site</a>
