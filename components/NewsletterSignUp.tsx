@@ -13,13 +13,39 @@ export default function NewsletterSignUp() {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
+    setError,
   } = useForm<TSubscribeNewsletterSchema>({
     resolver: zodResolver(subscribeNewsletterSchema),
   });
 
   const onSubmit = async (data: TSubscribeNewsletterSchema) => {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    reset();
+    const response = await fetch("/api/subscribe", {
+      method: "POST",
+      body: JSON.stringify({ email: data.email }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    const responseData = await response.json();
+
+    if (!response.ok) {
+      alert("Email subscription form failed");
+      return;
+    }
+
+    if (responseData.errors) {
+      const errors = responseData.errors;
+      if (errors.email) {
+        setError("email", {
+          type: "server",
+          message: errors.email,
+        });
+      } else {
+        alert("Something went wrong");
+      }
+    }
+    // reset();
   };
 
   return (
