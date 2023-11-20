@@ -53,7 +53,7 @@ export default function Articles() {
         {filteredArticles.map((articleData, index) => (
           <article className="border border-black p-8" key={index}>
             <div className="flex items-center justify-between">
-              <p>{articleData.date}</p>
+              <time dateTime={articleData.date}>{articleData.date}</time>
               <span className="px-3 py-2 border border-black rounded-full">
                 <p className="uppercase">{articleData.label}</p>
               </span>

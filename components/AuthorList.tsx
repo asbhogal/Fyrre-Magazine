@@ -12,7 +12,7 @@ export default function AuthorsList() {
     <div className="flex flex-col max-w-[95rem] w-full mx-auto py-8 lg:pt-24 lg:pb-48">
       {data.map((authors, index) => (
         <div key={authors.id}>
-          <div className="flex flex-col md:flex-row justify-between md:items-center gap-2 md:gap-0">
+          <article className="flex flex-col md:flex-row justify-between md:items-center gap-2 md:gap-0">
             <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-16">
               <img
                 className="h-[9.375rem] w-[9.375rem]"
@@ -41,7 +41,7 @@ export default function AuthorsList() {
                 />
               </Link>
             </div>
-          </div>
+          </article>
           {index < data.length - 1 && (
             <Separator className="border border-black my-6" />
           )}

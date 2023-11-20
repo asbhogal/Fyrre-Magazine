@@ -82,7 +82,9 @@ export default async function ArticleDetails({
             </span>
             <span className="flex flex-wrap">
               <p className="font-semibold pr-2">Date</p>
-              <p>{matchingArticle.date}</p>
+              <time dateTime={matchingArticle.date}>
+                {matchingArticle.date}
+              </time>
             </span>
             <span className="flex flex-wrap">
               <p className="font-semibold pr-2">Read</p>
@@ -190,7 +192,9 @@ export default async function ArticleDetails({
                 key={latestArticle.slug}
               >
                 <div className="flex items-center justify-between">
-                  <p>{latestArticle.date}</p>
+                  <time dateTime={latestArticle.date}>
+                    {latestArticle.date}
+                  </time>
                   <span className="px-3 py-2 border border-black rounded-full">
                     <p className="uppercase">{latestArticle.label}</p>
                   </span>
