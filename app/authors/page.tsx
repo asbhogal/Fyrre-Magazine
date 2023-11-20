@@ -1,6 +1,7 @@
 import AuthorsList from "@/components/AuthorList";
 import PageTitle from "@/components/PageTitle";
 import { Suspense } from "react";
+import Loading from "./loading";
 
 export const metadata = {
   title: "Authors  | Fyrre Magazine",
@@ -17,7 +18,7 @@ export default function AuthorsPage() {
       >
         Authors
       </PageTitle>
-      <Suspense fallback={<p>TEST</p>}>
+      <Suspense fallback={<Loading />}>
         <AuthorsList />
       </Suspense>
     </main>
