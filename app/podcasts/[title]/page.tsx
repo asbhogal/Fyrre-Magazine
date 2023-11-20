@@ -45,8 +45,8 @@ export default async function PodcastDetails({
     return (
       <main className="max-w-[95rem] w-full mx-auto px-4 pb-12 sm:pt-4 xs:pt-2 md:pb-4 sm:pb-2 xs:pb-2">
         <PostNavigation href="/podcasts">Podcast</PostNavigation>
-        <div className="max-w-[75rem] w-full mx-auto flex flex-wrap gap-24">
-          <div className="flex flex-col lg:w-1/4">
+        <article className="max-w-[75rem] w-full mx-auto flex flex-wrap gap-24">
+          <article className="flex flex-col lg:w-1/4">
             <img className="" src={podcastData.img} alt={podcastData.imgAlt} />
             <div className="flex justify-between mt-8 pb-12 border-b border-black">
               <p className="text-xl font-semibold">Listen On</p>
@@ -75,15 +75,15 @@ export default async function PodcastDetails({
             </div>
             <div className="flex flex-col gap-4 pt-8">
               <div className="flex flex-wrap justify-between">
-                <p>Date</p>
-                <p>{podcastData.date}</p>
+                <p className="font-semibold">Date</p>
+                <time dateTime={podcastData.date}>{podcastData.date}</time>
               </div>
               <div className="flex flex-wrap justify-between">
-                <p>Duration</p>
+                <p className="font-semibold">Duration</p>
                 <p>{podcastData.duration}</p>
               </div>
               <div className="flex flex-wrap justify-between">
-                <p className="flex">Share</p>
+                <p className="flex font-semibold">Share</p>
                 <SocialSharing
                   links={[
                     {
@@ -108,9 +108,9 @@ export default async function PodcastDetails({
                 />
               </div>
             </div>
-          </div>
+          </article>
 
-          <div className="flex flex-col flex-1 w-full">
+          <article className="flex flex-col flex-1 w-full">
             <p className="uppercase font-semibold">{podcastData.episode}</p>
             <h1 className="podcast-title">{podcastData.title}</h1>
             {podcastData.content.map((podcastItem, index) => (
@@ -130,8 +130,8 @@ export default async function PodcastDetails({
                 <p>{podcastItem.section2}</p>
               </div>
             ))}
-          </div>
-        </div>
+          </article>
+        </article>
         <div className="pb-12 md:pb-48">
           <h2 className="text-blog-subheading border-t-2 border-black mt-[9.5rem] pt-12 pb-12 md:pb-24">
             Latest Episodes

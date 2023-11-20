@@ -1,30 +1,31 @@
+"use client";
+
 import NewsletterTicker from "./NewsletterTicker";
 import { Input } from "@/components/ui/input";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import FooterSocialLinks from "./FooterSocialsLinks";
+import NewsletterSignUp from "./NewsletterSignUp";
 
 export default function Footer() {
   return (
     <footer className="bg-black overflow-hidden">
       <NewsletterTicker />
       <div className="max-w-[95rem] mx-auto px-6">
-        <div className="py-8 xl:py-[128px] grid grid-cols-1 2xl:grid-cols-2 gap-2 xl:gap-32 items-center">
+        <div className="py-8 xl:py-[128px] grid grid-cols-1 2xl:grid-cols-2 gap-2 md:gap-12 xl:gap-32 items-center">
           <h2 className="uppercase text-footer-title">
             Design news to your inbox
           </h2>
           <div className="flex flex-wrap lg:justify-end gap-3">
-            <Input
-              className="w-[19.3125rem]"
-              type="email"
-              placeholder="Email"
+            <NewsletterSignUp
+              formClassName="flex flex-col gap-4 max-w-[28rem] w-full"
+              formFieldsClassName="flex flex-wrap gap-3"
+              inputClassName="max-w-[20rem]"
+              buttonClassName="bg-white text-black hover:text-white"
             />
-            <Button className="w-[6.5rem]" type="submit">
-              Sign up
-            </Button>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row lg:justify-between gap-6 max-w-[95rem] w-full">
+        <div className="flex flex-col md:flex-row flex-wrap lg:justify-between gap-6 max-w-[95rem] w-full">
           <img
             className="w-fit"
             src="/logos/FyrreMagazineLogo-White.svg"

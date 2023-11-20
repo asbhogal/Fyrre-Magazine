@@ -1,4 +1,4 @@
-"use client";
+/* "use client";
 
 import { useArticleContext } from "@/hooks/useArticleContext";
 import Sidebar from "./Sidebar";
@@ -123,3 +123,4 @@ export default function LatestArticles() {
     );
   }
 }
+ */

@@ -7,7 +7,19 @@ import {
   subscribeNewsletterSchema,
 } from "@/lib/types";
 
-export default function NewsletterSignUp() {
+type SubscribeProps = {
+  formClassName?: string;
+  formFieldsClassName?: string;
+  inputClassName?: string;
+  buttonClassName?: string;
+};
+
+export default function NewsletterSignUp({
+  formClassName,
+  formFieldsClassName,
+  inputClassName,
+  buttonClassName,
+}: SubscribeProps) {
   const {
     register,
     handleSubmit,
@@ -49,28 +61,26 @@ export default function NewsletterSignUp() {
   };
 
   return (
-    <div className="bg-[#f8f8f8] p-[1.88rem] mt-16">
-      <h3 className="uppercase font-semibold mb-2">Newsletter</h3>
-      <p className="heading3-title mb-4">Design News to your Inbox</p>
-      <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} className={`${formClassName}`}>
+      <div className={`${formFieldsClassName}`}>
         <Input
           {...register("email")}
-          className="mb-2"
+          className={`mb-2 ${inputClassName}`}
           type="text"
           placeholder="Email Address"
           name="email"
         />
-        {errors.email && (
-          <p className="text-red-500 mb-2">{`${errors.email.message}`}</p>
-        )}
         <Button
           disabled={isSubmitting}
           type="submit"
-          className="disabled:cursor-none"
+          className={`disabled:cursor-none ${buttonClassName}`}
         >
           Sign Up
         </Button>
-      </form>
-    </div>
+      </div>
+      {errors.email && (
+        <p className="text-red-500 mb-2">{`${errors.email.message}`}</p>
+      )}
+    </form>
   );
 }

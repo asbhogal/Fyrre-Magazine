@@ -70,10 +70,10 @@ export default async function ArticleDetails({
     return (
       <main className="max-w-[95rem] w-full mx-auto px-4 md:pt-8 sm:pt-4 xs:pt-2 lg:pb-4 md:pb-4 sm:pb-2 xs:pb-2">
         <PostNavigation href="/magazine">Magazine</PostNavigation>
-        <div className="grid md:grid-cols-2 gap-6 md:gap-6 pb-6 md:pb-24">
+        <article className="grid md:grid-cols-2 gap-6 md:gap-6 pb-6 md:pb-24">
           <h2 className="text-subtitle">{matchingArticle.title}</h2>
           <p>{matchingArticle.description}</p>
-        </div>
+        </article>
         <div className="flex flex-col md:flex-row justify-between gap-6 md:gap-0 mb-8">
           <div className="flex flex-col sm:flex-row md:items-center gap-2 sm:gap-6">
             <span className="flex flex-wrap">
@@ -101,7 +101,8 @@ export default async function ArticleDetails({
           />
         </div>
 
-        <div className="flex flex-col md:flex-row gap-6 md:gap-16 max-w-[62.5rem] w-full mx-auto mt-6 md:mt-24">
+        <article className="flex flex-col md:flex-row gap-6 md:gap-16 max-w-[62.5rem] w-full mx-auto mt-6 md:mt-24">
+          {/*  <h2 className="sr-only">{matchingArticle.title}</h2> */}
           <div className="flex flex-col w-fit">
             <div className="flex gap-4 items-center">
               <img
@@ -114,15 +115,17 @@ export default async function ArticleDetails({
 
             <div className="flex flex-col gap-4 pt-8">
               <div className="flex flex-wrap justify-between">
-                <p>Date</p>
-                <p>{matchingArticle.date}</p>
+                <p className="font-semibold">Date</p>
+                <time dateTime={matchingArticle.date}>
+                  {matchingArticle.date}
+                </time>
               </div>
               <div className="flex flex-wrap justify-between">
-                <p>Read</p>
+                <p className="font-semibold">Read</p>
                 <p>{matchingArticle.read}</p>
               </div>
               <div className="flex flex-wrap justify-between">
-                <p className="flex">Share</p>
+                <p className="flex font-semibold">Share</p>
                 <SocialSharing
                   links={[
                     {
@@ -164,7 +167,7 @@ export default async function ArticleDetails({
             </p>
             <p>{matchingArticle.content[4].section2}</p>
           </div>
-        </div>
+        </article>
 
         <div>
           <Subheading
@@ -180,9 +183,12 @@ export default async function ArticleDetails({
             </div>
           ))}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-black border-collapse">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-black border-collapse mb-12 md:mb-48">
             {latestArticles.map((latestArticle) => (
-              <div className="border border-black p-8" key={latestArticle.slug}>
+              <article
+                className="border border-black p-8"
+                key={latestArticle.slug}
+              >
                 <div className="flex items-center justify-between">
                   <p>{latestArticle.date}</p>
                   <span className="px-3 py-2 border border-black rounded-full">
@@ -212,7 +218,7 @@ export default async function ArticleDetails({
                     <p>{latestArticle.read}</p>
                   </span>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>

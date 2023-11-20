@@ -77,7 +77,7 @@ export default function LatestArticles() {
                       alt={article.imgAlt}
                     />
                   </Link>
-                  <div className="flex flex-col justify-between">
+                  <article className="flex flex-col justify-between">
                     <div className="mb-4 :md:mb-0">
                       <h3 className="heading3-title mb-3">
                         <Link href={`/magazine/${article.slug}`}>
@@ -106,7 +106,7 @@ export default function LatestArticles() {
                         <p className="uppercase">{article.label}</p>
                       </span>
                     </div>
-                  </div>
+                  </article>
                 </article>
                 {index < remainingArticles.length - 1 && (
                   <Separator className="border border-black my-6" />

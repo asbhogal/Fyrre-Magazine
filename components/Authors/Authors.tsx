@@ -7,7 +7,7 @@ export default async function Authors() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 mb-48 max-w-[95rem] w-full mx-auto border border-black border-collapse">
       {data.map((article) => (
-        <div
+        <article
           className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 md:gap-12 p-4 md:p-8 border border-black"
           key={article.id}
         >
@@ -18,7 +18,7 @@ export default async function Authors() {
               alt={article.imgAlt}
             />
           </Link>
-          <div>
+          <article>
             <p className="heading3-title mb-4">
               <Link href={`/authors/${article.slug}`}>{article.author}</Link>
             </p>
@@ -32,8 +32,8 @@ export default async function Authors() {
                 <p className="">{article.city}</p>
               </span>
             </div>
-          </div>
-        </div>
+          </article>
+        </article>
       ))}
     </div>
   );

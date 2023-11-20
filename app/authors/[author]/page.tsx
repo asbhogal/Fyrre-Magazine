@@ -74,7 +74,7 @@ export default async function AuthorDetails({
     return (
       <main className="max-w-[95rem] w-full mx-auto px-4 sm:pt-4 xs:pt-2 lg:pb-4 md:pb-4 sm:pb-2 xs:pb-2">
         <PostNavigation href="/authors">Author</PostNavigation>
-        <div className="max-w-[75rem] w-full mx-auto grid lg:grid-cols-[300px_680px] gap-8 md:gap-0 justify-around">
+        <article className="max-w-[75rem] w-full mx-auto grid lg:grid-cols-[300px_680px] gap-8 md:gap-0 justify-around">
           <div className="w-fit">
             <img src={authorData.avatar} alt={authorData.imgAlt} />
             <div className="flex justify-between border-top border-t border-black mt-12 pt-6">
@@ -103,14 +103,14 @@ export default async function AuthorDetails({
               />
             </div>
           </div>
-          <div>
+          <article>
             <h1 className="text-subheading pb-8">{authorData.author}</h1>
             <p className="text-blog-summary pb-12">
               {authorData.biography.summary}
             </p>
             <p>{authorData.biography.body}</p>
-          </div>
-        </div>
+          </article>
+        </article>
         <div className="pb-12 md:pb-48">
           <h2 className="text-blog-subheading mt-[9.5rem] pt-12 pb-12 md:pb-24">
             Articles by {authorData.author}
@@ -129,7 +129,7 @@ function AuthorArticles({ articles }: { articles: ArticleData[] }) {
   return (
     <div className="grid md:grid-cols-2 border border-black border-collapse">
       {articles.map((article, index) => (
-        <div
+        <article
           className="flex items-center gap-2 md:gap-12 p-8 border border-black"
           key={index}
         >
@@ -146,8 +146,8 @@ function AuthorArticles({ articles }: { articles: ArticleData[] }) {
             </p>
             <div className="flex gap-8">
               <span className="flex">
-                <p className="font-semibold pr-2">Job</p>
-                <p className="">{article.date}</p>
+                <p className="font-semibold pr-2">Date</p>
+                <time dateTime={article.date}>{article.date}</time>
               </span>
               <span className="flex">
                 <p className="font-semibold pr-2">City</p>
@@ -155,7 +155,7 @@ function AuthorArticles({ articles }: { articles: ArticleData[] }) {
               </span>
             </div>
           </div>
-        </div>
+        </article>
       ))}
     </div>
   );

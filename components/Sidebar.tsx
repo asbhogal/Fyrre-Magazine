@@ -10,12 +10,15 @@ export default function Sidebar() {
       <img
         className="w-[20rem] pt-8 pb-4"
         src="/images/homepage/magazine-cover.jpg"
-        alt="A rust-colored magazine cover, showing a sculpture of a man, the words 'FYRRE MAGAZIN' on the top left and '03/2022' on the bottom right, a gold badge just above with 'EXCLUSIVE JAKOB GRONBERG INTERVIEW' printed on it, and an arrow pointing in the bottom right corner"
+        alt="A rust-colored magazine cover, showing a sculpture of a man, the words 'FYRRE MAGAZINE' on the top left and '03/2022' on the bottom right, a gold badge just above with 'EXCLUSIVE JAKOB GRONBERG INTERVIEW' printed on it, and an arrow pointing in the bottom right corner"
       />
       <Button>Order</Button>
-      <h3 className="uppercase font-semibold mt-16 mb-8">Most Popular</h3>
       <PopularArticles />
-      <NewsletterSignUp />
+      <div className="bg-[#f8f8f8] p-[1.88rem] mt-16">
+        <h3 className="uppercase font-semibold mb-2">Newsletter</h3>
+        <p className="heading3-title mb-4">Design News to your Inbox</p>
+        <NewsletterSignUp />
+      </div>
     </aside>
   );
 }

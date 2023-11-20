@@ -51,7 +51,7 @@ export default function Articles() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-black border-collapse mb-48">
         {filteredArticles.map((articleData, index) => (
-          <div className="border border-black p-8" key={index}>
+          <article className="border border-black p-8" key={index}>
             <div className="flex items-center justify-between">
               <p>{articleData.date}</p>
               <span className="px-3 py-2 border border-black rounded-full">
@@ -81,7 +81,7 @@ export default function Articles() {
                 <p>{articleData.read}</p>
               </span>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </div>
