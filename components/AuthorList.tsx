@@ -1,12 +1,9 @@
-"use client";
-
-import { useArticleContext } from "@/hooks/useArticleContext";
 import formatString from "@/app/functions/formatString";
 import Link from "next/link";
-import { Separator } from "@radix-ui/react-separator";
+import { ArticleType, getArticles } from "@/app/functions/getArticles";
 
-export default function AuthorsList() {
-  const { data } = useArticleContext();
+export default async function AuthorsList() {
+  const data: Array<ArticleType> = await getArticles();
 
   return (
     <div className="flex flex-col max-w-[95rem] w-full mx-auto py-8 lg:pt-24 lg:pb-48">
@@ -43,7 +40,7 @@ export default function AuthorsList() {
             </div>
           </article>
           {index < data.length - 1 && (
-            <Separator className="border border-black my-6" />
+            <div className="border border-black my-6" />
           )}
         </div>
       ))}
