@@ -10,6 +10,7 @@ A bold, striking arts and life magazine website build as an SPA from Figma templ
 - Faithful adaptation to Figma designs
 - Custom designed and developed 404 error page
 - Dynamic rendering of podcast, article and author data
+- Dynamic filtering of magazine articles based on categories
 - JSON data created for articles, podcast and authors to emulate API endpoints
 - React Suspense for UI loading states until async fetched content is available
 - React Server Components (app router pages)
