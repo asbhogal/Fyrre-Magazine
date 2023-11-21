@@ -32,25 +32,43 @@ export default function Footer() {
             alt="logo in white"
           />
           <div className="flex lg:flex-row max-w-[63.125rem] w-full">
-            <nav className="flex flex-1">
+            <nav className="flex flex-1" aria-label="left-footer-links">
               <ul className="text-white space-y-3">
-                <li>Art</li>
-                <li>Design</li>
-                <li>Architecture</li>
+                <li>
+                  <Link href="#">Art</Link>
+                </li>
+                <li>
+                  <Link href="#">Design</Link>
+                </li>
+                <li>
+                  <Link href="#">Architecture</Link>
+                </li>
               </ul>
             </nav>
-            <nav className="flex flex-1">
+            <nav className="flex flex-1" aria-label="middle-footer-links">
               <ul className="text-white space-y-3">
-                <li>Magazine</li>
-                <li>Podcast</li>
-                <li>Authors</li>
+                <li>
+                  <Link href="/magazine">Magazine</Link>
+                </li>
+                <li>
+                  <Link href="/podcasts">Podcast</Link>
+                </li>
+                <li>
+                  <Link href="/authors">Authors</Link>
+                </li>
               </ul>
             </nav>
-            <nav className="flex flex-1">
+            <nav className="flex flex-1" aria-label="right-footer-links">
               <ul className="text-white space-y-3">
-                <li>Styleguide</li>
-                <li>Licensing</li>
-                <li>Changelog</li>
+                <li>
+                  <a>Styleguide</a>
+                </li>
+                <li>
+                  <a>Licensing</a>
+                </li>
+                <li>
+                  <a>Changelog</a>
+                </li>
               </ul>
             </nav>
           </div>

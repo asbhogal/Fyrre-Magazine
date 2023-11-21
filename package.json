@@ -11,6 +11,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@axe-core/playwright": "^4.8.1",
     "@hookform/resolvers": "^3.3.2",
     "@radix-ui/react-dialog": "1.0.4",
     "@radix-ui/react-separator": "^1.0.3",

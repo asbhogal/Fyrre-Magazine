@@ -17,19 +17,33 @@ export default function Header() {
           </Link>
         </div>
         <Sheet>
-          <SheetTrigger>
-            <img
+          <SheetTrigger aria-labelledby="button-label">
+            <span id="button-label" hidden>
+              Menu
+            </span>
+            <svg
+              aria-hidden="true"
               className="md:hidden"
-              src="/icons/menu.svg"
-              alt="hamburger menu icon"
-            />
+              width="25"
+              height="16"
+              viewBox="0 0 25 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="25" height="4" fill="black" />
+              <rect y="6" width="25" height="4" fill="black" />
+              <rect y="12" width="25" height="4" fill="black" />
+            </svg>
           </SheetTrigger>
           <SheetContent
             side="top"
             className="w-full pt-14"
             aria-label="Menu Toggle"
           >
-            <nav className="flex flex-col flex-1 justify-end gap-6">
+            <nav
+              className="flex flex-col flex-1 justify-end gap-6"
+              aria-labelledby="mobile-nav"
+            >
               {menuLinks.map((menuItem, index) => (
                 <Link key={index} href={menuItem.href}>
                   {menuItem.label}
@@ -55,7 +69,10 @@ export default function Header() {
             </nav>
           </SheetContent>
         </Sheet>
-        <nav className="flex-1 justify-end gap-6 hidden md:flex">
+        <nav
+          className="flex-1 justify-end gap-6 hidden md:flex"
+          aria-labelledby="desktop-nav"
+        >
           {menuLinks.map((menuItem, index) => (
             <Link key={index} href={menuItem.href}>
               {menuItem.label}
