@@ -9,9 +9,7 @@ import Loading from "./loading";
 export default function LatestArticles() {
   const { data } = useArticleContext();
 
-  return <Loading />;
-
-  /* if (data.length > 0 && data[0].articles.length > 0) {
+  if (data.length > 0 && data[0].articles.length > 0) {
     const allArticles = data[0].articles.sort((a, b) => {
       const dateA = new Date(a.date).getTime();
       const dateB = new Date(b.date).getTime();
@@ -124,5 +122,5 @@ export default function LatestArticles() {
     );
   } else {
     return <Loading />;
-  } */
+  }
 }
