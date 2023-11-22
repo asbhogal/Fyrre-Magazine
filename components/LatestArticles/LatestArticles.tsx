@@ -61,8 +61,8 @@ export default function LatestArticles() {
                 className="w-full object-cover aspect-[9/6]"
                 src={latestArticle.content[0].img}
                 alt={latestArticle.imgAlt}
-                width={500}
-                height={500}
+                width={240}
+                height={240}
               />
             </div>
           </article>
