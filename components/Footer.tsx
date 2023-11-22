@@ -61,13 +61,13 @@ export default function Footer() {
             <nav className="flex flex-1" aria-label="right-footer-links">
               <ul className="text-white space-y-3">
                 <li>
-                  <a>Styleguide</a>
+                  <a href="#">Styleguide</a>
                 </li>
                 <li>
-                  <a>Licensing</a>
+                  <a href="#">Licensing</a>
                 </li>
                 <li>
-                  <a>Changelog</a>
+                  <a href="#">Changelog</a>
                 </li>
               </ul>
             </nav>
