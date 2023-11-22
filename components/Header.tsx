@@ -10,7 +10,7 @@ export default function Header() {
         <div className="flex flex-1">
           <Link href="/" aria-label="Return to homepage">
             <img
-              className="h-full"
+              className="h-full w-fit"
               src="/logos/FyrreMagazineLogo-Black.svg"
               alt="logo"
             />
@@ -49,7 +49,15 @@ export default function Header() {
                   {menuItem.label}
                 </Link>
               ))}
-              <img className="w-fit" src="/icons/line.svg" alt="line" />
+              <svg
+                width="15"
+                height="1"
+                viewBox="0 0 15 1"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="15" height="1" fill="black" />
+              </svg>
               <SocialSharing
                 links={[
                   {
@@ -70,7 +78,7 @@ export default function Header() {
           </SheetContent>
         </Sheet>
         <nav
-          className="flex-1 justify-end gap-6 hidden md:flex"
+          className="flex-1 items-center justify-end gap-6 hidden md:flex"
           aria-labelledby="desktop-nav"
         >
           {menuLinks.map((menuItem, index) => (
@@ -78,7 +86,15 @@ export default function Header() {
               {menuItem.label}
             </Link>
           ))}
-          <img className="w-fit" src="/icons/line.svg" alt="line" />
+          <svg
+            width="15"
+            height="1"
+            viewBox="0 0 15 1"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="15" height="1" fill="black" />
+          </svg>
           <SocialSharing
             links={[
               {

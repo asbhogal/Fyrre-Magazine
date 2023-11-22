@@ -21,7 +21,7 @@ export default function SocialSharing({ links }: SocialSharingProps) {
           aria-label={link.ariaLabel}
           target="_blank"
         >
-          <img className="h-full" src={link.src} alt={link.alt} />
+          <img className="h-full w-fit" src={link.src} alt={link.alt} />
         </Link>
       ))}
     </div>
