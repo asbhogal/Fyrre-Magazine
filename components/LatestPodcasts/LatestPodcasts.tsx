@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getPodcasts } from "@/app/functions/getPodcasts";
+import Image from "next/image";
 
 export default async function LatestPodcasts() {
   const data = await getPodcasts();
@@ -9,10 +10,12 @@ export default async function LatestPodcasts() {
         .map((podcast) => (
           <article className="border border-black p-4 md:p-12" key={podcast.id}>
             <Link href={`/podcasts/${podcast.slug}`}>
-              <img
+              <Image
                 className="hover:scale-105 transition"
                 src={podcast.img}
                 alt={podcast.imgAlt}
+                width={920}
+                height={920}
               />
             </Link>
             <h2 className="heading3-title mt-8 mb-12">

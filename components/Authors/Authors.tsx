@@ -1,4 +1,5 @@
 import { ArticleType, getArticles } from "@/app/functions/getArticles";
+import Image from "next/image";
 import Link from "next/link";
 
 export default async function Authors() {
@@ -12,10 +13,12 @@ export default async function Authors() {
           key={article.id}
         >
           <Link href={`authors/${article.slug}`}>
-            <img
+            <Image
               className="w-[9.375rem] h-[9.375rem] object-cover rounded-full hover:scale-105 transition"
               src={article.avatar}
               alt={article.imgAlt}
+              width={150}
+              height={150}
             />
           </Link>
           <article>

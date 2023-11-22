@@ -5,6 +5,7 @@ import Sidebar from "../Sidebar";
 import { Separator } from "@radix-ui/react-separator";
 import Link from "next/link";
 import Loading from "./loading";
+import Image from "next/image";
 
 export default function LatestArticles() {
   const { data } = useArticleContext();
@@ -56,10 +57,12 @@ export default function LatestArticles() {
               </article>
             </article>
             <div>
-              <img
+              <Image
                 className="w-full object-cover aspect-[9/6]"
                 src={latestArticle.content[0].img}
                 alt={latestArticle.imgAlt}
+                width={500}
+                height={500}
               />
             </div>
           </article>
