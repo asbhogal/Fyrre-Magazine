@@ -63,6 +63,7 @@ export default function LatestArticles() {
                 alt={latestArticle.imgAlt}
                 width={1488}
                 height={992}
+                priority
               />
             </div>
           </article>
