@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getPodcasts } from "@/app/functions/getPodcasts";
+import Image from "next/image";
 
 export default async function PodcastsList() {
   const data = await getPodcasts();
@@ -11,10 +12,12 @@ export default async function PodcastsList() {
           <div className="grid grid-cols-1 md:grid-cols-[auto_auto] justify-between md:items-center gap-3 md:gap-0">
             <div className="flex flex-col md:flex-row md:items-center gap-3 md:gap-16">
               <p className="font-semibold">{podcasts.episode.slice(7)}</p>
-              <img
+              <Image
                 className="w-[15rem] h-[15rem]"
                 src={podcasts.img}
                 alt={podcasts.imgAlt}
+                width={240}
+                height={240}
               />
               <h2 className="heading3-title">{podcasts.title}</h2>
             </div>

@@ -1,6 +1,7 @@
 import formatString from "@/app/functions/formatString";
 import Link from "next/link";
 import { ArticleType, getArticles } from "@/app/functions/getArticles";
+import Image from "next/image";
 
 export default async function AuthorsList() {
   const data: Array<ArticleType> = await getArticles();
@@ -11,10 +12,12 @@ export default async function AuthorsList() {
         <div key={authors.id}>
           <article className="flex flex-col md:flex-row justify-between md:items-center gap-2 md:gap-0">
             <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-16">
-              <img
+              <Image
                 className="h-[9.375rem] w-[9.375rem]"
                 src={authors.avatar}
                 alt={authors.imgAlt}
+                width={150}
+                height={150}
               />
               <h2 className="heading3-title">{authors.author}</h2>
             </div>
