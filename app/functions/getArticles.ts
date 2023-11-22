@@ -30,8 +30,7 @@ export type ArticleType = {
 
 export async function getArticles() {
   const res = await fetch(
-    "https://raw.githubusercontent.com/asbhogal/Fyrre-Magazine/main/json/articles.json",
-    { cache: "no-store" }
+    "https://raw.githubusercontent.com/asbhogal/Fyrre-Magazine/main/json/articles.json"
   );
 
   if (!res.ok) {

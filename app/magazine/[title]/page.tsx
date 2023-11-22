@@ -4,8 +4,6 @@ import SocialSharing from "@/components/SocialSharing";
 import Subheading from "@/components/Subheading";
 import Link from "next/link";
 
-export const revalidate = 10;
-
 export async function generateMetadata({
   params,
 }: {

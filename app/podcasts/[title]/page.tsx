@@ -4,8 +4,6 @@ import PostNavigation from "@/components/PostNavigation";
 import SocialSharing from "@/components/SocialSharing";
 import PodcastContextProvider from "@/context/PodcastContext";
 
-export const revalidate = 10;
-
 export async function generateMetadata({
   params,
 }: {

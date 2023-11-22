@@ -4,8 +4,6 @@ import PostNavigation from "@/components/PostNavigation";
 import SocialSharing from "@/components/SocialSharing";
 import Link from "next/link";
 
-export const revalidate = 10;
-
 type AuthorData = {
   author: string;
   job: string;
