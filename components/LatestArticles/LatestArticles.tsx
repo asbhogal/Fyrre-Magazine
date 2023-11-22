@@ -61,8 +61,8 @@ export default function LatestArticles() {
                 className="w-full object-cover aspect-[9/6]"
                 src={latestArticle.content[0].img}
                 alt={latestArticle.imgAlt}
-                width={240}
-                height={240}
+                width={1488}
+                height={992}
               />
             </div>
           </article>
@@ -74,10 +74,12 @@ export default function LatestArticles() {
               <article key={article.title}>
                 <article className="grid md:grid-cols-[0fr_1fr] gap-6 sm:gap-12">
                   <Link href={`magazine/${article.slug}`} className="h-60 w-60">
-                    <img
+                    <Image
                       className="w-full h-full object-cover hover:scale-105 transition"
                       src={article.img}
                       alt={article.imgAlt}
+                      width={240}
+                      height={240}
                     />
                   </Link>
                   <article className="flex flex-col justify-between">
