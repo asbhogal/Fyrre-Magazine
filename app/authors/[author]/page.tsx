@@ -1,5 +1,5 @@
-import formatString from "@/app/functions/formatString";
-import { getArticles } from "@/app/functions/getArticles";
+import formatString from "@/lib/functions/formatString";
+import { getArticles } from "@/lib/functions/getArticles";
 import PostNavigation from "@/components/PostNavigation";
 import SocialSharing from "@/components/SocialSharing";
 import Link from "next/link";

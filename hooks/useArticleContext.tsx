@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { ArticleType } from "@/app/functions/getArticles";
+import { ArticleType } from "@/lib/functions/getArticles";
 
 type ArticleContextType = {
   data: ArticleType[];

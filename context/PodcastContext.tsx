@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getPodcasts, PodcastType } from "@/app/functions/getPodcasts";
+import { getPodcasts, PodcastType } from "@/lib/functions/getPodcasts";
 import { PodcastContext } from "@/hooks/usePodcastContext";
 
 type PodcastContextProviderType = {

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getArticles, ArticleType } from "@/app/functions/getArticles";
+import { getArticles, ArticleType } from "@/lib/functions/getArticles";
 import { ArticleContext } from "@/hooks/useArticleContext";
 
 type ArticleContextProviderType = {

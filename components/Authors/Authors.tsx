@@ -1,4 +1,4 @@
-import { ArticleType, getArticles } from "@/app/functions/getArticles";
+import { ArticleType, getArticles } from "@/lib/functions/getArticles";
 import Image from "next/image";
 import Link from "next/link";
 

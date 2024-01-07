@@ -1,4 +1,4 @@
-import { ArticleType, getArticles } from "@/app/functions/getArticles";
+import { ArticleType, getArticles } from "@/lib/functions/getArticles";
 import PostNavigation from "@/components/PostNavigation";
 import SocialSharing from "@/components/SocialSharing";
 import Subheading from "@/components/Subheading";

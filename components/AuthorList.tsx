@@ -1,6 +1,6 @@
-import formatString from "@/app/functions/formatString";
+import formatString from "@/lib/functions/formatString";
 import Link from "next/link";
-import { ArticleType, getArticles } from "@/app/functions/getArticles";
+import { ArticleType, getArticles } from "@/lib/functions/getArticles";
 import Image from "next/image";
 
 export default async function AuthorsList() {

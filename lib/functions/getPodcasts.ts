@@ -16,9 +16,9 @@ export type PodcastType = {
 };
 
 export async function getPodcasts(): Promise<PodcastType[]> {
-  const res = await fetch(
-    "https://raw.githubusercontent.com/asbhogal/Fyrre-Magazine/main/json/podcasts.json"
-  );
+  const res = await fetch(`${process.env.API_BASE_URL}/api/podcasts`, {
+    cache: "no-store",
+  });
 
   if (!res.ok) {
     throw new Error("Failed to fetch podcast data");

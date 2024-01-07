@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { PodcastType } from "@/app/functions/getPodcasts";
+import { PodcastType } from "@/lib/functions/getPodcasts";
 
 type PodcastContextType = {
   data: PodcastType[];

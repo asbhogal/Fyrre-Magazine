@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { getPodcasts } from "@/app/functions/getPodcasts";
+import { getPodcasts } from "@/lib/functions/getPodcasts";
 import Image from "next/image";
 
 export default async function LatestPodcasts() {
   const data = await getPodcasts();
+  console.log(data);
   return (
     <div className="grid grid-cols-1 md:grid-cols-3  xl:grid-cols-3 max-w-[95rem] w-full mx-auto border border-black border-collapse">
       {data
