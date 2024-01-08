@@ -3,12 +3,12 @@ import LatestArticles from "@/components/LatestArticles/LatestArticles";
 import NewsLoading from "@/components/NewsTicker/loading";
 import LatestPodcasts from "@/components/LatestPodcasts/LatestPodcasts";
 import LatestPodcastsLoading from "@/components/LatestPodcasts/loading";
+import ArticlesLoading from "@/components/LatestArticles/loading";
 import AuthorsLoading from "@/components/Authors/loading";
 import NewsTicker from "@/components/NewsTicker/NewsTicker";
 import PageTitle from "@/components/PageTitle";
 import Subheading from "@/components/Subheading";
 import { Suspense } from "react";
-import { getArticles } from "@/lib/functions/getArticles";
 import { getNews } from "@/lib/functions/getNews";
 
 export const metadata = {
@@ -33,7 +33,9 @@ export default async function Home() {
         <NewsTicker news={news} />
       </Suspense>
 
-      <LatestArticles />
+      <Suspense fallback={<ArticlesLoading />}>
+        <LatestArticles />
+      </Suspense>
 
       <Subheading
         className="text-subheading"
