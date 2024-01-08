@@ -1,11 +1,5 @@
+import { SocialMediaLink } from "@/lib/types/links/types";
 import Link from "next/link";
-
-type SocialMediaLink = {
-  href: string;
-  ariaLabel: string;
-  src: string;
-  alt: string;
-};
 
 const FooterSocialMediaLinks: SocialMediaLink[] = [
   {

@@ -1,22 +1,21 @@
 "use client";
 
-import { useArticleContext } from "@/hooks/useArticleContext";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { useState } from "react";
+import { ArticlesType } from "@/lib/types/articles/types";
 
-export default function Articles() {
-  const { data } = useArticleContext();
+export default function Articles({ articles }: ArticlesType) {
   const [selectedLabel, setSelectedLabel] = useState("All");
 
   const labels: string[] = [
     "All",
     ...new Set(
-      data.flatMap((article) => article.articles.map((item) => item.label))
+      articles.flatMap((article) => article.articles.map((item) => item.label))
     ),
   ];
 
-  const filteredArticles = data.flatMap((article) =>
+  const filteredArticles = articles.flatMap((article) =>
     article.articles
       .filter((item) =>
         selectedLabel === "All" ? true : selectedLabel === item.label
@@ -31,7 +30,7 @@ export default function Articles() {
     <div className="max-w-[95rem] w-full mx-auto">
       <div className="flex flex-wrap justify-between items-center gap-2 md:gap-0 my-6">
         <p className="font-semibold uppercase">Categories</p>
-        {data && (
+        {articles && (
           <div className="flex flex-wrap gap-2">
             {labels.map((label, index) => (
               <Button

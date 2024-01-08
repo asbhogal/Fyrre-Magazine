@@ -1,22 +1,20 @@
 "use client";
 
-import { useArticleContext } from "@/hooks/useArticleContext";
+import { ArticlesType } from "@/lib/types/articles/types";
 import { Button } from "./ui/button";
 
-export default function ArticleFilterButtons() {
-  const { data } = useArticleContext();
-
+export default function ArticleFilterButtons({ articles }: ArticlesType) {
   const labels = [
     "All",
     ...new Set(
-      data.flatMap((article) => article.articles.map((item) => item.label))
+      articles.flatMap((article) => article.articles.map((item) => item.label))
     ),
   ];
 
   console.log(labels);
   return (
     <>
-      {data && (
+      {articles && (
         <div className="flex gap-2">
           {labels.map((label, index) => (
             <Button

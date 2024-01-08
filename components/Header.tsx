@@ -1,7 +1,7 @@
 import Link from "next/link";
-import menuLinks from "@/data/menu";
 import SocialSharing from "./SocialSharing";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import menu from "@/lib/data/menu";
 
 export default function Header() {
   return (
@@ -44,9 +44,9 @@ export default function Header() {
               className="flex flex-col flex-1 justify-end gap-6"
               aria-labelledby="mobile-nav"
             >
-              {menuLinks.map((menuItem, index) => (
-                <Link key={index} href={menuItem.href}>
-                  {menuItem.label}
+              {menu.map((link, index) => (
+                <Link key={index} href={link.href}>
+                  {link.label}
                 </Link>
               ))}
               <svg
@@ -81,9 +81,9 @@ export default function Header() {
           className="flex-1 items-center justify-end gap-6 hidden md:flex"
           aria-labelledby="desktop-nav"
         >
-          {menuLinks.map((menuItem, index) => (
-            <Link key={index} href={menuItem.href}>
-              {menuItem.label}
+          {menu.map((link, index) => (
+            <Link key={index} href={link.href}>
+              {link.label}
             </Link>
           ))}
           <svg

@@ -1,4 +1,4 @@
-import { subscribeNewsletterSchema } from "@/lib/types";
+import { subscribeNewsletterSchema } from "@/lib/types/newsletter/types";
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {

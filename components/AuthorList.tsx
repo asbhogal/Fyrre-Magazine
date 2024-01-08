@@ -1,10 +1,11 @@
 import formatString from "@/lib/functions/formatString";
 import Link from "next/link";
-import { ArticleType, getArticles } from "@/lib/functions/getArticles";
+import { getArticles } from "@/lib/functions/getArticles";
 import Image from "next/image";
+import { ArticlesType } from "@/lib/types/articles/types";
 
 export default async function AuthorsList() {
-  const data: Array<ArticleType> = await getArticles();
+  const data: ArticlesType[] = await getArticles();
 
   return (
     <div className="flex flex-col max-w-[95rem] w-full mx-auto py-8 lg:pt-24 lg:pb-48">

@@ -1,9 +1,6 @@
-type MenuItem = {
-  href: string;
-  label: string;
-};
+import { MenuLink } from "@/lib/types/links/types";
 
-const menu: MenuItem[] = [
+export const menu: MenuLink[] = [
   {
     href: "/magazine",
     label: "Magazine",

@@ -1,7 +1,8 @@
+import { PodcastType } from "@/lib/types/podcasts/types";
 import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
-  const podcasts = [
+  const podcasts: PodcastType[] = [
     {
       id: 5,
       episode: "Episode 05",

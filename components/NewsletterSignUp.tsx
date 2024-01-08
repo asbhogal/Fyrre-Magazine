@@ -1,3 +1,5 @@
+"use client";
+
 import { useForm } from "react-hook-form";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -5,14 +7,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import {
   TSubscribeNewsletterSchema,
   subscribeNewsletterSchema,
-} from "@/lib/types";
-
-type SubscribeProps = {
-  formClassName?: string;
-  formFieldsClassName?: string;
-  inputClassName?: string;
-  buttonClassName?: string;
-};
+} from "@/lib/types/newsletter/types";
+import { SubscribeProps } from "@/lib/types/props/types";
 
 export default function NewsletterSignUp({
   formClassName,

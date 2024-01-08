@@ -1,15 +1,12 @@
-"use client";
-
-import { useArticleContext } from "@/hooks/useArticleContext";
 import Sidebar from "../Sidebar";
-import { Separator } from "@radix-ui/react-separator";
 import Link from "next/link";
 import Loading from "./loading";
 import Image from "next/image";
+import { ArticlesType } from "@/lib/types/articles/types";
+import { getArticles } from "@/lib/functions/getArticles";
 
-export default function LatestArticles() {
-  const { data } = useArticleContext();
-
+export default async function LatestArticles() {
+  const data: ArticlesType[] = await getArticles();
   if (data.length > 0 && data[0].articles.length > 0) {
     const allArticles = data[0].articles.sort((a, b) => {
       const dateA = new Date(a.date).getTime();
@@ -57,14 +54,16 @@ export default function LatestArticles() {
               </article>
             </article>
             <div>
-              <Image
-                className="w-full object-cover aspect-[9/6]"
-                src={latestArticle.content[0].img}
-                alt={latestArticle.imgAlt}
-                width={1488}
-                height={992}
-                priority
-              />
+              {latestArticle.content[0].img && (
+                <Image
+                  className="w-full object-cover aspect-[9/6]"
+                  src={latestArticle.content[0].img}
+                  alt={latestArticle.imgAlt}
+                  width={1488}
+                  height={992}
+                  priority
+                />
+              )}
             </div>
           </article>
         </div>
@@ -115,7 +114,7 @@ export default function LatestArticles() {
                   </article>
                 </article>
                 {index < remainingArticles.length - 1 && (
-                  <Separator className="border border-black my-6" />
+                  <div className="border border-black my-6" />
                 )}
               </article>
             ))}

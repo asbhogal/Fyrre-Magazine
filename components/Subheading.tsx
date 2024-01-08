@@ -1,11 +1,5 @@
+import { SubheadingProps } from "@/lib/types/props/types";
 import Link from "next/link";
-
-type SubheadingProps = {
-  children: React.ReactNode;
-  className: string;
-  url: string;
-  linkText: string;
-};
 
 export default function Subheading({
   children,

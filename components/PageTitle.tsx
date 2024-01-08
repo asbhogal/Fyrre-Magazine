@@ -1,9 +1,4 @@
-type PageTitleProps = {
-  children: React.ReactNode;
-  className?: string;
-  imgSrc: string;
-  imgAlt: string;
-};
+import { PageTitleProps } from "@/lib/types/props/types";
 
 export default function PageTitle({
   children,

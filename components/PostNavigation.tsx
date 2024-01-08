@@ -1,10 +1,5 @@
+import { PostNavigationProps } from "@/lib/types/props/types";
 import Link from "next/link";
-
-type PostNavigationProps = {
-  children: React.ReactNode;
-  className?: string;
-  href: string;
-};
 
 export default function PostNavigation({
   children,

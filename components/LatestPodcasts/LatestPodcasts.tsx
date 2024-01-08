@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { getPodcasts } from "@/lib/functions/getPodcasts";
 import Image from "next/image";
+import { PodcastType } from "@/lib/types/podcasts/types";
 
 export default async function LatestPodcasts() {
-  const data = await getPodcasts();
+  const data: PodcastType[] = await getPodcasts();
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3  xl:grid-cols-3 max-w-[95rem] w-full mx-auto border border-black border-collapse">

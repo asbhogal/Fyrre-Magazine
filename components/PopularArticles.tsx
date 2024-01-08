@@ -1,10 +1,9 @@
-import { useArticleContext } from "@/hooks/useArticleContext";
-import { Separator } from "@radix-ui/react-separator";
+import { getArticles } from "@/lib/functions/getArticles";
+import { ArticlesType } from "@/lib/types/articles/types";
 import Link from "next/link";
 
-export default function PopularArticles() {
-  const { data } = useArticleContext();
-
+export default async function PopularArticles() {
+  const data: ArticlesType[] = await getArticles();
   const popularArticles = data.flatMap((author) =>
     author.articles
       .filter((article) => article.popular === true)
@@ -29,7 +28,7 @@ export default function PopularArticles() {
             </article>
           </div>
           {index < popularArticles.length - 1 && (
-            <Separator className="border border-black my-6" />
+            <div className="border border-black my-6" />
           )}
         </article>
       ))}

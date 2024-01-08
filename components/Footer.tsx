@@ -1,8 +1,6 @@
 "use client";
 
 import NewsletterTicker from "./NewsletterTicker";
-import { Input } from "@/components/ui/input";
-import { Button } from "./ui/button";
 import Link from "next/link";
 import FooterSocialLinks from "./FooterSocialsLinks";
 import NewsletterSignUp from "./NewsletterSignUp";

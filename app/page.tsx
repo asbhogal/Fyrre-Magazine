@@ -8,13 +8,17 @@ import NewsTicker from "@/components/NewsTicker/NewsTicker";
 import PageTitle from "@/components/PageTitle";
 import Subheading from "@/components/Subheading";
 import { Suspense } from "react";
+import { getArticles } from "@/lib/functions/getArticles";
+import { getNews } from "@/lib/functions/getNews";
 
 export const metadata = {
   title: "Fyrre Magazine | Art & Life | Home",
   description: "Articles, podcasts and news from the Berlin cultural scene",
 };
 
-export default function Home() {
+export default async function Home() {
+  const news = await getNews();
+
   return (
     <main className="flex flex-col min-h-screen max-w-[95rem] w-full mx-auto px-4 lg:pt-0 sm:pt-4 xs:pt-2 lg:pb-4 md:pb-4 sm:pb-2 xs:pb-2">
       <PageTitle
@@ -26,7 +30,7 @@ export default function Home() {
       </PageTitle>
 
       <Suspense fallback={<NewsLoading />}>
-        <NewsTicker />
+        <NewsTicker news={news} />
       </Suspense>
 
       <LatestArticles />

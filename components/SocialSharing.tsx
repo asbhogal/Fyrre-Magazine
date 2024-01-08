@@ -1,15 +1,5 @@
+import { SocialSharingProps } from "@/lib/types/props/types";
 import Link from "next/link";
-
-export type SocialMediaLink = {
-  href: string;
-  ariaLabel: string;
-  src: string;
-  alt: string;
-};
-
-type SocialSharingProps = {
-  links: SocialMediaLink[];
-};
 
 export default function SocialSharing({ links }: SocialSharingProps) {
   return (
