@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "rd /s /Q .next && next dev",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -24,7 +24,7 @@
     "react": "latest",
     "react-dom": "latest",
     "react-hook-form": "^7.48.2",
-    "shadcn-ui": "^0.4.0",
+    "shadcn-ui": "^0.2.3",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.22.4"

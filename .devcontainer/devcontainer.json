@@ -1,0 +1,11 @@
+{
+	"name": "fyrre-magazine",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "client",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"forwardPorts": [3000],
+	"postCreateCommand": "npm install",
+	"mounts": [
+    "type=bind,source=/home/${localEnv:USER}/.ssh,target=/home/node/.ssh,readonly"
+  ]
+}
