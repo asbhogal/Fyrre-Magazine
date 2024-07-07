@@ -7,5 +7,6 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ../..:/workspaces:cached
+      - ~/.ssh:/home/node/.ssh:cached
     command: sleep infinity
-    working_dir: /workspaces/Fyrre-Magazine
+    working_dir: /workspaces/fyrre-magazine
