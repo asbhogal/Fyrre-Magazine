@@ -4,8 +4,8 @@
 	"service": "client",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"forwardPorts": [3000],
-	"postCreateCommand": "npm install --legacy-peer-deps && npx playwright install && sudo npx playwright install-deps ",
+	"postCreateCommand": "npm install --legacy-peer-deps",
 	"mounts": [
-		"type=bind,source=/home/${localEnv:USER}/.ssh,target=/home/node/.ssh,readonly"
+    "type=bind,source=/home/${localEnv:USER}/.ssh,target=/home/node/.ssh,readonly"
   ]
 }
