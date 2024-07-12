@@ -7,6 +7,7 @@
     "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
     "start": "next start",
     "lint": "next lint",
+    "format": "npx prettier **/*.{js,jsx,ts,tsx} --write",
     "test:e2e": "playwright test",
     "prepare": "husky install"
   },
@@ -55,7 +56,14 @@
     "husky": "latest",
     "postcss": "latest",
     "tailwindcss": "latest",
-    "typescript": "latest"
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.2",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "typescript": "latest",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0"
   },
   "overrides": {
     "@types/react": "npm:types-react@19.0.0-beta.2",

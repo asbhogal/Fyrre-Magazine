@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export async function GET(request: Request) {
+export async function GET() {
   const news: string[] = [
     "Christopher Vaccaro reports on the latest street art festival",
     "A look back at the events which defined Berlin's cultural landscape",

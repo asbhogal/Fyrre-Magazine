@@ -7,7 +7,7 @@ export default async function PopularArticles() {
   const popularArticles = data.flatMap((author) =>
     author.articles
       .filter((article) => article.popular === true)
-      .sort((a, b) => Number(a.popularity) - Number(b.popularity))
+      .sort((a, b) => Number(a.popularity) - Number(b.popularity)),
   );
 
   return (

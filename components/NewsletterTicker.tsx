@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 
 export default function NewsletterTicker() {
   const newsletterText = useRef<HTMLDivElement | null>(null);
-  let xPercent = 0;
+  const xPercent = 0;
   const animationDuration = 20;
 
   useEffect(() => {

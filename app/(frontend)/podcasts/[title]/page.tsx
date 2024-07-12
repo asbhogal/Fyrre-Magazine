@@ -12,7 +12,7 @@ export async function generateMetadata({
   const podcast: PodcastType[] = await getPodcasts();
 
   const podcastData = podcast.find(
-    (podcast: PodcastType) => podcast.slug === params.title
+    (podcast: PodcastType) => podcast.slug === params.title,
   );
 
   if (!podcastData) {
@@ -33,7 +33,7 @@ export default async function PodcastDetails({
     const podcast: PodcastType[] = await getPodcasts();
 
     const podcastData = podcast.find(
-      (podcast: PodcastType) => podcast.slug === params.title
+      (podcast: PodcastType) => podcast.slug === params.title,
     );
 
     if (!podcastData) {

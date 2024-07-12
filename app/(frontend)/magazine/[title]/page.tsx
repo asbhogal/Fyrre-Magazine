@@ -12,7 +12,7 @@ export async function generateMetadata({
   const articles: ArticleType[] = await getArticles();
 
   const articleData = articles.find((article) =>
-    article.articles.find((articleItem) => articleItem.slug === params.title)
+    article.articles.find((articleItem) => articleItem.slug === params.title),
   );
 
   if (!articleData) {
@@ -20,7 +20,7 @@ export async function generateMetadata({
   }
 
   const matchingArticle = articleData.articles.find(
-    (articleItem) => articleItem.slug === params.title
+    (articleItem) => articleItem.slug === params.title,
   );
 
   return {
@@ -37,7 +37,7 @@ export default async function ArticleDetails({
     const articles: ArticleType[] = await getArticles();
 
     const articleData = articles.find((article) =>
-      article.articles.find((articleItem) => articleItem.slug === params.title)
+      article.articles.find((articleItem) => articleItem.slug === params.title),
     );
 
     if (!articleData) {
@@ -45,7 +45,7 @@ export default async function ArticleDetails({
     }
 
     const matchingArticle = articleData.articles.find(
-      (articleItem) => articleItem.slug === params.title
+      (articleItem) => articleItem.slug === params.title,
     );
 
     const latestArticles = articles

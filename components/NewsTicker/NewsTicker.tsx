@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
 
 export default function NewsTicker({ news }: NewsTickerProps) {
   const newsText = useRef<HTMLDivElement | null>(null);
-  let xPercent = 0;
+  const xPercent = 0;
   const animationDuration = 20;
 
   useEffect(() => {
@@ -46,9 +46,10 @@ export default function NewsTicker({ news }: NewsTickerProps) {
         {news.map((newsItem, index) => (
           <div
             key={index}
-            className={`whitespace-nowrap ${
-              index === news.length - 1 ? "overflow-visible" : "overflow-hidden"
-            }`}
+            // eslint-disable-next-line prettier/prettier
+            // prettier-ignore
+            className={`whitespace-nowrap ${index === news.length - 1 ? "overflow-visible" : "overflow-hidden"
+              }`}
             style={{ right: index === news.length - 1 ? "0" : "" }}
           >
             <p>{newsItem}+++</p>

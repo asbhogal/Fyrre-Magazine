@@ -1,4 +1,3 @@
-import formatString from "@/lib/functions/formatString";
 import { getArticles } from "@/lib/functions/getArticles";
 import PostNavigation from "@/components/PostNavigation";
 import SocialSharing from "@/components/SocialSharing";
@@ -37,7 +36,7 @@ export async function generateMetadata({
   const decodedAuthor = decodeURIComponent(params.author);
 
   const authorData = authors.find(
-    (author: AuthorData) => author.slug === decodedAuthor
+    (author: AuthorData) => author.slug === decodedAuthor,
   );
 
   if (!authorData) {
@@ -62,7 +61,7 @@ export default async function AuthorDetails({
     const decodedAuthor = decodeURIComponent(params.author);
 
     const authorData = authors.find(
-      (author: AuthorData) => author.slug === decodedAuthor
+      (author: AuthorData) => author.slug === decodedAuthor,
     );
 
     if (!authorData) {

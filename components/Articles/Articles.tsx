@@ -11,19 +11,19 @@ export default function Articles({ articles }: ArticlesType) {
   const labels: string[] = [
     "All",
     ...new Set(
-      articles.flatMap((article) => article.articles.map((item) => item.label))
+      articles.flatMap((article) => article.articles.map((item) => item.label)),
     ),
   ];
 
   const filteredArticles = articles.flatMap((article) =>
     article.articles
       .filter((item) =>
-        selectedLabel === "All" ? true : selectedLabel === item.label
+        selectedLabel === "All" ? true : selectedLabel === item.label,
       )
       .map((item) => ({
         ...item,
         author: article.author,
-      }))
+      })),
   );
 
   return (

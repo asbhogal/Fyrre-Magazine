@@ -7,7 +7,7 @@ export default function ArticleFilterButtons({ articles }: ArticlesType) {
   const labels = [
     "All",
     ...new Set(
-      articles.flatMap((article) => article.articles.map((item) => item.label))
+      articles.flatMap((article) => article.articles.map((item) => item.label)),
     ),
   ];
 

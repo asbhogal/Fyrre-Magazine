@@ -7,6 +7,7 @@
 A bold, striking arts and life magazine website build as an SPA from Figma templates (designed by Webflow designer <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/@pawelgola">Pawel Gola</a>), using Next.js, React Server Components, React Suspense, TypeScript, Tailwind, Shadcn and ES Lint and incorporates E2E testing using Playwright.
 
 <strong>Features</strong>
+
 - Faithful adaptation to Figma designs
 - Custom designed and developed 404 error page
 - Dynamic rendering of podcast, article and author data
@@ -38,9 +39,10 @@ A bold, striking arts and life magazine website build as an SPA from Figma templ
 <a target="_blank" rel="noopener noreferrer" href="https://zod.dev/logo.svg"><img src="https://zod.dev/logo.svg" alt="Zod logo" width="50" height="50" style="max-width:100%;"></a>
 
 <strong>Links</strong>
+
 - <a target="_blank" rel="noopener noreferrer" href="https://fyrre-magazine.vercel.app/">Fyrre Magazine Site</a>
 - <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/community/file/1136023191939170511/fyrre-magazine-website-webflow-template">Fyrre Magazine Templates</a>
 
 <strong>Disclaimer</strong>
 
-As far as the developer is aware all the individuals mentioned in this website are purely fictionalized. Any resemblance to individuals or entities, living or dead, is entirely coincidental and the developer bears no responsibility for any such resemblance. 
+As far as the developer is aware all the individuals mentioned in this website are purely fictionalized. Any resemblance to individuals or entities, living or dead, is entirely coincidental and the developer bears no responsibility for any such resemblance.
