@@ -1,4 +1,4 @@
-import Authors from "@/components/Authors/Authors";
+/* import Authors from "@/components/Authors/Authors";
 import LatestArticles from "@/components/LatestArticles/LatestArticles";
 import NewsLoading from "@/components/NewsTicker/loading";
 import LatestPodcasts from "@/components/LatestPodcasts/LatestPodcasts";
@@ -10,6 +10,10 @@ import PageTitle from "@/components/PageTitle";
 import Subheading from "@/components/Subheading";
 import { Suspense } from "react";
 import { getNews } from "@/lib/functions/getNews";
+import { getPayloadHMR } from "@payloadcms/next/utilities";
+import configPromise from "@payload-config";
+import { getPayload } from "payload";
+import { importConfig } from "payload/node"; */
 
 export const metadata = {
   title: "Fyrre Magazine | Art & Life | Home",
@@ -17,11 +21,11 @@ export const metadata = {
 };
 
 export default async function Home() {
-  const news = await getNews();
+  // const news = await getNews();
 
   return (
     <main className="flex flex-col min-h-screen max-w-[95rem] w-full mx-auto px-4 lg:pt-0 sm:pt-4 xs:pt-2 lg:pb-4 md:pb-4 sm:pb-2 xs:pb-2">
-      <PageTitle
+      {/* <PageTitle
         className="sr-only"
         imgSrc="/images/titles/Art&Life.svg"
         imgAlt="The words 'Art & Life' in bold uppercase lettering"
@@ -59,7 +63,7 @@ export default async function Home() {
 
       <Suspense fallback={<AuthorsLoading />}>
         <Authors />
-      </Suspense>
+      </Suspense> */}
     </main>
   );
 }

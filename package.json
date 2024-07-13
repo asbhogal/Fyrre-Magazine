@@ -5,11 +5,14 @@
   "scripts": {
     "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
     "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
+    "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
     "start": "next start",
     "lint": "next lint",
     "format": "npx prettier **/*.{js,jsx,ts,tsx} --write",
     "test:e2e": "playwright test",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "generate:types": "payload generate:types",
+    "generate:schema": "payload-graphql generate:schema"
   },
   "dependencies": {
     "@axe-core/playwright": "latest",
