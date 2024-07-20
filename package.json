@@ -15,14 +15,14 @@
     "generate:schema": "payload-graphql generate:schema"
   },
   "dependencies": {
+    "@payloadcms/db-mongodb": "3.0.0-beta.67",
+    "@payloadcms/db-postgres": "3.0.0-beta.67",
+    "@payloadcms/next": "3.0.0-beta.67",
+    "@payloadcms/richtext-lexical": "3.0.0-beta.67",
+    "@payloadcms/richtext-slate": "3.0.0-beta.67",
+    "@payloadcms/ui": "3.0.0-beta.67",
     "@axe-core/playwright": "latest",
     "@hookform/resolvers": "latest",
-    "@payloadcms/db-mongodb": "3.0.0-beta.58",
-    "@payloadcms/db-postgres": "^3.0.0-beta.58",
-    "@payloadcms/next": "3.0.0-beta.58",
-    "@payloadcms/richtext-lexical": "3.0.0-beta.58",
-    "@payloadcms/richtext-slate": "3.0.0-beta.58",
-    "@payloadcms/ui": "3.0.0-beta.58",
     "@radix-ui/react-dialog": "latest",
     "@radix-ui/react-separator": "latest",
     "@radix-ui/react-slot": "latest",
@@ -48,7 +48,7 @@
     "node": "^18.20.2 || >=20.9.0"
   },
   "devDependencies": {
-    "@payloadcms/graphql": "3.0.0-beta.58",
+    "@payloadcms/graphql": "3.0.0-beta.67",
     "@playwright/test": "latest",
     "@types/node": "^20.14.9",
     "@types/react": "npm:types-react@19.0.0-beta.2",
