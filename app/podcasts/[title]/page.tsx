@@ -3,6 +3,7 @@ import LatestPodcasts from "@/components/LatestPodcasts/LatestPodcasts";
 import PostNavigation from "@/components/PostNavigation";
 import SocialSharing from "@/components/SocialSharing";
 import PodcastContextProvider from "@/context/PodcastContext";
+import { notFound } from "next/navigation";
 
 export async function generateMetadata({
   params,
@@ -16,7 +17,7 @@ export async function generateMetadata({
   );
 
   if (!podcastData) {
-    return <div>No matching podcast found</div>;
+    notFound();
   }
 
   return {
@@ -37,7 +38,7 @@ export default async function PodcastDetails({
     );
 
     if (!podcastData) {
-      return <div>No matching podcast found</div>;
+      notFound();
     }
 
     return (
